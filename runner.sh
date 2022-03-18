@@ -15,7 +15,7 @@ restart_interval="10m"
 
 
 #parameters that passed to python scrypt
-threads="-t 1000"
+#threads="-t 1000"
 rpc="--rpc 200"
 proxy_interval="-p 600"
 
@@ -62,11 +62,13 @@ do
             echo -e "    "$target"\n"
            
             echo "command line"
-            echo $cmd_line
+            echo "$cmd_line"
             echo "full cmd"
             
             echo "$proxy_interval $threads $rpc"
-            sudo python3 ~/mhddos_proxy/$cmd_line $proxy_interval $threads $rpc
+            
+            cd ~/mhddos_proxy
+            sudo python3 $cmd_line $proxy_interval $rpc
    done
 echo -e "#####################################\n"
 sleep $restart_interval
