@@ -59,7 +59,7 @@ do
    for i in $list_size
    do
             # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
-            cmd_line=$(sudo awk 'NR=='"$i" <<< "$(sudo curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos/main/runner_targets | cat | grep "^runner.py")")
+            cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/Aruiem234/auto_mhddos/main/runner_targets | cat | grep "^[^#]")")
             echo -e "    "$target "\n""
            
             echo "command line"
