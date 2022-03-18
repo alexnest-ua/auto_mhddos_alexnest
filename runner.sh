@@ -71,6 +71,7 @@ do
             cd ~/mhddos_proxy
             sudo python3 $cmd_line $proxy_interval $rpc
    done
+   
    echo -e "#####################################\n"
    sleep $restart_interval
    echo -e "RESTARTING\n"
