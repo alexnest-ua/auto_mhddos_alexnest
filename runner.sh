@@ -20,8 +20,8 @@ rpc="--rpc 200"
 proxy_interval="-p 600"
 
 #Just in case kill previous copy of mhddos_proxy
-pkill -f ./start.py
-pkill -f runner.py
+sudo pkill -f ./start.py
+sudo pkill -f runner.py
 
 # Install git, python3, pip if doesn't installed already
 sudo apt install git -y
@@ -74,6 +74,6 @@ do
 echo -e "#####################################\n"
 sleep $restart_interval
 echo -e "RESTARTING\n"
-pkill -f ./start.py
-pkill -f runner.py
+sudo pkill -f ./start.py
+sudo pkill -f runner.py
 done
