@@ -76,5 +76,4 @@ do
    echo -e "RESTARTING\n"
    sudo pkill -f ./start.py
    sudo pkill -f runner.py
-
 done
