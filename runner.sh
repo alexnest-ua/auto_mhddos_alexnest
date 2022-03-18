@@ -45,7 +45,7 @@ sudo python3 -m pip install -r MHDDoS/requirements.txt
 cd ~
 
 # Restart attacks and update targets list every 10 minutes (by default)
-while true
+while [ 1 == 1 ]
 #echo -e "#####################################\n"
 do
    # Get number of targets in runner_targets. First 5 strings ommited, those are reserved as comments.
@@ -74,7 +74,7 @@ do
    
    echo -e "#####################################\n"
    sleep $restart_interval
-   echo -e "RESTARTING\n"
+   echo -e "\nRESTARTING"
    sudo pkill -f ./start.py
    sudo pkill -f runner.py
 done
