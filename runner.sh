@@ -16,7 +16,10 @@ restart_interval="10m"
 
 #parameters that passed to python scrypt
 #threads="-t 1000"
-rpc="--rpc 200"
+threads="${1:-500}"
+threads="-t $threads"
+rpc="${2:-100}"
+rpc="--rpc $rpc"
 proxy_interval="-p 600"
 
 #Just in case kill previous copy of mhddos_proxy
