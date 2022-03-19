@@ -72,7 +72,7 @@ do
             echo "$cmd_line $proxy_interval $threads $rpc"
             
             cd ~/mhddos_proxy
-            nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
+            nohup sudo python3 $cmd_line $threads $proxy_interval $rpc </dev/null &>/dev/null &
             echo -e "Атаку розпочато успішно, не переймайтеся, що нічого не виводиться на екран – атака запущена у фоні, щоб вона не завершилася при закритті терміналу"
    done
    
