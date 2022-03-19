@@ -67,7 +67,7 @@ do
             echo "$cmd_line $proxy_interval $threads $rpc"
             
             cd ~/mhddos_proxy
-            sudo python3 $cmd_line $proxy_interval $rpc
+            nohup sudo python3 $cmd_line $proxy_interval $rpc
    done
    
    echo -e "#####################################\n"
