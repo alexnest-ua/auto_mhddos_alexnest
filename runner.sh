@@ -42,8 +42,8 @@ git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd mhddos_proxy
 sudo rm proxies_config.json
 sudo wget https://raw.githubusercontent.com/Aruiem234/mhddosproxy/main/proxies_config.json
-sudo git clone https://github.com/MHProDev/MHDDoS.git
-sudo python3 -m pip install -r MHDDoS/requirements.txt
+git clone https://github.com/alexnest-ua/mhddos.git
+sudo python3 -m pip install -r mhddos/requirements.txt
 cd ~
 
 # Restart attacks and update targets list every 10 minutes (by default)
