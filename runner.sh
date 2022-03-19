@@ -26,6 +26,8 @@ sudo pkill -f runner.py
 # Install git, python3, pip if doesn't installed already
 sudo apt install git -y
 sudo apt upgrade git -y
+sudo apt install wget -y
+sudo apt upgrade wget -y
 sudo apt install python3 -y
 sudo apt upgrade python3 -y
 sudo apt install python3-pip -y
@@ -73,6 +75,7 @@ do
    
    echo -e "\nDDoS is up and Running, next update of targets list in $restart_interval\nSleeping\n"
    sleep $restart_interval
+   clear
    echo -e "\nRESTARTING\n"
    sudo pkill -f ./start.py
    sudo pkill -f runner.py
