@@ -70,7 +70,7 @@ do
             nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
    done
    
-   echo -e "#####################################\n"
+   echo -e "\nDDoS is up and Running, next update of targets list in $restart_interval\n"
    sleep $restart_interval
    echo -e "\nRESTARTING\n"
    sudo pkill -f ./start.py
