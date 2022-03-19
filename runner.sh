@@ -68,9 +68,10 @@ do
             
             cd ~/mhddos_proxy
             nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
+            echo -e "Атаку розпочато успішно, не переймайтеся, що нічого не виводиться на екран – атака запущена у фоні, щоб вона не завершилася при закритті терміналу"
    done
    
-   echo -e "\nDDoS is up and Running, next update of targets list in $restart_interval\n"
+   echo -e "\nDDoS is up and Running, next update of targets list in $restart_interval\nSleeping\n"
    sleep $restart_interval
    echo -e "\nRESTARTING\n"
    sudo pkill -f ./start.py
