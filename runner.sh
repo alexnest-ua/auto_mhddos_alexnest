@@ -20,8 +20,9 @@ rpc="--rpc 200"
 proxy_interval="-p 600"
 
 #Just in case kill previous copy of mhddos_proxy
-sudo pkill -f ./start.py
 sudo pkill -f runner.py
+sudo pkill -f ./start.py
+
 
 sudo apt update -y
 sudo apt upgrade -y
@@ -80,6 +81,6 @@ do
    sleep $restart_interval
    clear
    echo -e "\nRESTARTING\n"
-   sudo pkill -f ./start.py
    sudo pkill -f runner.py
+   sudo pkill -f ./start.py
 done
