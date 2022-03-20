@@ -23,6 +23,8 @@ proxy_interval="-p 600"
 sudo pkill -f ./start.py
 sudo pkill -f runner.py
 
+sudo apt update -y
+sudo apt upgrade -y
 # Install git, python3, pip if doesn't installed already
 sudo apt install git -y
 sudo apt upgrade git -y
