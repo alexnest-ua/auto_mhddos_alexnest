@@ -7,8 +7,8 @@
   
 * щоб запустити на нормальній Лінукс-машині:  
 cd ~  
-git clone https://github.com/alexnest-ua/auto_mhddos.git  
-cp ~/auto_mhddos/runner.sh ~  
+git clone https://github.com/alexnest-ua/auto_mhddos_alexnest.git
+cp ~/auto_mhddos_alexnest/runner.sh ~  
 screen -S "runner" bash runner.sh  
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
