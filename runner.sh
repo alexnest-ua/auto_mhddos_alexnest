@@ -68,7 +68,7 @@ do
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos/main/runner_targets | cat | grep "^runner.py")")
            
 
-            echo "full cmd:"
+            echo "\nfull cmd:\n"
             echo "$cmd_line $proxy_interval $rpc"
             
             cd ~/mhddos_proxy
