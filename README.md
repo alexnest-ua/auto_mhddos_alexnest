@@ -7,6 +7,7 @@
   
 * щоб запустити на нормальній Лінукс-машині:  
 cd ~  
+sudo apt install git -y  
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest.git  
 cp ~/auto_mhddos_alexnest/runner.sh ~  
 screen -S "runner" bash runner.sh  
