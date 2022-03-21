@@ -18,6 +18,7 @@ cp ~/auto_mhddos_alexnest/install_docker.sh ~
 bash install_docker.sh
 ```  
   
+Запуск автоматичного ДДоСу:  
   
 ```shell 
 cp ~/auto_mhddos_alexnest/runner.sh ~  
