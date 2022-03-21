@@ -16,13 +16,16 @@ git clone https://github.com/alexnest-ua/auto_mhddos_alexnest.git
 ```shell
 cp ~/auto_mhddos_alexnest/install_docker.sh ~
 bash install_docker.sh
-```
+```  
+  
+  
 ```shell 
 cp ~/auto_mhddos_alexnest/runner.sh ~  
 screen -S "runner" bash runner.sh  
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+  
   
 * щоб подивитися що там працює у фоні:  
 ```shell 
@@ -37,6 +40,14 @@ screen -r runner
 * щоб знову від'єднатися, та залишити його працювати:  
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
   
+  
+* якщо цікаво, чи запустилася команда пропищіть це:
+```shell 
+sudo docker ps -aqf ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest  
+```
+Вам видасть список запущенних контейнерів
+
+УВАГА!!! Скрипт при рестарті (кожні 20 хвилин) вбиває старі створенні DOCKER контейнери саме з MHDDoSом, тому якщо запускаєте цей скрипт на машині-Linux, то інший ДДоС робіть через python / python3-скрипт, або на іншій машині-Linux
   
 ## Список цілей  
 
