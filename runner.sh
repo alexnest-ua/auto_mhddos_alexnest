@@ -61,7 +61,7 @@ do
    #sudo pkill -f ./start.py
    echo "Kill all useless containers"
 
-   sudo docker kill $(sudo docker ps -aqf ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
+   sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
 
    echo "Docker useless containers killed"
 done
