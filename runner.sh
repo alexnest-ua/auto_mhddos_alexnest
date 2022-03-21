@@ -22,7 +22,9 @@ proxy_interval="-p 600"
 #Just in case kill previous copy of mhddos_proxy
 #sudo pkill -f runner.py
 #sudo pkill -f ./start.py
-
+echo "Kill all useless docker-containers with MHDDoS"
+sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
+echo "Docker useless containers killed"
 
 
 # Restart attacks and update targets list every 10 minutes (by default)
@@ -59,9 +61,7 @@ do
    echo -e "\nRESTARTING\n"
    #sudo pkill -f runner.py
    #sudo pkill -f ./start.py
-   echo "Kill all useless containers"
-
+   echo "Kill all useless docker-containers with MHDDoS"
    sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
-
    echo "Docker useless containers killed"
 done
