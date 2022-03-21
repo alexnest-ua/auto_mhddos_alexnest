@@ -44,7 +44,7 @@ sudo screen -r runner
   
 * якщо цікаво, чи запустилася команда пропищіть це:
 ```shell 
-sudo docker ps -aqf ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest  
+sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest  
 ```
 Вам видасть список запущенних контейнерів
 
