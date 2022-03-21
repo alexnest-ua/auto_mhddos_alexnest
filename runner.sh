@@ -77,7 +77,7 @@ do
             echo "$cmd_line $proxy_interval $rpc"
             
             cd ~/mhddos_proxy
-            sudo python3 $cmd_line $proxy_interval $rpc&
+            sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc&
             #nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
             echo -e "\nAttack started successfull\n"
    done
@@ -86,6 +86,11 @@ do
    sleep $restart_interval
    clear
    echo -e "\nRESTARTING\n"
-   sudo pkill -f runner.py
-   sudo pkill -f ./start.py
+   #sudo pkill -f runner.py
+   #sudo pkill -f ./start.py
+   echo "Kill all useless containers"
+
+   sudo docker kill $(sudo docker ps -aqf ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
+
+   echo "Docker useless containers killed"
 done
