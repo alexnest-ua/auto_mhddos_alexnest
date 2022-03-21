@@ -6,19 +6,31 @@
   
   
 * щоб запустити на нормальній Лінукс-машині:  
+```shell
 cd ~  
 sudo apt install git -y  
-git clone https://github.com/alexnest-ua/auto_mhddos_alexnest.git  
+git clone https://github.com/alexnest-ua/auto_mhddos_alexnest.git 
+```
+Якщо немає Docker а на машині(він потрібен зараз):  
+```shell
+cp ~/auto_mhddos_alexnest/install_docker.sh ~
+bash install_docker.sh
+```
+```shell 
 cp ~/auto_mhddos_alexnest/runner.sh ~  
 screen -S "runner" bash runner.sh  
+```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
   
 * щоб подивитися що там працює у фоні:  
+```shell 
 sudo screen -ls  
-
+```
 * щоб перейти до процесу та дізнатися як у нього справи (що він виводить), пишіть:  
+```shell 
 screen -r runner  
+```
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  
 
 * щоб знову від'єднатися, та залишити його працювати:  
