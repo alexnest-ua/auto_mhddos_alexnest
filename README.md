@@ -22,7 +22,7 @@ bash install_docker.sh
   
 ```shell 
 cp ~/auto_mhddos_alexnest/runner.sh ~  
-screen -S "runner" bash runner.sh  
+sudo screen -S "runner" bash runner.sh  
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
@@ -34,7 +34,7 @@ sudo screen -ls
 ```
 * щоб перейти до процесу та дізнатися як у нього справи (що він виводить), пишіть:  
 ```shell 
-screen -r runner  
+sudo screen -r runner  
 ```
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  
 
