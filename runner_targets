@@ -14,7 +14,7 @@
 
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
-https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 1000 --http-methods cfb cfbuam
+#https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 -t 1000 --http-methods cfb cfbuam
 
 https://meteoinfo.ru http://meteoinfo.ru http://193.7.160.228:80 https://193.7.160.228:443 tcp://193.7.160.228:80:80 tcp://193.7.160.228:80:443 -t 1000 --http-methods bypass stress get
 
