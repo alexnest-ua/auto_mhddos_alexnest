@@ -36,11 +36,11 @@ https://www.amediateka.ru https://www.amediateka.ru/kino1tv https://www.amediate
 
 https://wink.ru https://wink.ru/series https://wink.ru/collections 37.220.163.158:80 37.220.163.158:443 tcp://37.220.163.158:80 tcp://37.220.163.158:443 212.193.155.253:80 212.193.155.253:443 https://212.193.155.253:443 tcp://212.193.155.253:80 tcp://212.193.155.253:443 212.193.153.139:80 212.193.153.139:443 https://212.193.153.139:80 tcp://212.193.153.139:80 tcp://212.193.153.139:443 93.93.89.153:443 https://93.93.89.153:443 tcp://93.93.89.153:443 46.235.186.237:443 https://46.235.186.237:443 tcp://46.235.186.237:443 --http-methods STRESS BYPASS GET
 
-#https://www.meteonova.ru http://www.meteonova.ru 93.174.129.242:80 https://93.174.129.242:443 tcp://93.174.129.242:22 tcp://93.174.129.242:80 tcp://93.174.129.242:111 tcp://93.174.129.242:443 tcp://93.174.129.242:3005 --http-methods BYPASS DOWNLOADER
+https://www.meteonova.ru http://www.meteonova.ru 93.174.129.242:80 https://93.174.129.242:443 tcp://93.174.129.242:22 tcp://93.174.129.242:80 tcp://93.174.129.242:111 tcp://93.174.129.242:443 tcp://93.174.129.242:3005 --http-methods BYPASS DOWNLOADER
 
-#https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193.7.160.228:80 https://193.7.160.228:443 tcp://193.7.160.228:80 tcp://193.7.160.228:443 --http-methods DOWNLOADER
+https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193.7.160.228:80 https://193.7.160.228:443 tcp://193.7.160.228:80 tcp://193.7.160.228:443 --http-methods DOWNLOADER
 
-#https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru --http-methods DOWNLOADER BYPASS SLOW
+https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru --http-methods DOWNLOADER BYPASS SLOW
 
 #https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 --http-methods BYPASS CFB STRESS
 
