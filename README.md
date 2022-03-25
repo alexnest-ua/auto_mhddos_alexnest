@@ -1,8 +1,8 @@
 # Опис
   
 runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
-Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипти з mhddos_proxy та MHDDoS: https://github.com/alexnest-ua/auto_mhddos_test/blob/7e7ad084240b54756519e4ebcace3683948c4de2/runner.sh#L44  
-Також мій скрипт імітує роботу людини (вимикає увесь ДДоС на 1-10 (рандомно) хвилин, тобто вашу машину 95% не забанять, якщо правильно підібрати кількість потоків: https://github.com/alexnest-ua/auto_mhddos_test/blob/24581b9f03280abb449062578040d65fc1097432/runner.sh#L109  
+Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипти з mhddos_proxy та MHDDoS: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L46
+Також мій скрипт імітує роботу людини (вимикає увесь ДДоС на 1-10 (рандомно) хвилин, тобто вашу машину 95% не забанять, якщо правильно підібрати кількість потоків: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L132
 Скрипт розподіляє список машин по різним цілям
 
 ## Налаштування (встановлення)
@@ -10,14 +10,14 @@ runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює ці
 * щоб скачати на Linux-машину:  
 ```shell
 cd ~  
-sudo rm -r auto_mhddos_test
+sudo rm -r auto_mhddos_alexnest
 sudo apt install git -y  
-git clone https://github.com/alexnest-ua/auto_mhddos_test.git 
+git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
   
 **ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипти MHDDoS та усі залежності (один раз на новій машині):
 ```shell
-cd ~/auto_mhddos_test
+cd ~/auto_mhddos_alexnest
 bash setup.sh
 ```
 *чекаємо 5-10 хвилин поки все встановиться.*  
@@ -25,7 +25,7 @@ bash setup.sh
 ## Запуск на роботу у фоні (24/7 на Linux-сервері) - можна закривати термінал
 Запуск автоматичного ДДоСу:  
 ```shell 
-cd ~/auto_mhddos_test
+cd ~/auto_mhddos_alexnest
 screen -S "runner" bash runner.sh  
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
@@ -41,7 +41,7 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 ### Приклади команд з різними параметрами:
 перед уведенням команд обов'язково зробити ось це:
 ```shell
-cd ~/auto_mhddos_test
+cd ~/auto_mhddos_alexnest
 ```
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=500 rpc=100 debug="" (1 ціль, 500 потоків, 100 запитів на проксі, без дебагу)
 ```shell
@@ -57,11 +57,11 @@ screen -S "runner" bash runner.sh 1 500 100
 ```
 4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 2 1500 200
+screen -S "runner" bash runner.sh 2 2000 200
 ```
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 3 2000 250
+screen -S "runner" bash runner.sh 4 2000 300
 ```
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
@@ -115,7 +115,7 @@ sudo docker ps -af ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest
 ## Список цілей  
 
   
-runner.sh підтримує единий [список цілей](https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_test/main/runner_targets), який можна тримати на github і постійно оновлювати.  
+runner.sh підтримує единий [список цілей](https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_alexnest/main/runner_targets_new), який можна тримати на github і постійно оновлювати.  
   
   
   
