@@ -20,6 +20,10 @@ https://boxberry.ru/ https://argumenti.ru/ tcp://5.189.239.12:8888 tcp://5.189.2
 
 https://lkdr.nalog.gov.ru/ https://nalog.gov.ru/ tcp://213.24.64.138:443 tcp://213.24.64.104:443 tcp://81.176.235.2:443 tcp://213.24.64.94:443 --http-methods GET
 
+https://cdek.ru https://lk.cdek.ru/user/login https://api.cdek.ru https://global.cdek.ru https://izusa.cdek.ru https://mx12.cdek.ru https://jira8.cdek.ru https://mx3.cdek.ru https://mx13.cdek.ru https://rdp.msk.cdek.ru https://mail.global.cdek.ru https://static.cdek.ru --http-methods GET STRESS HEAD
+
+tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://178.248.238.208:443 tcp://178.248.238.62:80 tcp://178.248.238.62:443 tcp://195.189.222.55:80 tcp://195.189.222.55:443 tcp://185.165.123.206:80 tcp://185.165.123.206:443 tcp://194.49.120.60:80 tcp://194.49.120.60:443 tcp://195.189.222.56:80 tcp://195.189.222.56:443 tcp://195.189.222.41:22 tcp://195.189.222.41:80 tcp://195.189.222.41:443 tcp://194.49.120.61:80 tcp://194.49.120.61:443  tcp://194.49.121.18:443 tcp://194.49.121.18:3389 tcp://195.189.222.60:25 tcp://195.189.222.60:80 tcp://195.189.222.60:443 tcp://195.189.222.60:465 tcp://195.189.222.60:993 tcp://185.165.123.200:80 tcp://185.165.123.200:443
+
 https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
 https://www.cse.ru/ tcp://185.65.20.5:443 tcp://185.65.22.8:8015 tcp://185.65.22.8:993 --http-methods CFB
@@ -36,7 +40,7 @@ https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.
 
 #https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 --http-methods stress bypass head
 
-#https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 --http-methods stress get head
+https://cargocash.ru/ http://cargocash.ru/  http://188.225.36.11:80 http://188.225.36.11:443 https://188.225.36.11:443 tcp://188.225.36.11:22 tcp://188.225.36.11:80 tcp://188.225.36.11:143 tcp://188.225.36.11:3306 tcp://188.225.36.11:443 --http-methods EVEN BYPASS STRESS
 #94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 --http-methods stress get head
 
 #https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80  --http-methods bypass get stress
