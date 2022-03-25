@@ -6,8 +6,8 @@ restart_interval=13m
 
 #Just in case kill previous copy of mhddos_proxy
 echo "Killing all old processes with MHDDoS"
-sudo pkill -f runner.py
-sudo pkill -f ./start.py
+sudo pkill -e -f runner.py
+sudo pkill -e -f ./start.py
 echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 # for Docker
 #echo "Kill all useless docker-containers with MHDDoS"
@@ -123,8 +123,8 @@ do
    	
    	#Just in case kill previous copy of mhddos_proxy
    	echo "Killing all old processes with MHDDoS"
-   	sudo pkill -f runner.py
-   	sudo pkill -f ./start.py
+   	sudo pkill -e -f runner.py
+   	sudo pkill -e -f ./start.py
    	echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 4-12 -n 1)m"
