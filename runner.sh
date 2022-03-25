@@ -61,7 +61,7 @@ do
 		echo "Running updated auto_mhddos"
 		echo -e "\033[0;31m\n\ndebug in else in while: $debug\n\n\033[0;0m"
 		bash runner.sh $num_of_copies $threads $rpc $debug& # run new downloaded script 
-		sudo pkill -o -f runner.sh
+		#sudo pkill -o -f runner.sh
 		return 0
 		#exit #terminate old script
 	fi
