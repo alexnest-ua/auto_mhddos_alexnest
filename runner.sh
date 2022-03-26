@@ -45,7 +45,7 @@ do
 	cd ~/mhddos_proxy
 	sudo git pull origin main
 	
-	cd ~/auto_mhddos_test
+	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -c "Already")
    	echo "$num"
    	
