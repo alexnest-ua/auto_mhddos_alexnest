@@ -46,15 +46,17 @@ https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.
 
 http://nalog.gov.by 195.50.4.54:80 195.50.4.54:443 tcp://195.50.4.54:80 tcp://195.50.4.54:443 --http-methods STRESS GET
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_443.lst
+#-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_443.lst
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_80.lst 
+#-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_80.lst 
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_2000.lst
+#-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_2000.lst
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_5060.lst
+#-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_5060.lst
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_other.lst
+#-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_other.lst
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS CFB
 
 https://lkdr.nalog.gov.ru/ https://nalog.gov.ru/ https://spravka-nalog.ru https://viza.spravka-nalog.ru https://https://lkdr.nalog.gov.ru --http-methods STRESS BYPASS GET
 
