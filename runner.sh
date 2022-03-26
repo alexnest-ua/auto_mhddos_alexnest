@@ -44,8 +44,6 @@ echo -e "\033[0;34m#####################################\033[0;0m\n"
 do	
 	cd ~/mhddos_proxy
 	sudo git pull origin main
-	cd ~/mhddos_proxy/MHDDoS
-	sudo git pull origin main
 	
 	cd ~/auto_mhddos_test
    	num=$(sudo git pull origin main | grep -c "Already")
