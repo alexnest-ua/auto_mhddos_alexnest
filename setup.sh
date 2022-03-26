@@ -27,7 +27,3 @@ sudo -H pip3 install --upgrade pip
 cd ~
 sudo rm -r mhddos_proxy
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
-cd mhddos_proxy
-git clone https://github.com/MHProDev/MHDDoS.git
-sudo pip3 install -r MHDDoS/requirements.txt
-cd ~
