@@ -54,7 +54,7 @@ do
 		clear
 		echo -e "Running up to date auto_mhddos"
 	else
-		cd ~/auto_mhddos_test
+		cd ~/auto_mhddos_alexnest
 		clear
 		echo "Running updated auto_mhddos"
 		echo -e "\033[0;31m\n\ndebug in else in while: $debug\n\n\033[0;0m"
