@@ -18,7 +18,7 @@ proxy_interval="300"
 proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
-threads="${2:-500}"
+threads="${2:-1000}"
 if ((threads < 200));
 then
 	threads=200
