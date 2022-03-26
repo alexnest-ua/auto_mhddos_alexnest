@@ -66,7 +66,7 @@ https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 ht
 
 #https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 https://151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 tcp://93.85.84.202:22 tcp://93.85.84.202:80 tcp://93.85.84.202:443 --http-methods stress bypass head
 
-https://cargocash.ru/ http://cargocash.ru/ 94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:25 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:443 tcp://94.228.116.171:587 tcp://94.228.116.171:3306 --http-methods STRESS GET BYPASS
+https://cargocash.ru http://cargocash.ru 94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:25 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:443 tcp://94.228.116.171:587 tcp://94.228.116.171:3306 --http-methods BYPASS OVH CFB
 
 #94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 --http-methods stress get head
 
