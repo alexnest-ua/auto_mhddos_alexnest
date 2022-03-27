@@ -51,17 +51,17 @@ cd ~/auto_mhddos_alexnest
 ```shell
 screen -S "runner" bash runner.sh 
 ```
-2. Слаба машина(1 CPU + 1-2 GB RAM):
+2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 600 100 
+screen -S "runner" bash runner.sh 1 1500 200
 ```
-3. Середня машина(2 CPUs + 2-4 GB RAM), саме ці параметри за замовчуванням:
+3. Середня машина(2 CPUs + 2-4 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 1 1200 200
+screen -S "runner" bash runner.sh 2 2000 200
 ```
 4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 2 2500 250
+screen -S "runner" bash runner.sh 3 2500 250
 ```
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
