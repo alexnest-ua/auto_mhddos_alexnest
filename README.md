@@ -53,23 +53,23 @@ screen -S "runner" bash runner.sh
 ```
 2. Слаба машина(1 CPU + 1-2 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 1 300 100 
+screen -S "runner" bash runner.sh 1 600 100 
 ```
 3. Середня машина(2 CPUs + 2-4 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 500 100
+screen -S "runner" bash runner.sh 1 1200 200
 ```
 4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 2 2000 200
+screen -S "runner" bash runner.sh 2 2500 250
 ```
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 4 2000 300
+screen -S "runner" bash runner.sh 4 3000 300
 ```
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
-screen -S "runner" bash runner.sh all 3000 500
+screen -S "runner" bash runner.sh all 5000 500
 ```
   
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
