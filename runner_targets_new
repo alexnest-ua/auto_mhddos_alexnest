@@ -26,6 +26,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 
 https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
+https://tokyo-hm.ru https://tokyo-hm.ru/index/desserts/ https://tokyo-hm.ru/shipping-and-payment.html 185.78.31.31:80 185.78.31.31:443 https://185.78.31.31:443 tcp://185.78.31.31:21 tcp://185.78.31.31:22 tcp://185.78.31.31:80 tcp://185.78.31.31:443 --http-methods GET STRESS
+
 https://www.cse.ru/ tcp://185.65.20.5:443 tcp://185.65.22.8:8015 tcp://185.65.22.8:993 --http-methods CFB
 
 tcp://91.189.116.40:443 tcp://91.189.116.40:993 tcp://91.189.116.40:995 tcp://91.189.116.41:443 tcp://91.189.116.41:993 tcp://91.189.116.41:995 tcp://91.189.116.42:443 tcp://91.189.116.42:993
