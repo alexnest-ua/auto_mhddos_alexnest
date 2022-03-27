@@ -24,7 +24,7 @@ then
 	threads=200
 fi
 
-rpc="${3:-100}"
+rpc="${3:-200}"
 if ((rpc < 50));
 then
 	rpc=50
