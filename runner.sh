@@ -74,17 +74,17 @@ do
 	
    	if (("$num_of_copies" == "all"));
 	then	
-		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
+		if ((list_size > 7)); # takes not more than 7 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 5)
+			random_numbers=$(shuf -i 1-$list_size -n 7)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
 	elif ((num_of_copies > list_size));
 	then 
-		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
+		if ((list_size > 5)); # takes not more than 7 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 5)
+			random_numbers=$(shuf -i 1-$list_size -n 7)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
