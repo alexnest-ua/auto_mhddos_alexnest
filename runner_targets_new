@@ -22,7 +22,7 @@ https://cdek.ru https://lk.cdek.ru/user/login https://api.cdek.ru https://global
 
 tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://178.248.238.208:443 tcp://178.248.238.62:80 tcp://178.248.238.62:443 tcp://195.189.222.55:80 tcp://195.189.222.55:443 tcp://185.165.123.206:80 tcp://185.165.123.206:443 tcp://194.49.120.60:80 tcp://194.49.120.60:443 tcp://195.189.222.56:80 tcp://195.189.222.56:443 tcp://195.189.222.41:22 tcp://195.189.222.41:80 tcp://195.189.222.41:443 tcp://194.49.120.61:80 tcp://194.49.120.61:443  tcp://194.49.121.18:443 tcp://194.49.121.18:3389 tcp://195.189.222.60:25 tcp://195.189.222.60:80 tcp://195.189.222.60:443 tcp://195.189.222.60:465 tcp://195.189.222.60:993 tcp://185.165.123.200:80 tcp://185.165.123.200:443
 
-https://fstec.ru/ http://fstec.ru/ --http-methods CFB
+#https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
 https://anti-sushi.ru https://anti-sushi.ru/catalog/kombo/ https://anti-sushi.ru/catalog/special-offers/ 79.137.239.90:80 79.137.239.90:443 https://79.137.239.90:443 tcp://79.137.239.90:80 tcp://79.137.239.90:443 --http-methods GET STRESS
 
