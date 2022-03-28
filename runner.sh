@@ -14,7 +14,7 @@ echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 #sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
 #echo "Docker useless containers killed"
 
-proxy_interval="300"
+proxy_interval="1200"
 proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
