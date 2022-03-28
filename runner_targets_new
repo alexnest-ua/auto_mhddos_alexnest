@@ -24,6 +24,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 
 #https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
+https://www.cryptopro.ru/order/OrderForm.aspx?catid=c26ac260-7cfc-e811-870f-0025900a9ce7~ http://178.238.112.83:80 http://178.238.112.83:443 https://178.238.112.83:443 tcp://178.238.112.83:80 tcp://178.238.112.83:443 --http-methods GET POST
+
 https://bank-online-kabinet.ru/wp-json/ http://87.236.16.13:80 http://87.236.16.13:443 https://87.236.16.13:443 tcp://87.236.16.13:21 tcp://87.236.16.13:22 tcp://87.236.16.13:80 tcp://87.236.16.13:443 --http-methods GET STRESS
 
 https://anti-sushi.ru https://anti-sushi.ru/catalog/kombo/ https://anti-sushi.ru/catalog/special-offers/ 79.137.239.90:80 79.137.239.90:443 https://79.137.239.90:443 tcp://79.137.239.90:80 tcp://79.137.239.90:443 --http-methods GET STRESS
