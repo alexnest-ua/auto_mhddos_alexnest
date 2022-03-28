@@ -65,11 +65,11 @@ screen -S "runner" bash runner.sh 3 2500 250
 ```
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 4 3000 300
+screen -S "runner" bash runner.sh 4 3000 500
 ```
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
-screen -S "runner" bash runner.sh all 5000 500
+screen -S "runner" bash runner.sh all 5000 1000
 ```
   
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
