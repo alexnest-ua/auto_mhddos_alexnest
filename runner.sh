@@ -43,7 +43,8 @@ while [ 1 == 1 ]
 echo -e "\033[0;34m#####################################\033[0;0m\n"
 do	
 	cd ~/mhddos_proxy
-	sudo git pull origin main
+	sudo git pull origin main\
+	sudo pip3 install -r requirements.txt
 	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -c "Already")
