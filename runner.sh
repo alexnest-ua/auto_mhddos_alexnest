@@ -5,7 +5,7 @@ restart_interval=20m
 # TO DELETE WHEN EVERYTHING WILL BE OKAY WITH ORIGINAL REPO
 cd ~/mhddos_proxy
 sudo git checkout 49a4c8b034c2f7a5d3d0548e892414a2ebd30076
-#sudo pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 
 #Just in case kill previous copy of mhddos_proxy
 echo "Killing all old processes with MHDDoS"
