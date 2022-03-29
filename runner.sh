@@ -2,6 +2,7 @@
 
 restart_interval=20m
 
+ulimit -n 1048576
 # TO DELETE WHEN EVERYTHING WILL BE OKAY WITH ORIGINAL REPO
 cd ~/mhddos_proxy
 sudo git checkout 49a4c8b034c2f7a5d3d0548e892414a2ebd30076
