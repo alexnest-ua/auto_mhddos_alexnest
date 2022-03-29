@@ -21,7 +21,7 @@ sudo apt upgrade screen -y
 sudo apt install curl -y
 sudo apt upgrade curl -y
 sudo -H pip3 install --upgrade pip
-
+ulimit -n 1048576
 
 #Install latest version of mhddos_proxy and MHDDoS
 cd ~
