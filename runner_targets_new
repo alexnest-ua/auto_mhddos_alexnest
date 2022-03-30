@@ -26,6 +26,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 
 https://www.cryptopro.ru/order/OrderForm.aspx?catid=c26ac260-7cfc-e811-870f-0025900a9ce7~ http://178.238.112.83:80 http://178.238.112.83:443 https://178.238.112.83:443 tcp://178.238.112.83:80 tcp://178.238.112.83:443 --http-methods GET POST
 
+https://zala-aero.com/about/ https://zala-aero.com/production/ http://37.143.13.3:80 http://37.143.13.3:443 https://37.143.13.3:443 http://37.143.13.3:1500 https://37.143.13.3:1500 tcp://37.143.13.3:21 tcp://37.143.13.3:22 tcp://37.143.13.3:25 tcp://37.143.13.3:80 tcp://37.143.13.3:110 tcp://37.143.13.3:123 tcp://37.143.13.3:143 tcp://37.143.13.3:443 tcp://37.143.13.3:993 tcp://37.143.13.3:995 tcp://37.143.13.3:1500 --http-methods GET STRESS
+
 https://bank-online-kabinet.ru/wp-json/ http://87.236.16.13:80 http://87.236.16.13:443 https://87.236.16.13:443 tcp://87.236.16.13:21 tcp://87.236.16.13:22 tcp://87.236.16.13:80 tcp://87.236.16.13:443 --http-methods GET STRESS
 
 https://anti-sushi.ru https://anti-sushi.ru/catalog/kombo/ https://anti-sushi.ru/catalog/special-offers/ 79.137.239.90:80 79.137.239.90:443 https://79.137.239.90:443 tcp://79.137.239.90:80 tcp://79.137.239.90:443 --http-methods GET STRESS
