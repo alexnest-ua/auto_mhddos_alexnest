@@ -47,35 +47,35 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 ```shell
 cd ~/auto_mhddos_alexnest
 ```
-1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=500 rpc=100 debug="" (1 ціль, 500 потоків, 100 запитів на проксі, без дебагу)
+1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=500 debug="" (1 ціль, 1500 потоків, 500 запитів на проксі перед відправкою на ціль, без дебагу)
 ```shell
 screen -S "runner" bash runner.sh 
 ```
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 1500 200
+screen -S "runner" bash runner.sh 1 1500 500
 ```
 3. Середня машина(2 CPUs + 2-4 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 2 2000 200
+screen -S "runner" bash runner.sh 2 2000 750
 ```
 4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 3 2500 250
+screen -S "runner" bash runner.sh 3 2500 750
 ```
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 4 3000 500
+screen -S "runner" bash runner.sh 4 3000 1000
 ```
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
-screen -S "runner" bash runner.sh all 5000 1000
+screen -S "runner" bash runner.sh all 4000 1000
 ```
   
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
 ```shell
-screen -S "runner" bash runner.sh 1 500 100 --debug
+screen -S "runner" bash runner.sh 1 1500 500 --debug
 ```
 
 * Приклад БЕЗ параметру --debug:
@@ -95,9 +95,9 @@ screen -r runner
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  
 щоб вбити усі підпроцеси прописуєте (У ІНШОМУ ВІКНІ ТЕРМІНАЛУ):  
 ```shell
-sudo pkill -f runner.sh
-sudo pkill -f runner.py
-sudo pkill -f ./start.py
+sudo pkill -e -f runner.sh
+sudo pkill -e -f runner.py
+sudo pkill -e -f ./start.py
 ```
 
 * щоб знову від'єднатися, та залишити його працювати:  
@@ -112,7 +112,12 @@ bash install_docker.sh
 ```shell 
 sudo docker ps -af ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest  
 ```
-Вам видасть список запущенних контейнерів
+Вам видасть список запущенних контейнерів  
+  
+щоб вбити запущені docker-контейнери з mhddos_proxy пишіть це:
+```shell
+sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest) 
+```
 
 УВАГА!!! Скрипт при рестарті (кожні 10-20 хвилин) вбиває старі запущені скрипти саме з MHDDoSом, тому якщо запускаєте цей скрипт на машині-Linux, то інший MHDDoS запускайте лише через docker, або на іншій машині-Linux
   
