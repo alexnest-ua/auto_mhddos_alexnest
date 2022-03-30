@@ -4,9 +4,9 @@ restart_interval=20m
 
 ulimit -n 1048576
 # TO DELETE WHEN EVERYTHING WILL BE OKAY WITH ORIGINAL REPO
-cd ~/mhddos_proxy
-sudo git checkout 49a4c8b034c2f7a5d3d0548e892414a2ebd30076
-sudo pip3 install -r requirements.txt
+#cd ~/mhddos_proxy
+#sudo git checkout 49a4c8b034c2f7a5d3d0548e892414a2ebd30076
+#sudo pip3 install -r requirements.txt
 
 #Just in case kill previous copy of mhddos_proxy
 echo "Killing all old processes with MHDDoS"
@@ -46,9 +46,9 @@ fi
 while [ 1 == 1 ]
 echo -e "\033[0;34m#####################################\033[0;0m\n"
 do	
-	#cd ~/mhddos_proxy
-	#sudo git pull origin main
-	#sudo pip3 install -r requirements.txt
+	cd ~/mhddos_proxy
+	sudo git pull origin main
+	sudo pip3 install -r requirements.txt
 	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -c "Already")
@@ -130,7 +130,7 @@ do
    	sudo pkill -e -f ./start.py
    	echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
-   	no_ddos_sleep="$(shuf -i 2-10 -n 1)m"
+   	no_ddos_sleep="$(shuf -i 2-7 -n 1)m"
    	echo -e "\n\033[46mSleeping $no_ddos_sleep without DDoS to protect your machine from ban...\033[0m\n"
 	sleep $no_ddos_sleep
 	echo -e "\n\033[42mRESTARTING\033[0m\n"
