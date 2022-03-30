@@ -23,15 +23,15 @@ proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
 threads="${2:-1500}"
-if ((threads < 200));
+if ((threads < 500));
 then
-	threads=200
+	threads=500
 fi
 
-rpc="${3:-200}"
-if ((rpc < 50));
+rpc="${3:-500}"
+if ((rpc < 100));
 then
-	rpc=50
+	rpc=100
 fi
 
 debug="${4:-}"
@@ -87,7 +87,7 @@ do
 		fi
 	elif ((num_of_copies > list_size));
 	then 
-		if ((list_size > 5)); # takes not more than 7 targets to one attack (to deffend your machine)
+		if ((list_size > 7)); # takes not more than 7 targets to one attack (to deffend your machine)
 		then
 			random_numbers=$(shuf -i 1-$list_size -n 7)
 		else
