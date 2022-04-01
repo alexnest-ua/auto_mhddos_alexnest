@@ -84,7 +84,7 @@ screen -S "runner" bash runner.sh 4 3000 1000
 
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
-screen -S "runner" bash runner.sh all 4000 1000
+screen -S "runner" bash runner.sh all 4000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
