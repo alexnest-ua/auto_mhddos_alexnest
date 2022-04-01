@@ -53,36 +53,42 @@ screen -S "runner" bash runner.sh
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
 screen -S "runner" bash runner.sh 1 1500 500
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 3. Середня машина(2 CPUs + 2-4 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 2 2000 750
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 3 2500 750
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 5. Нормальна машина(4 CPUs + 8 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 4 3000 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 6. Потужна машина(4+ CPUs + 8+ CB RAM):
 ```shell
 screen -S "runner" bash runner.sh all 4000 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
   
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
@@ -91,6 +97,7 @@ screen -S "runner" bash runner.sh 1 1500 500 --debug
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
+
 
 * Приклад БЕЗ параметру --debug:
 ![image](https://user-images.githubusercontent.com/74729549/160018092-45e2e40d-f70c-4f6b-af14-6d0066dee1c7.png)
