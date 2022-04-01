@@ -12,6 +12,8 @@ https://russia-bilet.ru/ https://russia-bilet.ru/flights/moscow/ https://ticket.
 
 tcp://91.226.83.110:21 tcp://91.226.83.110:22 tcp://91.226.83.110:25 tcp://91.226.83.110:80 tcp://212.164.138.129:443 tcp://212.164.138.120:443 tcp://212.164.138.121:80 tcp://212.164.138.127:443 tcp://212.164.138.123:80 212.164.138.122 tcp://212.164.138.122:80
 
+https://spbexchange.ru/ https://spvb.ru/ https://www.moex.com/ https://emias-kabinet.ru/ https://www.citilink.ru/ http://194.247.132.130:80 https://194.247.132.130:443 http://185.63.191.14:80 tcp://185.178.208.131:80 tcp://185.178.208.131:443 tcp://178.176.128.128:443 tcp://178.176.128.128:444 tcp://178.176.128.128:7264 tcp://178.176.128.128:10080 --http-methods GET BYPASS STRESS
+
 ### rusvesna.su https://t.me/c/1624648668/87
 #http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
 
