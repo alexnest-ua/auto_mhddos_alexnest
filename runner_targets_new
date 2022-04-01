@@ -4,7 +4,7 @@ https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-
 
 https://riafan.ru --http-methods GET BYPASS STRESS
 
-#https://rusinskiimir.ru http://31.31.198.209:80 https://31.31.198.209:443 http://31.31.198.209:8080 https://31.31.198.209:8443 http://31.31.198.209:8880 --http-methods BYPASS DGB
+https://rusinskiimir.ru http://31.31.198.209:80 https://31.31.198.209:443 http://31.31.198.209:8080 https://31.31.198.209:8443 http://31.31.198.209:8880 --http-methods GET STRESS
 
 http://new.kspz.ru/ http://ulnammo.ru/vp/ http://www.barnaulpatron.ru/ru/ http://xn----7sbb5bnffjmff.xn--p1ai/en/index.php https://lztamarshal.ru/catalog/ http://www.tulammo.ru/en/ http://90.156.201.18:80 http://90.156.201.45:80 http://90.156.201.107:80 http://90.156.201.117:80 http://95.104.194.195:80 http://77.222.61.193:80 http://91.189.114.18:80 http://31.31.198.239:80 https://31.31.198.239:443 http://91.189.114.18:80 --http-methods GET STRESS
 
