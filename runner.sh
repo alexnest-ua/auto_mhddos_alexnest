@@ -56,13 +56,13 @@ do
    	then	
 		clear
 		echo -e "Running up to date mhddos_proxy"
-		sleep 5s
+		sleep 3s
 	else
 		cd ~/mhddos_proxy
 		clear
 		sudo pip3 install -r requirements.txt
 		echo "Running updated mhddos_proxy"
-		sleep 5s
+		sleep 3s
 	fi
 	
 	
@@ -73,12 +73,11 @@ do
    	if ((num == 1));
    	then	
 		clear
-		echo -e "Running up to date auto_mhddos"
+		echo -e "Running up to date auto_mhddos_alexnest"
 	else
 		cd ~/auto_mhddos_alexnest
 		clear
-		echo "Running updated auto_mhddos"
-		echo -e "\033[0;31m\n\ndebug in else in while: $debug\n\n\033[0;0m"
+		echo "Running updated auto_mhddos_alexnest"
 		bash runner.sh $num_of_copies $threads $rpc $debug& # run new downloaded script 
 		#sudo pkill -o -f runner.sh
 		return 0
