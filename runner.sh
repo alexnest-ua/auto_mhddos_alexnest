@@ -28,10 +28,10 @@ then
 	threads=500
 fi
 
-rpc="${3:-500}"
-if ((rpc < 100));
+rpc="${3:-1000}"
+if ((rpc < 1000));
 then
-	rpc=100
+	rpc=1000
 fi
 
 debug="${4:-}"
