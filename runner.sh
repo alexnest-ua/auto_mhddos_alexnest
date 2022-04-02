@@ -47,8 +47,24 @@ while [ 1 == 1 ]
 echo -e "\033[0;34m#####################################\033[0;0m\n"
 do	
 	cd ~/mhddos_proxy
-	sudo git pull origin main
-	sudo pip3 install -r requirements.txt
+
+
+	num0=$(sudo git pull origin main | grep -c "Already")
+   	echo "$num0"
+   	
+   	if ((num0 == 1));
+   	then	
+		clear
+		echo -e "Running up to date mhddos_proxy"
+		sleep 5s
+	else
+		cd ~/mhddos_proxy
+		clear
+		sudo pip3 install -r requirements.txt
+		echo "Running updated mhddos_proxy"
+		sleep 5s
+	fi
+	
 	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -c "Already")
