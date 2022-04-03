@@ -28,6 +28,12 @@ https://www.cdek.ru https://cdek.kz/ru/ https://cdek.by/ru/ https://bonus.cdek.r
 
 http://178.248.238.208:80 http://193.232.108.86:80 https://193.107.237.86:443 https://185.65.22.9:443 http://194.49.120.60:80 https://194.49.120.60:443 tcp://178.248.232.188:80 tcp://178.248.232.188:443 --http-methods GET STRESS
 
+https://www.cdek.ru https://cdekid.cdek.ru https://tender-buy.cdek.ru/Tenders https://cdek.kz/ru/ https://cdek.by/ru/ https://bonus.cdek.ru https://api.cdek.ru https://global.cdek.ru https://mx12.cdek.ru http://pokupkiusa.cdek.ru https://shopoglot.com/?ref=cdek https://pokupkiusa.track24.ru/ http://login.izusa.cdek.ru https://fivepost.ru  --http-methods GET STRESS
+
+https://195.189.222.59:443 https://194.49.120.61:443 http://195.189.222.42:80 tcp://195.189.222.62:25 https://194.49.120.60:443 https://194.49.120.61:443 tcp://195.189.222.62:465 tcp://194.49.120.61:443 tcp://195.189.222.58:80 tcp://195.189.222.58:465 tcp://178.248.234.88:80 --http-methods GET STRESS
+
+udp://195.189.222.19:53 udp://178.248.234.88:53 udp://178.248.235.87:53
+
 ### rusvesna.su https://t.me/c/1624648668/87
 http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB STRESS GET
 
