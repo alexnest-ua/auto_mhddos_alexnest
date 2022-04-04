@@ -46,7 +46,7 @@ udp://195.189.222.19:53 udp://178.248.234.88:53 udp://178.248.235.87:53
 http://rusvesna.su/ http://m.rusvesna.su/ --http-methods CFB STRESS GET
 
 # https://carte.by/vitebsk/dostavka/
-https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 tcp://193.176.182.165:2326  --http-methods BYPASS GET STRESS
+https://carte.by/source/front/api.js https://carte.by/minsk/hpl/export/ https://carte.by/vitebsk/dostavka/ 193.176.182.165:80 193.176.182.165:443 tcp://193.176.182.165:80 tcp://193.176.182.165:443 tcp://193.176.182.165:2326  --http-methods GET STRESS
 
 ### smotrim.ru 
 tcp://80.249.129.244:443 tcp://80.249.129.244:80
