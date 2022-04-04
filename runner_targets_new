@@ -1,3 +1,7 @@
+ https://vetrf.ru/ https://idp.vetrf.ru/idp/profile/SAML2/POST/SSO?execution=e1s1 https://duma.vetrf.ru/ https://vesta.vetrf.ru/ https://accounts.vetrf.ru https://cerberus.vetrf.ru/cerberus/ https://ecert.vetrf.ru https://help.vetrf.ru/wiki/ https://t2-idp.vetrf.ru/idp/ https://t2-aplms.vetrf.ru/pub/ --http-methods GET STRESS
+
+https://62.76.145.83:443 http://62.76.145.85:8443 http://62.76.145.203:80 http://62.76.145.203:8080 tcp://62.76.145.85:8443 tcp://62.76.145.84:443 tcp://62.76.145.10:80 tcp://62.76.145.10:443 --http-methods GET STRESS
+
 https://payanyway.ru https://www.avtovokzaly.ru https://bus.tutu.ru https://185.111.86.13:443 --http-methods GET DGB STRESS
 
 https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-methods GET STRESS
