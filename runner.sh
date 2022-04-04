@@ -22,10 +22,10 @@ proxy_interval="1200"
 proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
-threads="${2:-4000}"
-if ((threads < 4000));
+threads="${2:-3000}"
+if ((threads < 3000));
 then
-	threads=4000
+	threads=3000
 fi
 
 rpc="${3:-1000}"
