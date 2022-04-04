@@ -2,7 +2,8 @@
 
 restart_interval="2m"
 echo "$restart_interval"
-sleep 10
+sleep 5
+echo "5"
 sleep $restart_interval
 
 ulimit -n 1048576
