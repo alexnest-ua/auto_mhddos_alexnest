@@ -49,7 +49,7 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 ```shell
 cd ~/auto_mhddos_alexnest
 ```
-1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=500 debug="" (1 ціль, 1500 потоків, 500 запитів на проксі перед відправкою на ціль, без дебагу)
+1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=2000 rpc=1000 debug="" (1 ціль, 1500 потоків, 2000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```shell
 screen -S "runner" bash runner.sh 
 ```
@@ -58,7 +58,7 @@ screen -S "runner" bash runner.sh
 
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 3000 1000
+screen -S "runner" bash runner.sh 1 2000 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
