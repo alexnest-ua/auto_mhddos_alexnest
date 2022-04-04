@@ -22,10 +22,10 @@ proxy_interval="1200"
 proxy_interval="-p $proxy_interval"
 
 num_of_copies="${1:-1}"
-threads="${2:-1500}"
-if ((threads < 1000));
+threads="${2:-4000}"
+if ((threads < 4000));
 then
-	threads=1000
+	threads=4000
 fi
 
 rpc="${3:-1000}"
@@ -94,17 +94,17 @@ do
 	
    	if (("$num_of_copies" == "all"));
 	then	
-		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
+		if ((list_size > 3)); # takes not more than 3 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 5)
+			random_numbers=$(shuf -i 1-$list_size -n 3)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
 	elif ((num_of_copies > list_size));
 	then 
-		if ((list_size > 5)); # takes not more than 5 targets to one attack (to deffend your machine)
+		if ((list_size > 3)); # takes not more than 3 targets to one attack (to deffend your machine)
 		then
-			random_numbers=$(shuf -i 1-$list_size -n 5)
+			random_numbers=$(shuf -i 1-$list_size -n 3)
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
 		fi
