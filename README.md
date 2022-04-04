@@ -102,9 +102,9 @@ screen -S "runner" bash runner.sh 1 3000 1000 --debug
 
 
 * Приклад БЕЗ параметру --debug:
-![image](https://user-images.githubusercontent.com/74729549/160018092-45e2e40d-f70c-4f6b-af14-6d0066dee1c7.png)
+![image](https://user-images.githubusercontent.com/74729549/161614083-dc5ee162-f3cf-4b0f-8ccf-7874bf9d224a.png)
 * Приклад З параметром --debug:
-![image](https://user-images.githubusercontent.com/74729549/160018182-991ee42a-1ff0-434c-86fc-453b7909e96d.png)
+![image](https://user-images.githubusercontent.com/74729549/161614196-b8e778a1-3131-4c66-a371-7579d1489869.png)
 
 
 * щоб подивитися що там працює у фоні:  
