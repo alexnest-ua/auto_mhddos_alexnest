@@ -1,10 +1,6 @@
 #!/bin/bash
 
-restart_interval="2m"
-echo "$restart_interval"
-sleep 5
-echo "5"
-sleep $restart_interval
+restart_interval="20m"
 
 ulimit -n 1048576
 # TO DELETE WHEN EVERYTHING WILL BE OKAY WITH ORIGINAL REPO
