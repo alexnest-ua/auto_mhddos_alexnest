@@ -84,7 +84,7 @@ screen -S "runner" bash runner.sh 2 6000 2000
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-6. Потужна машина(8+ CPUs + 16+ CB RAM):
+6. Потужна машина(8+ CPUs + 16+ GB RAM):
 ```shell
 screen -S "runner" bash runner.sh all 10000 5000
 ```
