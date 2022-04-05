@@ -128,18 +128,23 @@ sudo pkill -e -f ./start.py
   
 Якщо немає Docker на машині(ВСТАНОВІТЬ НА МАЙБУТНЄ, бо можуть бути проблеми з python-скриптом, у зв'язку з кривими правками від розробників(якщо таке буде я автоматично переведу скрипт на docker)):  
 ```shell
-cd auto_mhddos_test
+git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
+cd ~/auto_mhddos_alexnest
 bash install_docker.sh
 ```    
-* якщо цікаво, чи запустилася docker-команда пропишіть це(ЗАРАЗ НЕ АКТУАЛЬНО):
+
+Запуск атак через Docker: https://hub.docker.com/r/alexnestua/auto_mhddos  
+  
+
+* якщо цікаво, чи запустилася docker-команда пропишіть це:
 ```shell 
-sudo docker ps -af ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest  
+sudo docker ps -af ancestor=alexnestua/auto_mhddos  
 ```
 Вам видасть список запущенних контейнерів  
   
 щоб вбити запущені docker-контейнери з mhddos_proxy пишіть це:
 ```shell
-sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest) 
+sudo docker kill $(sudo docker ps -aqf ancestor=alexnestua/auto_mhddos) 
 ```
 
 УВАГА!!! Скрипт при рестарті (кожні 10-20 хвилин) вбиває старі запущені скрипти саме з MHDDoSом, тому якщо запускаєте цей скрипт на машині-Linux, то інший MHDDoS запускайте лише через docker, або на іншій машині-Linux
@@ -147,7 +152,7 @@ sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon
 ## Список цілей  
 
   
-runner.sh підтримує единий [список цілей](https://raw.githubusercontent.com/alexnest-ua/auto_mhddos_alexnest/main/runner_targets_new), який можна тримати на github і постійно оновлювати.  
+runner.sh підтримує единий [список цілей](https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux), який можна тримати на github і постійно оновлювати.  
   
   
   
