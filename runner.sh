@@ -55,13 +55,11 @@ do
    	then	
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date mhddos_proxy"
-		sleep 3s
 	else
 		cd ~/mhddos_proxy
 		clear
 		sudo pip3 install -r requirements.txt
 		echo "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated mhddos_proxy"
-		sleep 3s
 	fi
 	
 	
