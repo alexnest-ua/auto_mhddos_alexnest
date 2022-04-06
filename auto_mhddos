@@ -184,7 +184,7 @@ self_run() {
 		print_green "Running attack for $attack_timeout: PID $attack_pid"
 		sleep "$attack_timeout"
 		print_blue "$attack_timeout of attack elapsed"
-		kill -- -"$attack_pid"
+		kill -- -"$attack_pid" 2>/dev/null || kill "$attack_pid" || true
 		print_green "Attack stopped: PID $attack_pid"
 
 		attack_sleep=$(shuf -i 2-6 -n 1)m
@@ -223,7 +223,6 @@ self_show() {
 
 	if attack_list=$(screen -ls | awk '{print $1}' | grep "\.${my_name}\."); then
 		if [ $# = 0 ]; then
-			print_blue "Running attacks:" >&2
 			echo "$attack_list"
 		else
 			if attack_name=$(self_show | grep -m1 "$1"); then
