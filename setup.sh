@@ -29,3 +29,4 @@ sudo rm -r mhddos_proxy
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd ~/mhddos_proxy
 sudo pip3 install -r requirements.txt
+cd ~/auto_mhddos_alexnest
