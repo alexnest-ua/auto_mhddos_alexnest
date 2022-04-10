@@ -123,7 +123,7 @@ self_install() {
 	if [ -f "$auto_dir"/"$my_name" ]; then
 		ln -sf "$auto_dir"/"$my_name" "$my_exe"
 	else
-		install -m 0700 "$my_path" "$my_exe"
+		install -m 0700 "$my_path" "$my_exe" || true
 	fi
 
 	rm -rfv "$tool_dir"
