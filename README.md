@@ -24,7 +24,7 @@ sudo apt install git -y
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
   
-**ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипти MHDDoS та усі залежності (один раз на новій машині):
+**ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипт mhddos_proxy та усі залежності (один раз на новій машині):
 ```shell
 cd ~/auto_mhddos_alexnest
 bash setup.sh
