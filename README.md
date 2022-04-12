@@ -42,7 +42,7 @@ docker run -it --rm --pull always alexnestua/auto_mhddos
   
 *чекаємо 5-10 хвилин поки все встановиться.*  
 
-## Запуск на роботу у фоні (24/7 на Linux-сервері) - можна закривати термінал
+## Запуск на роботу у фоні (24/7 на Linux-сервері та до завершення роботи на Windows) - можна закривати термінал
 Запуск автоматичного ДДоСу(без виведення на екран):  
 ```
 docker run -itd --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 
