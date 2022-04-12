@@ -1,15 +1,19 @@
 # Опис docker
 
-# ЯКЩО ВИ КОРИСТУВАЧ WINDOWS, ТО ЗАБУДЬТЕ ПРО ДОКЕР, БО ЦЕ ВІРТУАЛКА, ЯКА ЖРЕ УВЕСЬ ПРОЦЕССОР, ТА ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/runner_for_windows
+### ЯКЩО ВИ КОРИСТУВАЧ WINDOWS, ТО ЗАБУДЬТЕ ПРО ДОКЕР, БО ЦЕ ВІРТУАЛКА, ЯКА ЖРЕ УВЕСЬ ПРОЦЕССОР, ТА ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/runner_for_windows  
+### ЯКЩО ВИ КОРИСТУВАЧ LINUX - ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/auto_mhddos_alexnest
   
+### ЯКЩО ВИ ТАКИ ХОЧЕТЕ НАСИЛУВАТИ СВІЙ ПРОЦЕСОР - РОБІТЬ ТЕ ЩО НИЖЧЕ:  
+
 ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
 Також він автоматично оновлює не лише цілі, а й скрипти з mhddos_proxy та MHDDoS  
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 2-6 (рандомно) хвилин), тому знижується можливість блокування  
 Скрипт розподіляє список машин по різним цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
   
-[**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)
-[**Запуск команд**](
+[**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
+[**Запуск у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/docker/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96-%D1%82%D0%B0-%D0%B4%D0%BE-%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%BD%D1%8F-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%B8-%D0%BD%D0%B0-windows---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
+[**Приклади команд НЕ у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/docker/README.md#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%BD%D0%B5-%D1%83-%D1%84%D0%BE%D0%BD-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D0%BB%D1%8F-linux-%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5-sudo-%D0%B0%D0%B1%D0%BE-%D0%BA%D1%80%D0%B0%D1%89%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D1%8F%D0%BC%D1%83-httpsgithubcomalexnest-uaauto_mhddos_alexnest)  
 
 Канал, де координуються цілі: https://t.me/ddos_separ (звідти і беруться сюди цілі, тому якщо у вас на Linux запущено цей скрипт - то можете відпочивати, він все зробить за вас)  
 Чат, де ви можете задати свої питання: https://t.me/+8swDHSe_ROI5MmJi  
@@ -55,7 +59,7 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of
 - rpc - кількість запитів на проксі перед відправкою на ціль
 - debug - можливість дебагу (якщо хочете бачити повний інфу по атаці - у 4-ий параметр додайте --debug)
   
-### Приклади команд НЕ у фон з різними параметрами(для Linux додавайте sudo, або краще ставте на пряму: https://github.com/alexnest-ua/auto_mhddos_alexnest):
+### Приклади команд з різними параметрами(для Linux додавайте sudo, або краще ставте на пряму: https://github.com/alexnest-ua/auto_mhddos_alexnest):
 
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=3000 rpc=1000 debug="" (1 ціль, 3000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```
@@ -109,7 +113,7 @@ sudo docker kill $(docker ps -aqf name=alexnestua)
 ## Список цілей  
 
   
-alexnestua/auto_mhddos підтримує єдиний [список цілей](https://github.com/alexnest-ua/targets/blob/main/targets_docker), який можна тримати на github і постійно оновлювати.  
+ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest підтримує єдиний [список цілей](https://github.com/alexnest-ua/targets/blob/main/targets_docker), який можна тримати на github і постійно оновлювати.  
   
     
 Цілі не обов'язково видаляти із списку. Їх можна просто закоментувати і розкоментувати пізніше, якщо вони знов знадобляться. Скрипт використовує лише строки, які починаються не на #.  
