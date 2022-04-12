@@ -42,7 +42,7 @@ docker run -it --rm --pull always alexnestua/auto_mhddos
 ## Запуск на роботу у фоні (24/7 на Linux-сервері) - можна закривати термінал
 Запуск автоматичного ДДоСу(без виведення на екран):  
 ```
-docker run -itd --rm --pull always --name alexnest alexnestua/auto_mhddos 
+docker run -itd --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 
 ```
 
 **!!!УВАГА!!!** контейнер підтримує наступні параметри (САМЕ У ТАКОМУ ПОРЯДКУ ТА ЛИШЕ У ТАКІЙ КІЛЬКОСТІ(мінімум 3)), але можно і без них:  
@@ -56,28 +56,28 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of
 
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=3000 rpc=1000 debug="" (1 ціль, 3000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```
-docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest
 ```
 **CPUs** - це потоки вашого процесора (не ядра) - зазвичай потоків у два рази більше ніж ядер  
 
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```
-docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos 1 3000 1000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 1000
 ```
 
 3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos 1 5000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 5000 2000
 ```
 
 4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnest  alexnestua/auto_mhddos 2 6000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 6000 2000
 ```
 
 6. Потужна машина(9+ CPUs + 16+ CB RAM):
 ```
-docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos all 6000 5000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 6000 5000
 ```
 
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  (у його відкритій вкладці)  
@@ -85,7 +85,7 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos all 600
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
 ```
-docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos 1 3000 1000 --debug
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 1000 --debug
 ```
 
 * Приклад БЕЗ параметру --debug:
@@ -98,7 +98,7 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos 1 3000 
 docker ps  -a
 щоб вбити запущені раніше фонові підпроцеси на Linux прописуєте:  
 sudo docker kill $(docker ps -aqf name=alexnestua)
-або на Windows зайти у Docker Dekstop -> Containers / Apps -> Видалити container з ім'ям alexnest
+або на Windows зайти у Docker Dekstop -> Containers / Apps -> Видалити container з ім'ям alexnestua
 ```
 
 
