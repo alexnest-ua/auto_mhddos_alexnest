@@ -66,28 +66,21 @@ screen -S "runner" bash runner.sh 1 3000 1000
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-3. Середня машина(2 CPUs + 2-4 GB RAM):
+3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 1 5000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
-```shell
-screen -S "runner" bash runner.sh 1 6000 2000
-```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
-якщо все успішно буде повідомлення [detached from runner]  
-
-5. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
+4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 2 6000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-6. Потужна машина(8+ CPUs + 16+ GB RAM):
+5. Потужна машина(9+ CPUs + 16+ GB RAM):
 ```shell
 screen -S "runner" bash runner.sh all 10000 5000
 ```
