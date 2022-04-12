@@ -82,7 +82,7 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 6000 2000
 ```
 
-6. Потужна машина(9+ CPUs + 16+ CB RAM):
+5. Потужна машина(9+ CPUs + 16+ CB RAM):
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 6000 5000
 ```
