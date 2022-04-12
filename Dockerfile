@@ -9,7 +9,7 @@ RUN chmod +x setup.sh
 RUN ./setup.sh
 
 COPY runner.sh /
-RUN cmhod + x runner.sh
+RUN chmod +x runner.sh
 
 ENTRYPOINT ["/runner.sh"]
 CMD [ "bash", "runner.sh" ]
