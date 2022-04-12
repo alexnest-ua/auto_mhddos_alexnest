@@ -110,3 +110,7 @@ alexnestua/auto_mhddos підтримує єдиний [список цілей]
   
     
 Цілі не обов'язково видаляти із списку. Їх можна просто закоментувати і розкоментувати пізніше, якщо вони знов знадобляться. Скрипт використовує лише строки, які починаються не на #.  
+
+## Thanks
+
+Special thanks to https://github.com/OleksandrBlack and https://twitter.com/SprechenFuehrer  
