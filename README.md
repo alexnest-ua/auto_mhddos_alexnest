@@ -131,7 +131,7 @@ cd ~/auto_mhddos_alexnest
 bash install_docker.sh
 ```    
 
-Запуск атак через Docker: https://hub.docker.com/r/alexnestua/auto_mhddos  
+Запуск атак через Docker: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker
   
 
 * якщо цікаво, чи запустилася docker-команда пропишіть це:
