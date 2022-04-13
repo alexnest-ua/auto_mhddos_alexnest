@@ -18,6 +18,10 @@ echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old proce
 #sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
 #echo "Docker useless containers killed"
 
+sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
+sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
+
+
 proxy_interval="1200"
 proxy_interval="-p $proxy_interval"
 
@@ -46,6 +50,7 @@ fi
 while [ 1 == 1 ]
 do	
 	cd ~/mhddos_proxy
+	
 
 	num0=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num0"
