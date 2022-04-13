@@ -63,7 +63,7 @@ do
 	
 	
 	cd ~/auto_mhddos_alexnest
-   	num=$(git pull origin main | grep -P -c 'Already|Уже')
+   	num=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num"
    	
    	if ((num == 1));
