@@ -47,7 +47,7 @@ while [ 1 == 1 ]
 do	
 	cd ~/mhddos_proxy
 
-	num0=$(sudo git pull origin main | grep -c "Already")
+	num0=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num0"
    	
    	if ((num0 == 1));
@@ -63,7 +63,7 @@ do
 	
 	
 	cd ~/auto_mhddos_alexnest
-   	num=$(git pull origin main | grep -c "Already")
+   	num=$(git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num"
    	
    	if ((num == 1));
