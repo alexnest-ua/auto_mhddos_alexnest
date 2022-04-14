@@ -97,6 +97,7 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 
 * Приклад БЕЗ параметру --debug:
 ![image](https://github.com/alexnest-ua/special_files/blob/main/screenshots/docker_no_debug.png?raw=true)
+І після цього наступні 300 секунд НІЧОГО не буде виводитись, але це нормально
 * Приклад З параметром --debug:
 ![image](https://github.com/alexnest-ua/special_files/blob/main/screenshots/docker_debug.png?raw=true)
 
