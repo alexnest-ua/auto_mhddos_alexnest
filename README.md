@@ -107,6 +107,7 @@ screen -S "runner" bash runner.sh 1 3000 1000 --debug
 
 * Приклад БЕЗ параметру --debug:
 ![image](https://user-images.githubusercontent.com/74729549/161614083-dc5ee162-f3cf-4b0f-8ccf-7874bf9d224a.png)
+І після цього наступні 300 секунд НІЧОГО не буде виводитись, але це нормально
 * Приклад З параметром --debug:
 ![image](https://user-images.githubusercontent.com/74729549/161614196-b8e778a1-3131-4c66-a371-7579d1489869.png)
 
