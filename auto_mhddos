@@ -162,6 +162,8 @@ self_run() {
 			return
 		}
 
+		cd "$tool_dir"
+
 		if [ "$target_mode" = custom ]; then
 			print_blue "Custom target: $*"
 			python3 "$tool_dir"/runner.py "$@" &
