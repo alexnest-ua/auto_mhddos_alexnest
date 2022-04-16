@@ -1,11 +1,19 @@
 # Опис
   
 runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
-Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипти з mhddos_proxy та MHDDoS: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L46
-Також мій скрипт імітує роботу людини (вимикає увесь ДДоС на 2-6 (рандомно) хвилин, тобто вашу машину 95% не забанять, якщо правильно підібрати кількість потоків: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L132
-Скрипт розподіляє список машин по різним цілям  
+Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L46
+Також скрипт імітує роботу людини (вимикає увесь ДДоС на 2-6 (рандомно) хвилин), тому знижується можливість блокування:  
+https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L132
+Скрипт розподіляє список машин по різним цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux  
+Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker   
   
-чат де координуються цілі: https://t.me/ddos_separ (звідти і беруться сюди цілі, тому якщо у вас на Linux запущено цей скрипт - то можете відповчивати, він все зробить за вас)  
+[**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
+[**Запуск у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
+[**Приклади команд**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8)  
+
+
+  
+Канал, де координуються цілі: https://t.me/ddos_separ (звідти і беруться сюди цілі, тому якщо у вас на Linux запущено цей скрипт - то можете відповчивати, він все зробить за вас)  
 чат де ви можете задати свої питання: https://t.me/+8swDHSe_ROI5MmJi  
 також можете писати мені в особисті у телеграм, я завжди усім відповідаю: @brainqdead
   
@@ -21,7 +29,7 @@ sudo apt install git -y
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
   
-**ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипти MHDDoS та усі залежності (один раз на новій машині):
+**ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипт mhddos_proxy та усі залежності (один раз на новій машині):
 ```shell
 cd ~/auto_mhddos_alexnest
 bash setup.sh
@@ -56,35 +64,31 @@ screen -S "runner" bash runner.sh
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
+**CPUs** - це потоки вашого процесора (не ядра) - зазвичай потоків у два рази більше ніж ядер    
+
+
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 2000 1000
+screen -S "runner" bash runner.sh 1 3000 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-3. Середня машина(2 CPUs + 2-4 GB RAM):
+3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 1 5000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-4. Середня+ машина(2-4 CPUs + 4-8 GB RAM):
-```shell
-screen -S "runner" bash runner.sh 1 6000 2000
-```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
-якщо все успішно буде повідомлення [detached from runner]  
-
-5. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
+4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```shell
 screen -S "runner" bash runner.sh 2 6000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-6. Потужна машина(8+ CPUs + 16+ GB RAM):
+5. Потужна машина(9+ CPUs + 16+ GB RAM):
 ```shell
 screen -S "runner" bash runner.sh all 10000 5000
 ```
@@ -103,6 +107,7 @@ screen -S "runner" bash runner.sh 1 3000 1000 --debug
 
 * Приклад БЕЗ параметру --debug:
 ![image](https://user-images.githubusercontent.com/74729549/161614083-dc5ee162-f3cf-4b0f-8ccf-7874bf9d224a.png)
+І після цього наступні 300 секунд НІЧОГО не буде виводитись, але це нормально
 * Приклад З параметром --debug:
 ![image](https://user-images.githubusercontent.com/74729549/161614196-b8e778a1-3131-4c66-a371-7579d1489869.png)
 
@@ -116,12 +121,6 @@ screen -ls
 screen -r runner  
 ```
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  
-щоб вбити усі підпроцеси прописуєте (У ІНШОМУ ВІКНІ ТЕРМІНАЛУ):  
-```shell
-sudo pkill -e -f runner.sh
-sudo pkill -e -f runner.py
-sudo pkill -e -f ./start.py
-```
 
 * щоб знову від'єднатися, та залишити його працювати:  
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
@@ -133,7 +132,7 @@ cd ~/auto_mhddos_alexnest
 bash install_docker.sh
 ```    
 
-Запуск атак через Docker: https://hub.docker.com/r/alexnestua/auto_mhddos  
+Запуск атак через Docker: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker
   
 
 * якщо цікаво, чи запустилася docker-команда пропишіть це:
@@ -156,4 +155,4 @@ runner.sh підтримує единий [список цілей](https://raw.
   
   
   
-Цілі не обов'язково видаляти із списку. Їх можна просто закоментувати і розкоментувати пізніше, якщо вони знов знадобляться. Скрипт використовує лише строки, які починаються на 'runner.py'.  
+Цілі не обов'язково видаляти із списку. Їх можна просто закоментувати і розкоментувати пізніше, якщо вони знов знадобляться. Скрипт використовує лише строки, які починаються не на #.  

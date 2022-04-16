@@ -18,6 +18,10 @@ echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old proce
 #sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
 #echo "Docker useless containers killed"
 
+sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
+sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
+
+
 proxy_interval="1200"
 proxy_interval="-p $proxy_interval"
 
@@ -46,9 +50,9 @@ fi
 while [ 1 == 1 ]
 do	
 	cd ~/mhddos_proxy
+	
 
-
-	num0=$(sudo git pull origin main | grep -c "Already")
+	num0=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num0"
    	
    	if ((num0 == 1));
@@ -64,7 +68,7 @@ do
 	
 	
 	cd ~/auto_mhddos_alexnest
-   	num=$(sudo git pull origin main | grep -c "Already")
+   	num=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num"
    	
    	if ((num == 1));
@@ -142,9 +146,9 @@ do
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 2-6 -n 1)m"
-   	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m]\033[46mSleeping $no_ddos_sleep without DDoS to protect your machine from ban...\033[0m\n"
+   	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[36mSleeping $no_ddos_sleep without DDoS to protect your machine from ban...\033[0m\n"
 	sleep $no_ddos_sleep
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m]\033[42mRESTARTING\033[0m\n"
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mRESTARTING\033[0m\n"
 	
 	# for docker
    	#echo "Kill all useless docker-containers with MHDDoS"
