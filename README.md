@@ -65,7 +65,7 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest
 ```
-**CPUs** - це потоки вашого процесора (не ядра) - зазвичай потоків у два рази більше ніж ядер  
+**CPUs** - це ядра вашого процесора - зазвичай ядер у два рази менше ніж потоків
 
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```
