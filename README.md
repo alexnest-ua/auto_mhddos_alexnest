@@ -57,7 +57,7 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 ```shell
 cd ~/auto_mhddos_alexnest
 ```
-1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=3000 rpc=1000 debug="" (1 ціль, 3000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
+1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=1000 debug="" (1 ціль, 1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```shell
 screen -S "runner" bash runner.sh 
 ```
@@ -69,28 +69,28 @@ screen -S "runner" bash runner.sh
 
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 3000 1000
+screen -S "runner" bash runner.sh 1 1500 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 1 5000 2000
+screen -S "runner" bash runner.sh 1 3000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```shell
-screen -S "runner" bash runner.sh 2 6000 2000
+screen -S "runner" bash runner.sh 2 5000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 5. Потужна машина(9+ CPUs + 16+ GB RAM):
 ```shell
-screen -S "runner" bash runner.sh all 10000 5000
+screen -S "runner" bash runner.sh all 5000 2500
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
@@ -99,7 +99,7 @@ screen -S "runner" bash runner.sh all 10000 5000
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
 ```shell
-screen -S "runner" bash runner.sh 1 3000 1000 --debug
+screen -S "runner" bash runner.sh 1 1500 1000 --debug
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
