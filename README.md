@@ -61,7 +61,7 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of
   
 ### Приклади команд з різними параметрами(для Linux додавайте sudo, або краще ставте на пряму: https://github.com/alexnest-ua/auto_mhddos_alexnest):
 
-1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=3000 rpc=1000 debug="" (1 ціль, 3000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
+1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=1000 debug="" (1 ціль, 1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest
 ```
@@ -69,22 +69,22 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 
 2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 1000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 1000
 ```
 
 3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 5000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 2000
 ```
 
 4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 6000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 5000 2000
 ```
 
 5. Потужна машина(9+ CPUs + 16+ CB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 6000 5000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 5000 2500
 ```
 
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  (у його відкритій вкладці)  
@@ -92,7 +92,7 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 1000 --debug
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 1000 --debug
 ```
 
 * Приклад БЕЗ параметру --debug:
