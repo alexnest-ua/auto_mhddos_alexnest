@@ -1,4 +1,7 @@
 # Опис
+
+[**Варіант для Windows**](https://github.com/alexnest-ua/runner_for_windows)  
+[**Варіант для Docker**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker)  
   
 runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
 Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L46
