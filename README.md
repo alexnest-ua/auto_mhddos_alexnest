@@ -5,7 +5,7 @@
   
 runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
 Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L46
-Також скрипт імітує роботу людини (вимикає увесь ДДоС на 2-6 (рандомно) хвилин), тому знижується можливість блокування:  
+Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування:  
 https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/0566b426a4960b283024a37b6995c5b8260d2795/runner.sh#L132
 Скрипт розподіляє список машин по різним цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/main/runner.sh
