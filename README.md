@@ -7,7 +7,7 @@
 
 ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
 Також він автоматично оновлює не лише цілі, а й скрипти з mhddos_proxy та MHDDoS  
-Також скрипт імітує роботу людини (вимикає увесь ДДоС на 2-6 (рандомно) хвилин), тому знижується можливість блокування  
+Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
 Скрипт розподіляє список машин по різним цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
   
