@@ -134,22 +134,10 @@ git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 cd ~/auto_mhddos_alexnest
 bash install_docker.sh
 ```    
+   
 
-Запуск атак через Docker: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker
-  
 
-* якщо цікаво, чи запустилася docker-команда пропишіть це:
-```shell 
-sudo docker ps -af ancestor=alexnestua/auto_mhddos  
-```
-Вам видасть список запущенних контейнерів  
-  
-щоб вбити запущені docker-контейнери з mhddos_proxy пишіть це:
-```shell
-sudo docker kill $(sudo docker ps -aqf ancestor=alexnestua/auto_mhddos) 
-```
-
-УВАГА!!! Скрипт при рестарті (кожні 10-20 хвилин) вбиває старі запущені скрипти саме з MHDDoSом, тому якщо запускаєте цей скрипт на машині-Linux, то інший MHDDoS запускайте лише через docker, або на іншій машині-Linux
+УВАГА!!! Скрипт при рестарті (кожні 20 хвилин) вбиває запущені скрипти саме з mhddos_proxy, тому якщо запускаєте цей скрипт на машині-Linux, то свої атаки mhddos_proxy запускайте лише через docker, або на іншій машині-Linux
   
 ## Список цілей  
 
