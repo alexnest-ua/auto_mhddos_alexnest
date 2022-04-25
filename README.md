@@ -8,7 +8,7 @@
 ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
 Також він автоматично оновлює не лише цілі, а й скрипти з mhddos_proxy та MHDDoS  
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
-Скрипт розподіляє список машин по різним цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
+Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
   
 [**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
@@ -24,7 +24,7 @@
 ## Налаштування (встановлення)
   
 * щоб скачати на Windows / Mac:  
-https://www.docker.com/get-started/ (якщо виникають якісь проблеми: пишіть мені @brainqdead (телеграм)
+https://www.docker.com/get-started/ (якщо виникають якісь проблеми: пишіть мені @brainqdead (телеграм))
 
 * щоб скачати на Linux-машину(але краще ставте напряму: https://github.com/alexnest-ua/auto_mhddos_alexnest ):  
 ```
@@ -74,12 +74,12 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 
 3. Середня машина(2-4 CPUs + 2-8 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 3000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 2000 2000
 ```
 
 4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 5000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 4000 2000
 ```
 
 5. Потужна машина(9+ CPUs + 16+ CB RAM):
