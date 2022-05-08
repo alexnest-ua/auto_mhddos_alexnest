@@ -1,13 +1,14 @@
 # Опис docker
 
 ### ЯКЩО ВИ КОРИСТУВАЧ WINDOWS, ТО ЗАБУДЬТЕ ПРО ДОКЕР, БО ЦЕ ВІРТУАЛКА, ЯКА ЖРЕ УВЕСЬ ПРОЦЕССОР, ТА ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/runner_for_windows  
+### ЯКЩО ВИ КОРИСТУВАЧ MAC - ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/auto_mhddos_mac
 ### ЯКЩО ВИ КОРИСТУВАЧ LINUX - ЙДІТЬ СЮДИ: https://github.com/alexnest-ua/auto_mhddos_alexnest
   
-### ЯКЩО ВИ ТАКИ ХОЧЕТЕ НАСИЛУВАТИ СВІЙ ПРОЦЕСОР - РОБІТЬ ТЕ ЩО НИЖЧЕ:  
+### ЯКЩО ВИ ТАКИ ХОЧЕТЕ НАСИЛУВАТИ СВІЙ ПРОЦЕСОР ДОКЕРОМ - РОБІТЬ ТЕ ЩО НИЖЧЕ:  
 
-ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
-Також він автоматично оновлює не лише цілі, а й скрипти з mhddos_proxy та MHDDoS  
-Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
+ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) 
+Також він автоматично оновлює не лише свій скрипт та цілі, а й сам скрипт mhddos_proxy  
+Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-2 (рандомно) хвилин), щоб дати машині трохи відпочити
 Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
   
@@ -55,7 +56,7 @@ docker run -itd --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mh
 **!!!УВАГА!!!** контейнер підтримує наступні параметри (САМЕ У ТАКОМУ ПОРЯДКУ ТА ЛИШЕ У ТАКІЙ КІЛЬКОСТІ(мінімум 3)), але можно і без них:  
 docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of_copies] [threads] [rpc] [debug]  
 - num_of_copies - кількість атакуємих за один прохід цілей
-- threads - кількість потоків на кожне ядро процесора
+- threads - кількість потоків
 - rpc - кількість запитів на проксі перед відправкою на ціль
 - debug - можливість дебагу (якщо хочете бачити повний інфу по атаці - у 4-ий параметр додайте --debug)
   
