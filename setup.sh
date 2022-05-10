@@ -10,3 +10,7 @@ sudo rm -r mhddos_proxy
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd ~/mhddos_proxy
 sudo pip3 install -r requirements.txt
+
+git clone https://github.com/alexnest-ua/proxy_finder.git
+cd ~/proxy_finder
+sudo pip3 install -r requirements.txt
