@@ -1,6 +1,11 @@
 #!/bin/bash
 
+#Just in case kill previous copy of mhddos_proxy and finder
+echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with DDoS and finder"
+sudo pkill -e -f runner.py
 sudo pkill -e -f finder.py
+echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with DDoS and finder\033[0;0m\n"
+
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling our proxy_finder...\033[0;0m\n"
 sleep 3s
 cd ~
@@ -15,10 +20,6 @@ restart_interval="20m"
 
 ulimit -n 1048576
 
-#Just in case kill previous copy of mhddos_proxy
-echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
-sudo pkill -e -f runner.py
-echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 
 sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
 sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
@@ -173,10 +174,10 @@ do
 	clear
    	
    	#Just in case kill previous copy of mhddos_proxy
-   	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
+   	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with DDoS and finder"
    	sudo pkill -e -f runner.py
 	sudo pkill -e -f finder.py
-   	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
+   	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with DDoS and finder killed\033[0;0m\n"
 	
    	no_ddos_sleep="$(shuf -i 1-3 -n 1)m"
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[36mSleeping $no_ddos_sleep without DDoS to let your computer cool down...\033[0m\n"
