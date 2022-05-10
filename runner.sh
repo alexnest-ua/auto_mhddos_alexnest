@@ -1,12 +1,12 @@
 #!/bin/bash
 
 sudo pkill -e -f finder.py
-echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling our proxy finder...\033[0;0m\n"
+echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling our proxy_finder...\033[0;0m\n"
 sleep 3s
 cd ~
 git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
 cd ~/proxy_finder
-echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy finder...\033[0;0m\n\n"
+echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy_finder...\033[0;0m\n\n"
 sleep 3s
 sudo pip3 install -r requirements.txt
 cd ~
@@ -79,7 +79,6 @@ while [ 1 == 1 ]
 do	
 	cd ~/mhddos_proxy
 	
-
 	num0=$(sudo git pull origin main | grep -P -c 'Already|Уже')
    	echo "$num0"
    	
@@ -95,6 +94,22 @@ do
 		sleep 2s
 	fi
 	
+	cd ~/proxy_finder	
+
+	num0=$(sudo git pull origin main | grep -P -c 'Already|Уже')
+   	echo "$num0"
+   	
+   	if ((num0 == 1));
+   	then	
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date proxy_finder"
+	else
+		cd ~/mhddos_proxy
+		sudo pip3 install -r requirements.txt
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated proxy_finder"
+		sleep 2s
+	fi
 	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -P -c 'Already|Уже')
