@@ -11,7 +11,7 @@ RUN pip3 install -r ~/mhddos_proxy/requirements.txt
 
 RUN mkdir ~/proxy_finder
 RUN git clone https://github.com/porthole-ascend-cinnamon/proxy_finder.git ~/proxy_finder
-RUN pip3 install -r ~/mhddos_proxy/requirements.txt 
+RUN pip3 install -r ~/proxy_finder/requirements.txt 
  
 COPY runner.sh / 
 RUN chmod +x runner.sh 
