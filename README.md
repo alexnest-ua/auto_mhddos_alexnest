@@ -1,6 +1,6 @@
 # Опис
  
-runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)  
+runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)    
 Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy:  
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
 Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux  
@@ -123,7 +123,7 @@ screen -ls
 ```shell 
 screen -r runner  
 ```
-Після цього, якщо хочете вбити процес - натискайте Ctrl+C(або якщо не спрацює - у іншому вікні пишіть `sudo pkill -e -f runner`  
+Після цього, якщо хочете вбити процес - натискайте Ctrl+C(або якщо не спрацює - у іншому вікні пишіть `sudo pkill -e -f runner`)  
 
 * щоб знову від'єднатися, та залишити його працювати:  
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
