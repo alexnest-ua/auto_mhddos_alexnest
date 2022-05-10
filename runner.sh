@@ -64,6 +64,7 @@ echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack
 sleep 7s
 
 sudo trap 'echo signal received!; kill "${PID}"; wait "${PID}"' SIGINT SIGTERM
+sleep 5s
 
 # Restarts attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
