@@ -23,6 +23,7 @@ ulimit -n 1048576
 
 sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
 sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
+sudo git config --global --add safe.directory /home/${USER}/proxy_finder
 
 num_of_copies="${1:-1}"
 if [[ "$num_of_copies" == "all" ]];
