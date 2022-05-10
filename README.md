@@ -6,8 +6,8 @@
   
 ### ЯКЩО ВИ ТАКИ ХОЧЕТЕ НАСИЛУВАТИ СВІЙ ПРОЦЕСОР ДОКЕРОМ - РОБІТЬ ТЕ ЩО НИЖЧЕ:  
 
-ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) 
-Також він автоматично оновлює не лише свій скрипт та цілі, а й сам скрипт mhddos_proxy  
+ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)    
+Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy та proxy_finder 
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-2 (рандомно) хвилин), щоб дати машині трохи відпочити
 Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
@@ -56,8 +56,8 @@ docker run -itd --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mh
 **!!!УВАГА!!!** контейнер підтримує наступні параметри (САМЕ У ТАКОМУ ПОРЯДКУ ТА ЛИШЕ У ТАКІЙ КІЛЬКОСТІ(мінімум 3)), але можно і без них:  
 docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of_copies] [threads] [rpc] [debug]  
 - num_of_copies - кількість атакуємих за один прохід цілей
-- threads - кількість потоків (але не менше 1000, та не більше 6000)
-- rpc - кількість запитів на проксі перед відправкою на ціль (але не менше 1000, та не більше 5000)
+- threads - кількість потоків (але не менше 5000, та не більше 4000)
+- rpc - кількість запитів на проксі перед відправкою на ціль (але не менше 1000, та не більше 2500)
 - debug - можливість дебагу (якщо хочете бачити повний інфу по атаці - у 4-ий параметр додайте --debug)
   
 ### Приклади команд з різними параметрами(для Linux додавайте sudo, або краще ставте на пряму: https://github.com/alexnest-ua/auto_mhddos_alexnest):
@@ -80,12 +80,12 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 
 4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 4000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 3000 2000
 ```
 
 5. Потужна машина(9+ CPUs + 16+ CB RAM):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 5000 2500
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 4000 2500
 ```
 
 Після цього, якщо хочете вбити процес - натискайте Ctrl+C  (у його відкритій вкладці)  
