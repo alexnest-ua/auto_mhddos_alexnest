@@ -11,13 +11,13 @@ sudo pkill -e -f runner.py
 sudo pkill -e -f finder.py
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 
-echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling files into correct directories...\033[0;0m\n"
-cd ~
-rm -rf proxy_finder
-git clone https://github.com/alexnest-ua/proxy_finder.git
-cd ~/proxy_finder
-sudo pip3 install -r requirements.txt
-echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mFiles installed successfully\033[1;0m\n\n"
+#echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling files into correct directories...\033[0;0m\n"
+#cd ~
+#rm -rf proxy_finder
+#git clone https://github.com/alexnest-ua/proxy_finder.git
+#cd ~/proxy_finder
+#sudo pip3 install -r requirements.txt
+#echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mFiles installed successfully\033[1;0m\n\n"
 
 num_of_copies="${1:-1}"
 if [[ "$num_of_copies" == "all" ]];
