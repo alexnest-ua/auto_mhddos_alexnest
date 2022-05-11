@@ -68,22 +68,22 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 ```
 **CPUs** - це ядра вашого процесора - зазвичай ядер у два рази менше ніж потоків
 
-2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
+2. Слаба машина(1 CPU), саме ці параметри за замовчуванням:
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 1000
 ```
 
-3. Середня машина(2-4 CPUs + 2-8 GB RAM):
+3. Середня машина(2-4 CPUs):
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 2000 2000
 ```
 
-4. Нормальна машина(4-8 CPUs + 8-16 GB RAM):
+4. Нормальна машина(4-8 CPUs):
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 3000 2000
 ```
 
-5. Потужна машина(9+ CPUs + 16+ CB RAM):
+5. Потужна машина(9+ CPUs):
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 4000 2500
 ```
