@@ -91,7 +91,6 @@ do
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date mhddos_proxy"
 	else
-		cd ~/mhddos_proxy
 		sudo pip3 install -r requirements.txt
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated mhddos_proxy"
@@ -108,7 +107,6 @@ do
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date proxy_finder"
 	else
-		cd ~/mhddos_proxy
 		sudo pip3 install -r requirements.txt
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated proxy_finder"
@@ -124,7 +122,6 @@ do
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date auto_mhddos_alexnest"
 	else
-		cd ~/auto_mhddos_alexnest
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated auto_mhddos_alexnest"
 		bash runner.sh $num_of_copies $threads $rpc $debug # run new downloaded script 
