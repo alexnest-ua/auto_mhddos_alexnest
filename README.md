@@ -70,28 +70,28 @@ screen -S "runner" bash runner.sh
 **CPUs** - це ядра вашого процесора - зазвичай ядер у два рази МЕНШЕ ніж потоків   
 
 
-2. Слаба машина(1 CPU + 1-2 GB RAM), саме ці параметри за замовчуванням:
+2. Слаба машина(1 CPU), саме ці параметри за замовчуванням:
 ```shell
 screen -S "runner" bash runner.sh 1 1000 1000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-3. Середня машина(2-4 CPUs + 2-8 GB RAM):
+3. Середня машина(2-4 CPUs):
 ```shell
 screen -S "runner" bash runner.sh 1 2000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-4. Нормальна машина(5-8 CPUs + 8-16 GB RAM):
+4. Нормальна машина(5-8 CPUs):
 ```shell
 screen -S "runner" bash runner.sh 2 3000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-5. Потужна машина(9+ CPUs + 16+ GB RAM):
+5. Потужна машина(9+ CPUs):
 ```shell
 screen -S "runner" bash runner.sh all 4000 2500
 ```
