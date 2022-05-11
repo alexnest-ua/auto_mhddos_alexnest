@@ -1,11 +1,10 @@
 #Just in case kill previous copy of mhddos_proxy
 sudo pkill -f runner.sh
 sudo pkill -f runner.py
-sudo pkill -f ./start.py
+sudo pkill -f finder.py
 
 
 sudo apt update -y
-sudo apt upgrade -y
 # Install git, python3
 sudo apt install git gcc libc-dev libffi-dev libssl-dev python3-dev rustc -y
 sudo apt install git -y
