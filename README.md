@@ -6,7 +6,7 @@
   
 ### ЯКЩО ВИ ТАКИ ХОЧЕТЕ НАСИЛУВАТИ СВІЙ ПРОЦЕСОР ДОКЕРОМ - РОБІТЬ ТЕ ЩО НИЖЧЕ:  
 
-ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)    
+ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) docker-контейнер для будь-яких машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)   
 Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy та proxy_finder 
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-2 (рандомно) хвилин), щоб дати машині трохи відпочити
 Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
