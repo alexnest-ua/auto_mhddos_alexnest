@@ -53,6 +53,7 @@ docker run -it --rm --pull always alexnestua/auto_mhddos
 ```
 docker run -itd --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 
 ```
+* Буде запущено атаку з наступними параметрами за замовчуванням: threads=1500 rpc=1000 debug="" vpn=""(1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу, без атаки через ваш ІР) та автоматично запустить паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
 
 **!!!УВАГА!!!** контейнер підтримує наступні параметри (САМЕ У ТАКОМУ ПОРЯДКУ ТА ЛИШЕ У ТАКІЙ КІЛЬКОСТІ(мінімум 3)), але можно і без них:  
 docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of_copies] [threads] [rpc] [debug]  
@@ -62,7 +63,9 @@ docker run -it --rm --pull always --name alexnest alexnestua/auto_mhddos [num_of
 - debug - можливість дебагу (якщо хочете бачити повний інфу по атаці - у 4-ий параметр додайте --debug)
   
 ### Приклади команд з різними параметрами(для Linux додавайте sudo, або краще ставте на пряму: https://github.com/alexnest-ua/auto_mhddos_alexnest):
-
+  
+* У всіх варіантах буде автоматично запущено паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
+  
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=1000 debug="" (1 ціль, 1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest
