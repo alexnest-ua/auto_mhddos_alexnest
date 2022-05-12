@@ -12,9 +12,10 @@
 Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_docker  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker  
   
-[**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
-[**Запуск у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/docker/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96-%D1%82%D0%B0-%D0%B4%D0%BE-%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%BD%D1%8F-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%B8-%D0%BD%D0%B0-windows---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
-[**Приклади команд НЕ у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/docker/README.md#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%BD%D0%B5-%D1%83-%D1%84%D0%BE%D0%BD-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D0%BB%D1%8F-linux-%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5-sudo-%D0%B0%D0%B1%D0%BE-%D0%BA%D1%80%D0%B0%D1%89%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D1%8F%D0%BC%D1%83-httpsgithubcomalexnest-uaauto_mhddos_alexnest)  
+[**Налаштування**](#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
+[**Запуск у фон**](#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96-%D1%82%D0%B0-%D0%B4%D0%BE-%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%BD%D1%8F-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%B8-%D0%BD%D0%B0-windows---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
+[**Приклади команд НЕ у фон**](#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D0%BB%D1%8F-linux-%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5-sudo-%D0%B0%D0%B1%D0%BE-%D0%BA%D1%80%D0%B0%D1%89%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D1%8F%D0%BC%D1%83-httpsgithubcomalexnest-uaauto_mhddos_alexnest)  
+[**Подивитися що там працює у фоні(для Linux додайте sudo на початку) та ВБИТИ процес**](#%D0%BF%D0%BE%D0%B4%D0%B8%D0%B2%D0%B8%D1%82%D0%B8%D1%81%D1%8F-%D1%89%D0%BE-%D1%82%D0%B0%D0%BC-%D0%BF%D1%80%D0%B0%D1%86%D1%8E%D1%94-%D1%83-%D1%84%D0%BE%D0%BD%D1%96%D0%B4%D0%BB%D1%8F-linux-%D0%B4%D0%BE%D0%B4%D0%B0%D0%B9%D1%82%D0%B5-sudo-%D0%BD%D0%B0-%D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%BA%D1%83-%D1%82%D0%B0-%D0%B2%D0%B1%D0%B8%D1%82%D0%B8-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81)
 
 Канал, де координуються цілі: https://t.me/ddos_separ (звідти і беруться сюди цілі, тому якщо у вас на Linux запущено цей скрипт - то можете відпочивати, він все зробить за вас)  
 Чат, де ви можете задати свої питання: https://t.me/+8swDHSe_ROI5MmJi  
@@ -88,7 +89,7 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest all 4000 2500
 ```
 
-Після цього, якщо хочете вбити процес - натискайте Ctrl+C  (у його відкритій вкладці)  
+Після цього, якщо хочете вбити процес - натискайте Ctrl+C  (у його відкритій вкладці) або якщо не спрацює - закривайте вікно.  
 
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
@@ -96,19 +97,22 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 1000 --debug
 ```
 
-* Приклад БЕЗ параметру --debug:
-![image](https://github.com/alexnest-ua/special_files/blob/main/screenshots/docker_no_debug.png?raw=true)
-І після цього наступні 300 секунд НІЧОГО не буде виводитись, але це нормально
-* Приклад З параметром --debug:
-![image](https://github.com/alexnest-ua/special_files/blob/main/screenshots/docker_debug.png?raw=true)
+* Приклад **БЕЗ** параметру --debug:  
+![image](https://user-images.githubusercontent.com/74729549/168058965-1116eb6a-6fc4-45d5-b2a8-eb7f5529ab87.png)  
+***наступні 5 хвилин буде виводитись лише інформація від proxy_finder про пошук проксі, але атака теж йде паралельно!***  
+* Приклад **З** параметром --debug:  
+![image](https://user-images.githubusercontent.com/74729549/168060170-b33ef233-3563-4cab-9439-55036d332a41.png)  
 
-* щоб подивитися що там працює у фоні(для Linux додайте sudo) та вбити процес:  
-```
+
+### Подивитися що там працює у фоні(для Linux додайте sudo на початку) та ВБИТИ процес:  
+```shell
 docker ps  -a
-щоб вбити запущені раніше фонові підпроцеси на Linux прописуєте:  
-sudo docker kill $(docker ps -aqf name=alexnestua)
-або на Windows зайти у Docker Dekstop -> Containers / Apps -> Видалити container з ім'ям alexnestua
 ```
+щоб вбити запущені раніше фонові Docker підпроцеси на Linux прописуєте:  
+```shell
+sudo docker kill $(docker ps -aqf name=alexnestua)
+```
+або на Windows зайти у Docker Dekstop -> Containers / Apps -> Видалити container з ім'ям alexnestua
 
 
 
