@@ -3,16 +3,17 @@
 runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)    
 Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy та proxy_finder  
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
-Скрипт розподіляє список машин по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux  
+Скрипт розподіляє ваші машини по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux (цілі беруться звідси: https://t.me/ddos_separ)  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/main/runner.sh  
 
 [**Варіант для Mac**](https://github.com/alexnest-ua/auto_mhddos_mac)  
 [**Варіант для Windows**](https://github.com/alexnest-ua/runner_for_windows)  
 [**Варіант для Docker**](https://github.com/alexnest-ua/auto_mhddos_alexnest/tree/docker)    
   
-[**Налаштування**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
-[**Запуск у фон**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
-[**Приклади команд**](https://github.com/alexnest-ua/auto_mhddos_alexnest#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8)  
+[**Налаштування**](#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F)  
+[**Запуск у фон**](#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%83-%D1%83-%D1%84%D0%BE%D0%BD%D1%96-247-%D0%BD%D0%B0-linux-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%96---%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%82%D0%B5%D1%80%D0%BC%D1%96%D0%BD%D0%B0%D0%BB)  
+[**Приклади команд з --debug та без**](#%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-%D0%B7-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8)  
+[**Повернення до фонового процесу**](#%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BE-%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%83)
 
 
   
@@ -108,13 +109,14 @@ screen -S "runner" bash runner.sh 1 1000 1000 --debug
 якщо все успішно буде повідомлення [detached from runner]  
 
 
-* Приклад БЕЗ параметру --debug:
-![image](https://user-images.githubusercontent.com/74729549/161614083-dc5ee162-f3cf-4b0f-8ccf-7874bf9d224a.png)
-І після цього наступні 300 секунд НІЧОГО не буде виводитись, але це нормально
-* Приклад З параметром --debug:
-![image](https://user-images.githubusercontent.com/74729549/161614196-b8e778a1-3131-4c66-a371-7579d1489869.png)
+* Приклад **БЕЗ** параметру --debug:  
+![image](https://user-images.githubusercontent.com/74729549/168058965-1116eb6a-6fc4-45d5-b2a8-eb7f5529ab87.png)  
+***наступні 5 хвилин буде виводитись лише інформація від proxy_finder про пошук проксі, але атака теж йде паралельно!***  
+* Приклад **З** параметром --debug:  
+![image](https://user-images.githubusercontent.com/74729549/168060170-b33ef233-3563-4cab-9439-55036d332a41.png)  
 
 
+## Повернення до фонового процесу
 * щоб подивитися що там працює у фоні:  
 ```shell 
 screen -ls  
