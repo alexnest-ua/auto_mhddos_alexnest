@@ -103,6 +103,7 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 * Приклад **З** параметром --debug:  
 ![image](https://user-images.githubusercontent.com/74729549/168060170-b33ef233-3563-4cab-9439-55036d332a41.png)  
 
+Далі кожні 5 хвилин воно буде оновлювати список проксі, а кожні 20 хвилин - цілі атаки    
 
 ### Подивитися що там працює у фоні(для Linux додайте sudo на початку) та ВБИТИ процес:  
 ```shell
