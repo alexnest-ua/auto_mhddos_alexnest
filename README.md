@@ -115,11 +115,12 @@ screen -S "runner" bash runner.sh 1 1000 1000 --debug
 
 
 * Приклад **БЕЗ** параметру --debug:  
-![image](https://user-images.githubusercontent.com/74729549/168058965-1116eb6a-6fc4-45d5-b2a8-eb7f5529ab87.png)  
+![image](https://user-images.githubusercontent.com/74729549/168069087-1d1d641e-4ded-43b8-99e4-1d0688e3d2f0.png)  
 ***наступні 5 хвилин буде виводитись лише інформація від proxy_finder про пошук проксі, але атака теж йде паралельно!***  
 * Приклад **З** параметром --debug:  
-![image](https://user-images.githubusercontent.com/74729549/168060170-b33ef233-3563-4cab-9439-55036d332a41.png)  
-
+![image](https://user-images.githubusercontent.com/74729549/168068441-0be60ba6-49c7-41de-a89c-c50410a50fef.png)  
+  
+Далі кожні 5 хвилин воно буде оновлювати список проксі, а кожні 20 хвилин - цілі атаки та перевіряти наявність оновлення (та встановлювати його якщо воно є)  
 
 ## Повернення до фонового процесу
 * щоб подивитися що там працює у фоні:  
