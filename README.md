@@ -46,7 +46,10 @@ bash setup.sh
 ```shell 
 cd ~/auto_mhddos_alexnest
 screen -S "runner" bash runner.sh  
-```
+```  
+  
+* Буде запущено атаку з наступними параметрами за замовчуванням: threads=1500 rpc=1000 debug="" vpn=""(1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу, без атаки через ваш ІР) та автоматично запустить паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
+  
 Далі кожні 5 хвилин воно буде оновлювати список проксі, а кожні 20 хвилин - цілі атаки та перевіряти наявність оновлення (та встановлювати його якщо воно є)  
   
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
@@ -65,7 +68,10 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 перед уведенням команд обов'язково зробити ось це:
 ```shell
 cd ~/auto_mhddos_alexnest
-```
+```  
+  
+У всіх варіантах буде автоматично запущено паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
+  
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1000 rpc=1000 debug="" (1 ціль, 1000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```shell
 screen -S "runner" bash runner.sh 
