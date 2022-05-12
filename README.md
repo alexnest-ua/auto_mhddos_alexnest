@@ -116,7 +116,7 @@ docker ps  -a
 ```
 щоб вбити запущені раніше фонові Docker підпроцеси на Linux прописуєте:  
 ```shell
-sudo docker kill $(docker ps -aqf name=alexnestua)
+sudo docker kill $(sudo docker ps -aqf name=alexnestua)
 ```
 або на Windows зайти у Docker Dekstop -> Containers / Apps -> Видалити container з ім'ям alexnestua
 
