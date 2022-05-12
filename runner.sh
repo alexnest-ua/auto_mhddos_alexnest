@@ -40,7 +40,7 @@ elif ((num_of_copies < 1));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack (less than 1 is not effective)\033[0;0m\n"
 	num_of_copies=1
-elif ((num_of_copies != 1 && num_of_copies != 2 num_of_copies != 3));
+elif ((num_of_copies != 1 && num_of_copies != 2 && num_of_copies != 3));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack\033[0;0m\n"
 	num_of_copies=1
