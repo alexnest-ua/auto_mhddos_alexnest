@@ -98,7 +98,7 @@ screen -S "runner" bash runner.sh 1 2000 2000
 
 4. Нормальна машина(5-8 CPUs):
 ```shell
-screen -S "runner" bash runner.sh 2 3000 2000
+screen -S "runner" bash runner.sh 2 2000 2000
 ```
 Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
