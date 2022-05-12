@@ -185,7 +185,7 @@ do
             sudo python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
 	    PID="$!"
 	    PIDS[j]=${PID}
-	    echo -e "${PIDS[j]}\n"
+	    echo -e "\n${PIDS[j]}\n"
 	    j=$(( $j + 1 ))
 	    sleep 20s
 
@@ -200,7 +200,7 @@ do
 	sudo python3 finder.py&
 	PID="$!"
 	PIDS[j]=${PID}
-	echo -e "${PIDS[j]}\n"
+	echo -e "\n${PIDS[j]}\n"
 	
 	sleep $restart_interval
 	clear
