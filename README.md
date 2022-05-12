@@ -74,17 +74,17 @@ docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhd
 
 2. Слаба машина(1 CPU), саме ці параметри за замовчуванням:
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 1000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1000 1000
 ```
 
 3. Середня машина(2-4 CPUs):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 2000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 1 1500 2000
 ```
 
 4. Нормальна машина(4-8 CPUs):
 ```
-docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 3000 2000
+docker run -it --rm --pull always --name alexnestua ghcr.io/alexnest-ua/auto_mhddos_alexnest:latest 2 2000 2000
 ```
 
 5. Потужна машина(9+ CPUs):
