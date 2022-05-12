@@ -70,7 +70,7 @@ runner.sh [num_of_copies] [threads] [rpc] [debug]
 cd ~/auto_mhddos_alexnest
 ```  
   
-У всіх варіантах буде автоматично запущено паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
+* У всіх варіантах буде автоматично запущено паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
   
 1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1000 rpc=1000 debug="" (1 ціль, 1000 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу)
 ```shell
