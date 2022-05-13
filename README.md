@@ -48,12 +48,14 @@ cd ~/auto_mhddos_alexnest
 screen -S "runner" bash runner.sh  
 ```  
   
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+якщо все успішно буде повідомлення [detached from runner]  
+
 * Буде запущено атаку з наступними параметрами за замовчуванням: threads=1500 rpc=1000 debug="" vpn=""(1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу, без атаки через ваш ІР) та автоматично запустить паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
   
 Далі кожні 5 хвилин воно буде оновлювати список проксі, а кожні 20 хвилин - цілі атаки та перевіряти наявність оновлення (та встановлювати його якщо воно є)  
   
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
-якщо все успішно буде повідомлення [detached from runner]  
+
   
 Щоб повернутися та/або **вбити** фоновий процес [читайте це](#%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BE-%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%83)
 
@@ -76,7 +78,7 @@ cd ~/auto_mhddos_alexnest
 ```shell
 screen -S "runner" bash runner.sh 
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 **CPUs** - це ядра вашого процесора - зазвичай ядер у два рази МЕНШЕ ніж потоків   
@@ -86,28 +88,28 @@ screen -S "runner" bash runner.sh
 ```shell
 screen -S "runner" bash runner.sh 1 1000 1000
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 3. Середня машина(2-4 CPUs):
 ```shell
 screen -S "runner" bash runner.sh 1 2000 2000
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 4. Нормальна машина(5-8 CPUs):
 ```shell
 screen -S "runner" bash runner.sh 2 2000 2000
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 5. Потужна машина(9+ CPUs):
 ```shell
 screen -S "runner" bash runner.sh all 4000 2500
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
   
@@ -116,7 +118,7 @@ screen -S "runner" bash runner.sh all 4000 2500
 ```shell
 screen -S "runner" bash runner.sh 1 1000 1000 --debug
 ```
-Настикаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
+Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ   
 якщо все успішно буде повідомлення [detached from runner]  
 
 
