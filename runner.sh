@@ -10,10 +10,16 @@ echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling ou
 sleep 3s
 cd ~
 sudo rm -rf proxy_finder
+sudo apt install --upgrade git
 git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
 cd ~/proxy_finder
 echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy_finder...\033[0;0m\n\n"
+
+# Install git, python3, etc
+sudo apt update -y
+sudo apt install --upgrade python3 python3-pip -y
 sleep 3s
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 cd ~
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mFiles installed successfully\033[1;0m\n\n"
