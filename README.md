@@ -29,7 +29,7 @@ runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює ці
 * щоб скачати на Linux-машину:  
 ```shell
 cd ~  
-sudo rm -r auto_mhddos_alexnest
+sudo rm -rf auto_mhddos_alexnest
 sudo apt install git -y  
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
