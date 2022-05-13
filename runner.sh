@@ -9,6 +9,7 @@ ulimit -n 1048576
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
 sudo pkill -e -f runner.py
 sudo pkill -e -f finder.py
+sudo docker kill $(sudo docker ps -aqf ancestor=elwahab/dd-attack)
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with MHDDoS killed\033[0;0m\n"
 
 
