@@ -14,7 +14,7 @@ git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
 cd ~/proxy_finder
 echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy_finder...\033[0;0m\n\n"
 sleep 3s
-sudo pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 cd ~
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mFiles installed successfully\033[1;0m\n\n"
 
@@ -93,7 +93,7 @@ do
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date mhddos_proxy"
 	else
-		sudo pip3 install -r requirements.txt
+		python3 -m pip install -r requirements.txt
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated mhddos_proxy"
 		sleep 2s
@@ -109,7 +109,7 @@ do
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date proxy_finder"
 	else
-		sudo pip3 install -r requirements.txt
+		python3 -m pip install -r requirements.txt
 		clear
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated proxy_finder"
 		sleep 2s
