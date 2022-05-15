@@ -283,7 +283,7 @@ do
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
 		sleep 3s
 		cd ~/proxy_finder
-		python3 finder.py&
+		python3 finder.py --threads $threads&
 	fi
 	
 	sleep $restart_interval
