@@ -180,7 +180,7 @@ do
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mStarting our new proxy_finder, next restart in $restart_interval...\033[1;0m"
 		
 	cd ~/proxy_finder
-	python3 finder.py&
+	python3 finder.py --threads $threads&
 	
 	sleep $restart_interval
 	clear
