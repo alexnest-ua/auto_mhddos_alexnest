@@ -63,7 +63,7 @@ then
 	num_of_copies=1
 fi
 
-threads="${2:-2000}"
+threads="${2:-1500}"
 if ((threads < 1000));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too LOW amount of threads - attack will be started with 1000 threads\033[0;0m\n"
@@ -287,7 +287,7 @@ do
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
 		sleep 3s
 		cd ~/proxy_finder
-		python3 finder.py --threads $threads&
+		python3 finder.py --threads 3500&
 	fi
 	
 	sleep $restart_interval
