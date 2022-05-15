@@ -34,8 +34,11 @@ restart_interval="20m"
 ulimit -n 1048576
 
 sudo chown -R ${USER}:${USER} ~/auto_mhddos_alexnest
+sudo chown -R ${USER}:${USER} /home/${USER}/auto_mhddos_alexnest
 sudo chown -R ${USER}:${USER} ~/mhddos_proxy
+sudo chown -R ${USER}:${USER} /home/${USER}/mhddos_proxy
 sudo chown -R ${USER}:${USER} ~/proxy_finder
+sudo chown -R ${USER}:${USER} /home/${USER}/proxy_finder
 sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
 sudo git config --global --add safe.directory /home/${USER}/mhddos_proxy
 sudo git config --global --add safe.directory /home/${USER}/proxy_finder
