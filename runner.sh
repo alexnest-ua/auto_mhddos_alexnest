@@ -227,7 +227,7 @@ do
            
 
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - full cmd:\n"
-            		echo "sudo python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
+            		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
             
             		cd ~/mhddos_proxy
             		python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
