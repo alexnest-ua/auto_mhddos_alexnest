@@ -127,7 +127,7 @@ then
 		fi
 	fi
 	
-elif ((proc_num >= 2 && proc_num <= 4));
+elif ((proc_num >= 2 && proc_num < 4));
 then
 	if ((threads > 5000));
 	then
