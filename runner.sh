@@ -16,15 +16,16 @@ git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
 git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 
+
+echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
+
+sudo apt update -y
+
 sudo apt install curl software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt install screen python3.10 python3.10-distutils -y
 curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
 sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
-
-echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
-sudo apt update -y
-sudo apt install --upgrade python3 python3-pip -y
 
 python3 -m pip install uvloop
 python3 -m pip install --upgrade pip
