@@ -174,8 +174,7 @@ then
 	fi
 
 fi
-	
-fi
+
 
 sleep 5s
 
