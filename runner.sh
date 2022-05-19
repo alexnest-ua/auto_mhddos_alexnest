@@ -27,6 +27,11 @@ sudo apt install screen python3.10 python3.10-distutils -y
 curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
 sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
 
+sudo apt remove python3-apt -y
+sudo apt autoremove -y
+sudo apt autoclean -y 
+sudo apt install python3-apt -y
+
 python3 -m pip install uvloop
 python3 -m pip install --upgrade pip
 
