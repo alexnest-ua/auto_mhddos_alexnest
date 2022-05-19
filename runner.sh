@@ -43,15 +43,6 @@ then
 fi
 
 rpc="${3:-1000}"
-if ((rpc < 1000));
-then
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too LOW amount of rpc(connections) - attack will be started with 1000 rpc\033[0;0m\n"
-	rpc=1000
-elif ((rpc > 3000));
-then
-	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too HIGH amount of rpc(connections) - attack will be started with 3000 rpc\033[0;0m\n"
-	rpc=3000
-fi
 
 debug="${4:-}"
 if [ "${debug}" != "--debug" ] && [ "${debug}" != "" ];
@@ -72,11 +63,6 @@ then
 		threads=2000
 	fi
 	
-	if ((rpc > 1000));
-	then
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too HIGH amount of rpc for 1 CPU - attack will be started with 1000 rpc\033[0;0m\n"
-		rpc=1000
-	fi
 	
 	rand=$(shuf -i 1-2 -n 1)
 	if ((rand == 1));
@@ -103,11 +89,6 @@ then
 		threads=5000
 	fi
 	
-	if ((rpc > 2000));
-	then
-		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33m$rpc is too HIGH amount of rpc for $proc_num CPUs - attack will be started with 2000 rpc\033[0;0m\n"
-		rpc=2000
-	fi
 	
 	if ((num_of_copies > 1));
 	then 
@@ -154,7 +135,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
+            		python3 runner.py $cmd_line -t $threads --vpn $debug&
 	    		sleep 20s
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
@@ -190,7 +171,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug&
+            		python3 runner.py $cmd_line -t $threads --vpn $debug&
 	    		sleep 10s
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
 		done
