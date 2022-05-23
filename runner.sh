@@ -19,18 +19,27 @@ git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 
 echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
 
-sudo apt update -y
 
-sudo apt install curl software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt install screen python3.10 python3.10-distutils -y
-curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
-sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
+num=$(python3 --version | grep -E -c '3.10')
 
-sudo apt remove python3-apt -y
-sudo apt autoremove -y
-sudo apt autoclean -y 
-sudo apt install python3-apt -y
+if ((num == 1));
+then	
+	clear
+	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Python3 is already up to date"
+else
+	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Updating Python3 to 3.10 version"
+	sudo apt install --upgrade curl software-properties-common -y
+	sudo add-apt-repository ppa:deadsnakes/ppa -y
+	sudo apt install --upgrade python3.10 python3.10-distutils -y
+	curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+	sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
+
+	sudo apt remove python3-apt -y
+	sudo apt autoremove -y
+	sudo apt autoclean -y 
+	sudo apt install python3-apt -y	
+fi
+
 
 python3 -m pip install uvloop
 python3 -m pip install --upgrade pip
