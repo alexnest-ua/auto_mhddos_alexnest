@@ -32,6 +32,7 @@ else
 	sudo apt install --upgrade python3.10 python3.10-distutils -y
 	curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
 	sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
+	sudo ln -sf /usr/local/bin/python3.10 /usr/local/bin/python3
 
 	sudo apt remove python3-apt -y
 	sudo apt autoremove -y
