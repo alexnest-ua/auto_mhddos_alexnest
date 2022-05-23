@@ -24,10 +24,9 @@ num=$(python3 --version | grep -E -c '3.10')
 
 if ((num == 1));
 then	
-	clear
 	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Python3 is already up to date"
 else
-	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Updating Python3 to 3.10 version"
+	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Updating Python3 to 3.10 version..."
 	sudo apt install --upgrade curl software-properties-common -y
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
 	sudo apt install --upgrade python3.10 python3.10-distutils -y
