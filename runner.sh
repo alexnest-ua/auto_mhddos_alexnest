@@ -304,7 +304,7 @@ do
 			echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;32mStarting proxy_finder...\033[1;0m"
 			sleep 2s
 			cd ~/proxy_finder
-			python3 finder.py&
+			python3 finder.py --threads 7500&
 		done
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update of targets list in $restart_interval ...\033[1;0m"
 		sleep 5s
