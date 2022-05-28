@@ -22,11 +22,17 @@ echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling 
 
 num=$(python3 --version | grep -E -c '3.10')
 
+os_version=$(cat /etc/*-release | grep -E -c "Ubuntu 18.04")
+
+if ((os_version == 2));
+then
+	sudo rm -rf /usr/lib/python3
+fi
+
 if ((num == 1));
 then	
 	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Python3 is already up to date"
 else
-	sudo rm -rf /usr/lib/python3
 	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Updating Python3 to 3.10 version..."
 	sudo apt install --upgrade curl software-properties-common -y
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
