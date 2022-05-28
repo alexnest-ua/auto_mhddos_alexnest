@@ -26,6 +26,7 @@ if ((num == 1));
 then	
 	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Python3 is already up to date"
 else
+	sudo rm -rf /usr/lib/python3
 	echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Updating Python3 to 3.10 version..."
 	sudo apt install --upgrade curl software-properties-common -y
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
