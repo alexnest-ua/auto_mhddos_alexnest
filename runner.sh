@@ -32,8 +32,23 @@ else
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
 	sudo apt install --upgrade python3.10 python3.10-distutils -y
 	curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
-	sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
-	sudo ln -sf /usr/local/bin/python3.10 /usr/local/bin/python3
+	num1=$(cd /usr/bin/python3.10 | grep -E -c 'No such')
+	
+	FILE=/usr/bin/python3.10
+	if [[ -f "$FILE" ]];
+	then
+    		sudo ln -sf /usr/bin/python3.10 /usr/bin/python3
+		sudo ln -sf /usr/bin/python3.10 /usr/local/bin/python3
+	fi
+	
+	FILE=/usr/local/bin/python3.10
+	if [[ -f "$FILE" ]];
+	then
+    		sudo ln -sf /usr/local/bin/python3.10 /usr/bin/python3
+		sudo ln -sf /usr/local/bin/python3.10 /usr/local/bin/python3
+	fi
+	
+	
 
 	sudo apt remove python3-apt -y
 	sudo apt autoremove -y
