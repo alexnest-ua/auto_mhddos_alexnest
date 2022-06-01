@@ -32,7 +32,6 @@ else
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
 	sudo apt install --upgrade python3.10 python3.10-distutils -y
 	curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
-	num1=$(cd /usr/bin/python3.10 | grep -E -c 'No such')
 	
 	FILE=/usr/bin/python3.10
 	if [[ -f "$FILE" ]];
@@ -165,7 +164,7 @@ do
 
 	cd ~/mhddos_proxy	
 	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
-   	echo "$num0"   	
+   	echo "$num0" 
    	if ((num0 == 1));
    	then	
 		clear
