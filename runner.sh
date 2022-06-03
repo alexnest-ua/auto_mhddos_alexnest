@@ -8,7 +8,7 @@ echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old proce
 
 
 cd ~
-sudo apt install --upgrade git -y
+sudo apt install --upgrade git curl -y
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
 git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 
