@@ -277,7 +277,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		python3 runner.py $cmd_line -t $threads --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --vpn $debug&
 	    		sleep 20s
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
@@ -313,7 +313,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		python3 runner.py $cmd_line -t $threads --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --vpn $debug&
 	    		sleep 20s
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
 			
