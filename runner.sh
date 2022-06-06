@@ -4,7 +4,10 @@ restart_interval="20m"
 
 ulimit -n 1048576
 
+cd ~
 git clone -b docker https://github.com/alexnest-ua/auto_mhddos_alexnest
+git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
+git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
 
 #Just in case kill previous copy of mhddos_proxy
 echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Killing all old processes with MHDDoS"
