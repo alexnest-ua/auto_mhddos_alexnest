@@ -136,7 +136,7 @@ do
 
 	cd ~/mhddos_proxy
 	
-	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+	num0=$(git pull --ff-only | grep -E -c 'Already|Уже|Вже')
    	echo "$num0"
    	
    	if ((num0 == 1));
@@ -152,7 +152,7 @@ do
 	
 	cd ~/proxy_finder	
 
-	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+	num0=$(git pull --ff-only | grep -E -c 'Already|Уже|Вже')
    	echo "$num0"
    	
    	if ((num0 == 1));
@@ -167,7 +167,7 @@ do
 	fi
 	
 	cd ~/auto_mhddos_alexnest
-   	num=$(sudo git pull | grep -E -c 'Already|Уже|Вже')
+   	num=$(git pull --ff-only | grep -E -c 'Already|Уже|Вже')
    	echo "$num"
    	
    	if ((num == 1));
