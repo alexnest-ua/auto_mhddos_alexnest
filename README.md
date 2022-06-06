@@ -31,7 +31,7 @@ runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює ці
 cd ~  
 sudo rm -rf auto_mhddos_alexnest
 sudo apt install git -y  
-git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
+sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
   
 **ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипт mhddos_proxy та усі залежності (один раз на новій машині):
