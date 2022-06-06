@@ -12,9 +12,9 @@ sleep 1s
 cd ~
 sudo rm -rf proxy_finder
 sudo apt install --upgrade git curl -y
-git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
-git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
-git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
+sudo git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
+sudo git clone https://github.com/porthole-ascend-cinnamon/proxy_finder
+sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 
 
 echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
