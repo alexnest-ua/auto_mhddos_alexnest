@@ -66,6 +66,9 @@ do
 			threads=1500
 		fi
 		rand=$(shuf -i 1-2 -n 1)
+		echo -e "\n\n rand = $rand \n\n"
+		sleep 5
+		
 		if ((rand == 1));
 		then
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only 1 CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
@@ -96,6 +99,9 @@ do
 	
 	
 		rand=$(shuf -i 1-2 -n 1)
+		echo -e "\n\n rand = $rand \n\n"
+		sleep 5
+		
 		if ((rand == 1));
 		then
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have only $proc_num CPU, so for next 20 minutes will be started only proxy_finder (without mhddos_proxy)\033[0;0m\n"
