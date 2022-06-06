@@ -66,8 +66,6 @@ do
 			threads=1500
 		fi
 		rand=$(shuf -i 1-2 -n 1)
-		echo -e "\n\n rand = $rand \n\n"
-		sleep 5
 		
 		if ((rand == 1));
 		then
@@ -99,8 +97,6 @@ do
 	
 	
 		rand=$(shuf -i 1-2 -n 1)
-		echo -e "\n\n rand = $rand \n\n"
-		sleep 5
 		
 		if ((rand == 1));
 		then
