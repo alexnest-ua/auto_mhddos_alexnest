@@ -153,7 +153,7 @@ do
 	fi
 	
 	cd ~/auto_mhddos_alexnest
-   	num=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
+   	num=$(sudo git pull | grep -E -c 'Already|Уже|Вже')
    	echo "$num"   	
    	if ((num == 1));
    	then	
