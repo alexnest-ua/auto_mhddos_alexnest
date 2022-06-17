@@ -30,7 +30,7 @@ elif ((num_of_copies < 1));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack (less than 1 is not effective)\033[0;0m\n"
 	num_of_copies=1
-elif ((num_of_copies != 1 && num_of_copies != 2 && num_of_copies != 3 && num_of_copies != 4));
+elif ((num_of_copies != 1 && num_of_copies != 2 && num_of_copies != 3  && num_of_copies != 4));
 then
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mScript will be started with 1 parallel attack\033[0;0m\n"
 	num_of_copies=1
@@ -138,7 +138,6 @@ do
 		sleep 2s
 	fi
 	
-	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull --ff-only | grep -E -c 'Already|Уже|Вже')
    	echo "$num"   	
@@ -188,6 +187,7 @@ do
             	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[42mAttack started successfully\033[0m\n"
    	done
 	echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[1;35mDDoS is up and Running, next update in $restart_interval ...\033[1;0m"
+
 	sleep $restart_interval
 	clear
    	
