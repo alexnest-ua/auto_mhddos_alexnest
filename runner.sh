@@ -202,20 +202,6 @@ do
 		sleep 2s
 	fi
 	
-	cd ~/proxy_finder
-	num0=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
-   	echo "$num0"   	
-   	if ((num0 == 1));
-   	then	
-		clear
-		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running up to date proxy_finder"
-	else
-		python3 -m pip install -r requirements.txt
-		clear
-		echo -e "[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - Running updated proxy_finder"
-		sleep 2s
-	fi
-	
 	cd ~/auto_mhddos_alexnest
    	num=$(sudo git pull origin main | grep -E -c 'Already|Уже|Вже')
    	echo "$num"   	
