@@ -33,13 +33,6 @@ sudo rm -rf auto_mhddos_alexnest
 sudo apt install git -y  
 sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
-  
-**ОБОВ'ЯЗКОВО** - запуск файлу, який встановить скрипт mhddos_proxy та усі залежності (один раз на новій машині):
-```shell
-cd ~/auto_mhddos_alexnest
-bash setup.sh
-```
-*чекаємо 5-10 хвилин поки все встановиться.*  
 
 ## Запуск на роботу у фоні (24/7 на Linux-сервері) - можна закривати термінал
 Запуск автоматичного ДДоСу:  
