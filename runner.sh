@@ -179,7 +179,7 @@ do
 		
 		if ((num_of_copies < 2));
 		then 
-			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have $proc_num CPUs, so attack will be started only with 2 parallel attack(s)\033[0;0m\n"
+			echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mYou have $proc_num CPUs, so attack will be started with 2 parallel attack(s)\033[0;0m\n"
 			num_of_copies=2
 		fi
 
