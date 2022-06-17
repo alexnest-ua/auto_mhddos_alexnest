@@ -1,7 +1,7 @@
 # Опис
  
-runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy) та [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)    
-Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy та proxy_finder  
+runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює цілі та себе) bash-скрипт для Linux-машин, що керує [mhddos_proxy](https://github.com/porthole-ascend-cinnamon/mhddos_proxy)      
+Також він автоматично оновлює не лише свій скрипт та цілі, а й скрипт mhddos_proxy  
 Також скрипт імітує роботу людини (вимикає увесь ДДоС на 1-3 (рандомно) хвилин), тому знижується можливість блокування  
 Скрипт розподіляє ваші машини по цілям: https://github.com/alexnest-ua/targets/blob/main/targets_linux (цілі беруться звідси: https://t.me/ddos_separ)  
 Увесь source code знаходиться тут: https://github.com/alexnest-ua/auto_mhddos_alexnest/blob/main/runner.sh  
@@ -44,7 +44,7 @@ screen -S "runner" bash runner.sh
 Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
-* Буде запущено атаку з наступними параметрами за замовчуванням: num_of_copies=1 threads=1500 rpc=1000 debug=""(1 список цілей, 1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу) та автоматично запустить паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
+* Буде запущено атаку з параметрами за замовчуванням в залежності від кількості ядер вашого ПК
   
 Далі кожні 5 хвилин воно буде оновлювати список проксі, а кожні 20 хвилин - цілі атаки та перевіряти наявність оновлення (та встановлювати його якщо воно є)  
   
@@ -54,8 +54,8 @@ screen -S "runner" bash runner.sh
 
 **!!!УВАГА!!!** runner.sh підтримує наступні параметри (САМЕ У ТАКОМУ ПОРЯДКУ ТА ЛИШЕ У ТАКІЙ КІЛЬКОСТІ(мінімум 3)), але можно і без них:  
 runner.sh [num_of_copies] [threads] [rpc] [debug]  
-- num_of_copies - кількість атакуємих списків цілей за один прохід (але не менше 1, та не більше 3, бо більше 3-ох знижує ефективність)
-- threads - кількість потоків (але не менше 1000, та не більше 1500 для одного ядра, не більше 1000 для 2-4 ядер, не більше 15000 для 4+ ядер)
+- num_of_copies - кількість атакуємих списків цілей за один прохід (але не менше 1, та не більше 4, бо більше 4-ох знижує ефективність)
+- threads - кількість потоків (але не менше 2500, та не більше 5000 для одного ядра, не більше 10000 для 2-4 ядер, не більше 15000 для 4+ ядер)
 - rpc - кількість запитів на проксі перед відправкою на ціль (але не менше 1000, та не більше 3000)
 - debug - можливість дебагу (якщо хочете бачити повний інфу по атаці - у 4-ий параметр додайте --debug)
   
@@ -67,7 +67,7 @@ cd ~/auto_mhddos_alexnest
   
 * У всіх варіантах буде автоматично запущено паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder)  
   
-1. ***Для лінивих*** (буде обрано за замовчуванням: num_of_copies=1, threads=1500 rpc=1000 debug="" (1 список цілей, 1500 потоків, 1000 запитів на проксі перед відправкою на ціль, без дебагу) та автоматично запустить паралельно наш [proxy_finder](https://github.com/porthole-ascend-cinnamon/proxy_finder) )
+1. ***Для лінивих*** (буде запущено атаку з параметрами за замовчуванням в залежності від кількості ядер вашого ПК)  
 ```shell
 screen -S "runner" bash runner.sh 
 ```
@@ -79,14 +79,14 @@ screen -S "runner" bash runner.sh
 
 2. Слаба машина(1 CPU), саме ці параметри за замовчуванням:
 ```shell
-screen -S "runner" bash runner.sh 1 1500 1000
+screen -S "runner" bash runner.sh 1 2500 1000
 ```
 Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
 
 3. Середня машина(2-4 CPUs):
 ```shell
-screen -S "runner" bash runner.sh 1 3000 2000
+screen -S "runner" bash runner.sh 1 6000 2000
 ```
 Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
@@ -100,7 +100,7 @@ screen -S "runner" bash runner.sh 2 6000 2000
 
 5. Потужна машина(9+ CPUs):
 ```shell
-screen -S "runner" bash runner.sh all 10000 2500
+screen -S "runner" bash runner.sh all 7500 2500
 ```
 Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ  
 якщо все успішно буде повідомлення [detached from runner]  
@@ -109,7 +109,7 @@ screen -S "runner" bash runner.sh all 10000 2500
 *також ви можете змінювати параметри на будь-які інші значення, але я рекомендую саме ці.*  
 *також можете додавати останнім **4-тим** параметром --debug, що слідкувати за ходом атаки, наприклад:*  
 ```shell
-screen -S "runner" bash runner.sh 1 1500 1000 --debug
+screen -S "runner" bash runner.sh 1 2500 1000 --debug
 ```
 Натискаємо Ctrl+A , потім Ctrl+D - І ВСЕ ГОТОВО - ПРАЦЮЄ В ФОНІ   
 якщо все успішно буде повідомлення [detached from runner]  
