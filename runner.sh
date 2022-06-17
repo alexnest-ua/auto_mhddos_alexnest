@@ -122,7 +122,7 @@ do
 	fi
 
 
-	sleep 2s
+	sleep 4s
 
 	cd ~/mhddos_proxy	
 	num0=$(sudo git pull --ff-only | grep -E -c 'Already|Уже|Вже')
