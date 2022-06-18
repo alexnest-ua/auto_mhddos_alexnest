@@ -30,7 +30,7 @@ runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює ці
 ```shell
 cd ~  
 sudo rm -rf auto_mhddos_alexnest
-sudo apt install git -y  
+sudo apt install git screen -y  
 sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 ```
 
