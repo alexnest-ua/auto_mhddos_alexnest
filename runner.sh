@@ -12,16 +12,14 @@ sudo docker kill $(sudo docker ps -aqf ancestor=elwahab/dd-attack)
 sudo docker kill $(sudo docker ps -aqf ancestor=ghcr.io/opengs/uashield:latest)   
 echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;35mAll old processes with DDoS and finder killed\033[0;0m\n"
 
-echo -e "\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling our new proxy_finder...\033[0;0m\n"
-sleep 1s
-cd ~
-sudo apt install --upgrade git curl -y
-sudo git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
-sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
-
-
 echo -e "\n\n[\033[1;32m$(date +"%d-%m-%Y %T")\033[1;0m] - \033[0;33mInstalling latest requirements...\033[0;0m\n\n"
 
+sleep 1s
+cd ~
+sudo apt update -y
+sudo apt install --upgrade git curl python3 python3-pip -y
+sudo git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy
+sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
 
 os_version=$(cat /etc/*-release | grep -E -c "Ubuntu 18.04")
 if ((os_version == 2));
