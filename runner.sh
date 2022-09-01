@@ -26,7 +26,7 @@ sudo git config --global --add safe.directory ~/auto_mhddos_alexnest
 sudo git config --global --add safe.directory /home/${USER}/auto_mhddos_alexnest
 
 
-сd ~
+cd ~
 curl -Lo mhddos_proxy_linux https://github.com/porthole-ascend-cinnamon/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux
 chmod +x mhddos_proxy_linux
 
