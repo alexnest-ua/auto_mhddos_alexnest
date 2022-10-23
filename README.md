@@ -20,16 +20,6 @@ runner.sh - ПОВНІСТЮ АВТООНОВЛЮВАНИЙ (оновлює ці
   
 Туторіал по створенню автоматичних та автономних Linux-серверів: https://auto-ddos.notion.site/dd91326ed30140208383ffedd0f13e5c  
 
-## Налаштування (встановлення)
-  
-* щоб скачати на Linux-машину:  
-```shell
-cd ~  
-sudo rm -rf auto_mhddos_alexnest
-sudo apt install git screen -y  
-sudo git clone https://github.com/alexnest-ua/auto_mhddos_alexnest
-```
-
 ## Запуск на роботу у фоні (24/7 на Linux-сервері) - можна закривати термінал
 Запуск автоматичного ДДоСу:  
 ```shell 
